@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.linkedin.com)"
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(python3 -c \"from PIL import Image, ImageDraw, ImageFont; print\\(''Pillow OK''\\)\")",
+      "Bash(pip3 install Pillow --quiet)",
+      "Bash(python3 -c \"from PIL import Image; print\\(''OK''\\)\")",
+      "Bash(pip3 install Pillow)",
+      "Bash(pip3 install Pillow --break-system-packages)",
+      "Bash(python3 /tmp/gen_og.py)",
+      "Bash(python3 /tmp/gen_og_v2.py)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 /tmp/gen_og_v3.py)",
+      "Bash(python3 -c \"import base64; print\\(base64.b64encode\\(b''web''\\).decode\\(\\)\\); print\\(base64.b64decode\\(''d2Vi''\\).decode\\(\\)\\)\")",
+      "Bash(python3 -:*)"
     ]
   }
 }

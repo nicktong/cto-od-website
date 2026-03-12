@@ -12,16 +12,19 @@
 
 :root {
   /* Palette */
-  --clr-bg:         #FFFFFF;
-  --clr-bg-alt:     #F4F7FB;
-  --clr-dark:       #0B1829;
-  --clr-body:       #2C3A4F;
-  --clr-muted:      #5A6B84;
-  --clr-border:     #DDE5EF;
-  --clr-accent:     #1756E8;
-  --clr-accent-dk:  #1145C4;
-  --clr-accent-bg:  #EBF0FD;
-  --clr-accent-nav: #0B1829;
+  --clr-bg:           #FFFFFF;
+  --clr-bg-alt:       #F4F7FB;          /* cool tint — hover states */
+  --clr-section-alt:  #F8F6F2;          /* warm off-white — alt section bg */
+  --clr-surface:      #FFFFFF;          /* card surfaces */
+  --clr-dark:         #0B1829;
+  --clr-body:         #2C3A4F;
+  --clr-muted:        #5A6B84;
+  --clr-border:       #DDE5EF;
+  --clr-accent:       #1756E8;
+  --clr-accent-dk:    #1145C4;
+  --clr-accent-bg:    #EBF0FD;
+  --clr-accent-nav:   #0B1829;
+  --clr-accent-hi:    #6BA3FF;          /* lighter blue for use on dark bg */
 
   /* Typography */
   --font:           'Inter', system-ui, sans-serif;
@@ -32,7 +35,7 @@
   --fw-extrabold:   800;
 
   /* Spacing */
-  --section-py:     5rem;
+  --section-py:     clamp(4rem, 8vw, 7rem);
   --container-w:    1200px;
   --container-px:   1.5rem;
 
@@ -41,10 +44,11 @@
   --radius-md:      0.75rem;
   --radius-lg:      1.25rem;
 
-  /* Shadows */
-  --shadow-sm:      0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
-  --shadow-md:      0 4px 16px rgba(0,0,0,.1);
-  --shadow-lg:      0 12px 40px rgba(0,0,0,.12);
+  /* Shadows — navy-tinted for brand coherence */
+  --shadow-sm:      0 1px 2px rgba(11,24,41,.06), 0 2px 4px rgba(11,24,41,.04);
+  --shadow-card:    0 0 0 1px rgba(11,24,41,.07), 0 4px 12px rgba(11,24,41,.08), 0 16px 32px rgba(11,24,41,.05);
+  --shadow-md:      0 4px 20px rgba(11,24,41,.12), 0 1px 4px rgba(11,24,41,.06);
+  --shadow-lg:      0 12px 48px rgba(11,24,41,.16), 0 4px 12px rgba(11,24,41,.08);
 
   /* Transitions */
   --ease:           0.2s ease;
@@ -71,6 +75,14 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { cursor: pointer; font: inherit; border: none; background: none; }
 
+/* Accessible focus ring — keyboard only, respects brand colour */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2.5px solid var(--clr-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
 /* ── 2. Typography Scale ── */
 h1, h2, h3, h4, h5 {
   font-weight: var(--fw-bold);
@@ -79,8 +91,8 @@ h1, h2, h3, h4, h5 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: var(--fw-extrabold); }
-h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); }
+h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight: var(--fw-extrabold); }
+h2 { font-size: clamp(1.875rem, 4vw, 2.75rem); }
 h3 { font-size: 1.125rem; font-weight: var(--fw-semibold); }
 h4 { font-size: 1rem; font-weight: var(--fw-semibold); }
 
@@ -98,12 +110,12 @@ p { max-width: 68ch; }
 
 .section-alt {
   padding-block: var(--section-py);
-  background: var(--clr-bg-alt);
+  background: var(--clr-section-alt);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .section-header h2 { margin-bottom: 0.75rem; }
@@ -225,6 +237,13 @@ p { max-width: 68ch; }
   color: var(--clr-muted);
 }
 
+.site-header .logo-tagline {
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark);
+  letter-spacing: -0.02em;
+}
+
 /* Desktop nav */
 .nav-desktop {
   display: flex;
@@ -305,8 +324,10 @@ p { max-width: 68ch; }
 
 /* ── 6. Hero ── */
 .hero {
-  background: linear-gradient(160deg, #F0F5FF 0%, #FFFFFF 55%);
-  padding-block: 5rem 4rem;
+  background:
+    radial-gradient(ellipse 70% 100% at 100% 0%, rgba(23,86,232,.07) 0%, transparent 65%),
+    linear-gradient(160deg, #EEF3FD 0%, #FFFFFF 60%);
+  padding-block: clamp(4rem, 7vw, 6rem) clamp(3rem, 5vw, 5rem);
   overflow: hidden;
 }
 
@@ -397,9 +418,9 @@ p { max-width: 68ch; }
 
 .card {
   background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-card);
   transition: box-shadow var(--ease), transform var(--ease);
 }
 
@@ -536,15 +557,15 @@ p { max-width: 68ch; }
 }
 
 .how-card {
-  background: var(--clr-bg-alt);
-  border: 1px solid var(--clr-border);
+  background: var(--clr-bg);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-card);
 }
 
 .how-card-accent {
   background: var(--clr-dark);
-  border-color: var(--clr-dark);
+  box-shadow: 0 4px 20px rgba(11,24,41,.3);
   color: rgba(255,255,255,.85);
 }
 
@@ -627,7 +648,9 @@ p { max-width: 68ch; }
 
 /* ── 11. About Nick ── */
 .section-about {
-  background: linear-gradient(160deg, #F0F5FF 0%, #FFFFFF 60%);
+  background:
+    radial-gradient(ellipse 50% 70% at 0% 100%, rgba(23,86,232,.05) 0%, transparent 60%),
+    linear-gradient(160deg, #EEF3FD 0%, #FFFFFF 55%);
   padding-block: var(--section-py);
 }
 
@@ -669,10 +692,10 @@ p { max-width: 68ch; }
 
 .stat {
   background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
   padding: 0.875rem 0.625rem;
   text-align: center;
+  box-shadow: var(--shadow-card);
 }
 
 .stat-num {
@@ -769,7 +792,131 @@ p { max-width: 68ch; }
 
 .process-cta { text-align: center; }
 
-/* ── 13. FAQ ── */
+/* Dark section override — applied to Process section */
+.section-dark {
+  background: var(--clr-dark);
+  padding-block: var(--section-py);
+}
+
+.section-dark h2,
+.section-dark h3 { color: #fff; }
+
+.section-dark .section-tag {
+  color: var(--clr-accent-hi);
+}
+
+.section-dark .section-lead {
+  color: rgba(255, 255, 255, .58);
+}
+
+.section-dark .step-body p {
+  color: rgba(255, 255, 255, .52);
+}
+
+.section-dark .process-steps::before {
+  background: linear-gradient(to right, var(--clr-accent-hi), var(--clr-accent-hi));
+  opacity: 0.2;
+}
+
+.section-dark .step-num {
+  box-shadow: 0 4px 20px rgba(23, 86, 232, .45);
+}
+
+/* ── 13. TESTIMONIALS ── */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  background: var(--clr-surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.testimonial:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.testimonial blockquote {
+  margin: 0;
+  flex: 1;
+}
+
+.testimonial blockquote p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--clr-body);
+  quotes: "\201C" "\201D";
+  position: relative;
+}
+
+.testimonial blockquote p::before {
+  content: "\201C";
+  font-size: 2.5rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--clr-accent);
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.testimonial figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  border-top: 1px solid var(--clr-border);
+  padding-top: 1.25rem;
+}
+
+.testimonial-avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--clr-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.testimonial-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-heading);
+}
+
+.testimonial-role {
+  font-size: 0.8125rem;
+  color: var(--clr-muted);
+}
+
+.testimonial-date {
+  font-size: 0.75rem;
+  color: var(--clr-muted);
+  opacity: 0.7;
+}
+
+/* ── 14. FAQ ── */
 .faq-list {
   max-width: 780px;
   margin-inline: auto;
@@ -971,6 +1118,10 @@ p { max-width: 68ch; }
   gap: 0.875rem;
 }
 
+/* Ensure [hidden] always wins over display: flex/grid on these elements */
+.form-success[hidden],
+.form-error[hidden] { display: none !important; }
+
 .form-success svg { flex-shrink: 0; color: #4ade80; margin-top: 0.1rem; }
 .form-success strong { display: block; color: #fff; margin-bottom: 0.2rem; }
 .form-success p { font-size: 0.875rem; max-width: none; color: rgba(255,255,255,.65); }
@@ -1005,12 +1156,6 @@ p { max-width: 68ch; }
   max-width: none;
 }
 
-/* ── 15. Focus visible ── */
-:focus-visible {
-  outline: 2px solid var(--clr-accent);
-  outline-offset: 3px;
-  border-radius: var(--radius-sm);
-}
 
 /* ── 15b. Scroll offset (compensates for sticky header) ── */
 [id] {
@@ -1072,6 +1217,12 @@ p { max-width: 68ch; }
 
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-inline: auto;
   }
 
   .about-inner {
