@@ -95,8 +95,8 @@ h1, h2, h3, h4, h5 {
 /* Display font for major headings — Syne adds editorial character */
 h1, h2 { font-family: var(--font-display); }
 
-h1 { font-size: clamp(2.5rem, 5.5vw, 4rem); font-weight: var(--fw-extrabold); letter-spacing: -0.03em; }
-h2 { font-size: clamp(1.875rem, 4vw, 2.75rem); letter-spacing: -0.025em; }
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.5rem); font-weight: var(--fw-bold); letter-spacing: -0.025em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); letter-spacing: -0.02em; }
 h3 { font-size: 1.125rem; font-weight: var(--fw-semibold); }
 h4 { font-size: 1rem; font-weight: var(--fw-semibold); }
 
@@ -133,27 +133,13 @@ p { max-width: 68ch; }
 
 .eyebrow,
 .section-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
+  display: inline-block;
+  font-size: 0.6875rem;
   font-weight: var(--fw-bold);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--clr-accent);
   margin-bottom: 0.75rem;
-}
-
-.eyebrow::before,
-.section-tag::before {
-  content: '';
-  display: inline-block;
-  width: 2px;
-  height: 0.8em;
-  background: currentColor;
-  border-radius: 1px;
-  flex-shrink: 0;
-  opacity: 0.7;
 }
 
 /* ── 4. Buttons ── */
@@ -915,23 +901,35 @@ p { max-width: 68ch; }
   box-shadow: 0 4px 20px rgba(23, 86, 232, .45);
 }
 
-/* ── 13. TESTIMONIALS ── */
+/* ── 13. TESTIMONIALS — asymmetric editorial layout ── */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 1.5rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
+}
+
+/* First testimonial spans full width — featured/hero */
+.testimonial:first-child {
+  grid-column: 1 / -1;
 }
 
 .testimonial {
   background: var(--clr-surface);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2rem 2.25rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.5rem;
   box-shadow: var(--shadow-card);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  transition: box-shadow var(--ease), transform var(--ease);
+}
+
+/* Featured testimonial gets darker bg for visual hierarchy */
+.testimonial:first-child {
+  background: var(--clr-dark);
+  padding: 2.5rem 3rem;
 }
 
 .testimonial:hover {
@@ -946,21 +944,34 @@ p { max-width: 68ch; }
 
 .testimonial blockquote p {
   font-size: 0.9375rem;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--clr-body);
   quotes: "\201C" "\201D";
   position: relative;
 }
 
+/* Featured: bigger text, lighter colour on dark bg */
+.testimonial:first-child blockquote p {
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,.82);
+  font-weight: var(--fw-normal);
+  line-height: 1.8;
+}
+
 .testimonial blockquote p::before {
   content: "\201C";
-  font-size: 2.5rem;
-  line-height: 1;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  line-height: 0.8;
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
   color: var(--clr-accent);
-  opacity: 0.3;
-  font-family: Georgia, serif;
+  opacity: 0.5;
+}
+
+.testimonial:first-child blockquote p::before {
+  color: var(--clr-accent-hi);
+  opacity: 0.6;
 }
 
 .testimonial figcaption {
@@ -969,6 +980,10 @@ p { max-width: 68ch; }
   gap: 0.875rem;
   border-top: 1px solid var(--clr-border);
   padding-top: 1.25rem;
+}
+
+.testimonial:first-child figcaption {
+  border-top-color: rgba(255,255,255,.1);
 }
 
 .testimonial-avatar {
@@ -986,6 +1001,10 @@ p { max-width: 68ch; }
   flex-shrink: 0;
 }
 
+.testimonial:first-child .testimonial-avatar {
+  background: rgba(255,255,255,.15);
+}
+
 .testimonial-meta {
   display: flex;
   flex-direction: column;
@@ -995,18 +1014,34 @@ p { max-width: 68ch; }
 .testimonial-name {
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--clr-heading);
+  color: var(--clr-dark);
 }
+
+.testimonial:first-child .testimonial-name { color: #fff; }
 
 .testimonial-role {
   font-size: 0.8125rem;
   color: var(--clr-muted);
 }
 
+.testimonial:first-child .testimonial-role {
+  color: rgba(255,255,255,.5);
+}
+
 .testimonial-date {
   font-size: 0.75rem;
   color: var(--clr-muted);
   opacity: 0.7;
+}
+
+/* Left-aligned section headers for editorial sections */
+.section-header.align-left {
+  text-align: left;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.section-header.align-left .section-lead {
+  margin-inline: 0;
 }
 
 /* ── 13b. Impact / Case Studies — editorial list ── */
@@ -1384,8 +1419,10 @@ p { max-width: 68ch; }
 
   .testimonials-grid {
     grid-template-columns: 1fr;
-    max-width: 640px;
-    margin-inline: auto;
+  }
+
+  .testimonial:first-child {
+    padding: 2rem;
   }
 
   .impact-item {
