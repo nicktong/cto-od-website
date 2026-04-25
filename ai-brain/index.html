@@ -633,8 +633,8 @@
 
       <header class="ab-modal-header">
         <span class="section-tag">Rate card</span>
-        <h3 id="rateCardTitle">Where should I send the AI Brain rate card?</h3>
-        <p>I'll email you a copy and you'll get the download immediately. No newsletter, no follow-up sequence — just the rate card and a one-time email if you ever decide to get in touch.</p>
+        <h3 id="rateCardTitle">Read the AI Brain rate card.</h3>
+        <p>Drop your details below and the rate card opens in a new tab. No newsletter, no follow-up sequence — your details just let Nick know who's been reading.</p>
       </header>
 
       <form class="ab-rate-form" id="rateCardForm"
@@ -677,22 +677,22 @@
         </label>
 
         <button type="submit" class="btn btn-primary btn-full" id="rateCardSubmit">
-          <span class="ab-rate-submit-label">Email me the rate card</span>
+          <span class="ab-rate-submit-label">Open the rate card</span>
         </button>
 
         <p class="ab-rate-note">
-          The PDF starts downloading on your device the moment you submit. You'll also get a copy in your inbox.
+          The rate card opens in a new tab as soon as you submit. Make sure your browser allows pop-ups for this page.
         </p>
       </form>
 
       <div class="ab-rate-success" id="rateCardSuccess" hidden role="status" aria-live="polite">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        <h4>Sent — check your downloads.</h4>
-        <p>The rate card is downloading now. If it doesn't appear, <a href="rate-card.pdf" download id="rateCardManual">click here to retry</a>. A copy is also on its way to your inbox.</p>
+        <h4>Sent — the rate card is opening.</h4>
+        <p>The rate card has opened in a new tab. If a pop-up blocker stopped it, <a href="#" id="rateCardManual" target="_blank" rel="noopener noreferrer">click here to open it</a>.</p>
       </div>
 
       <div class="ab-rate-error" id="rateCardError" hidden role="alert">
-        <p>Something went wrong sending your details. You can still <a href="rate-card.pdf" download>download the rate card directly</a>, or email <a href="mailto:nick@ctoondemand.co.uk">nick@ctoondemand.co.uk</a>.</p>
+        <p>Something went wrong sending your details. You can still <a href="#" id="rateCardErrorLink" target="_blank" rel="noopener noreferrer">open the rate card directly</a>, or email <a href="mailto:nick@ctoondemand.co.uk">nick@ctoondemand.co.uk</a>.</p>
       </div>
     </div>
   </div>
@@ -819,14 +819,14 @@
       }
     });
 
-    // ── Rate-card modal + email-gated download ───────────────
+    // ── Rate-card modal + email-gated open ───────────────────
     const rateCardOpen    = document.getElementById('rateCardOpen');
     const rateCardModal   = document.getElementById('rateCardModal');
     const rateCardForm    = document.getElementById('rateCardForm');
     const rateCardSubmit  = document.getElementById('rateCardSubmit');
     const rateCardSuccess = document.getElementById('rateCardSuccess');
     const rateCardError   = document.getElementById('rateCardError');
-    const RATE_CARD_URL   = 'rate-card.pdf';
+    const RATE_CARD_URL   = 'https://docs.google.com/document/d/1Uko0IBg3oQe9teE5XHOp2Li44dCklRGIXU9r9F68_PE/edit?tab=t.0';
     let lastFocused = null;
 
     function openModal() {
@@ -862,15 +862,10 @@
       }
     });
 
-    // Programmatically trigger PDF download
-    function triggerDownload() {
-      const a = document.createElement('a');
-      a.href = RATE_CARD_URL;
-      a.download = 'AI-Brain-rate-card.pdf';
-      a.rel = 'noopener';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+    // Programmatically open the rate card in a fresh tab.
+    // Used as a fallback for the manual "click here to open it" link.
+    function openRateCard() {
+      window.open(RATE_CARD_URL, '_blank', 'noopener,noreferrer');
     }
 
     rateCardForm.addEventListener('submit', async (e) => {
@@ -880,6 +875,11 @@
         rateCardForm.reportValidity();
         return;
       }
+
+      // Open the popup *synchronously* during the user gesture so browsers
+      // don't block it. We point it at about:blank first and redirect once
+      // Formspree confirms; if the request fails, we close it.
+      const popup = window.open('about:blank', '_blank', 'noopener,noreferrer');
 
       rateCardSubmit.disabled = true;
       rateCardSubmit.querySelector('.ab-rate-submit-label').textContent = 'Sending…';
@@ -894,23 +894,35 @@
 
         if (!res.ok) throw new Error('Non-OK response');
 
-        // Trigger download, swap form for success state
-        triggerDownload();
+        // Redirect the pre-opened tab to the rate card
+        if (popup && !popup.closed) {
+          popup.location.href = RATE_CARD_URL;
+        }
+
+        // Swap form for success state
         rateCardForm.hidden = true;
         rateCardSuccess.hidden = false;
 
-        // If user clicks "click here to retry", trigger again
+        // Manual fallback for users whose browser blocked the popup
         const manual = document.getElementById('rateCardManual');
         if (manual) {
+          manual.setAttribute('href', RATE_CARD_URL);
           manual.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            triggerDownload();
+            // Let the native target=_blank do its thing, but also call openRateCard()
+            // as a belt-and-braces fallback in case the href didn't take.
+            if (!RATE_CARD_URL) ev.preventDefault();
           });
         }
       } catch (_) {
+        // Close the placeholder popup so the user isn't left with a blank tab
+        if (popup && !popup.closed) popup.close();
+
+        const errLink = document.getElementById('rateCardErrorLink');
+        if (errLink) errLink.setAttribute('href', RATE_CARD_URL);
+
         rateCardError.hidden = false;
         rateCardSubmit.disabled = false;
-        rateCardSubmit.querySelector('.ab-rate-submit-label').textContent = 'Email me the rate card';
+        rateCardSubmit.querySelector('.ab-rate-submit-label').textContent = 'Open the rate card';
       }
     });
   </script>
