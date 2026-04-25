@@ -305,6 +305,15 @@
   background: var(--clr-dark);
 }
 
+/* Invisible spacer so cards without a badge still align their H3
+   with cards that have a badge */
+.ab-card-flag.ab-flag-spacer {
+  background: transparent;
+  color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
 .ab-card h3 {
   font-size: 1.125rem;
   letter-spacing: -0.015em;
@@ -459,82 +468,16 @@
 
 .ab-who-foot strong { color: var(--clr-dark); }
 
-/* ── Founder section ── */
-.ab-founder {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 3rem;
-  align-items: start;
+/* Inline link inside body copy (e.g. "Read more about Nick →") */
+.ab-inline-link {
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--ease);
 }
 
-.ab-founder-visual {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.ab-founder-avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: var(--clr-dark);
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 2.25rem;
-  font-weight: var(--fw-extrabold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: -0.03em;
-  box-shadow: var(--shadow-md);
-}
-
-.ab-founder-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.ab-founder-stat {
-  background: var(--clr-bg);
-  border-radius: var(--radius-md);
-  padding: 0.875rem 0.75rem;
-  text-align: center;
-  box-shadow: var(--shadow-card);
-}
-
-.ab-founder-stat-num {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: var(--fw-extrabold);
-  color: var(--clr-dark);
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.ab-founder-stat-label {
-  display: block;
-  font-size: 0.625rem;
-  font-weight: var(--fw-medium);
-  color: var(--clr-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-top: 0.2rem;
-  line-height: 1.3;
-}
-
-.ab-founder-content p {
-  font-size: 1rem;
-  color: var(--clr-body);
-  line-height: 1.75;
-  margin-bottom: 1rem;
-  max-width: 62ch;
-}
-
-.ab-founder-content p:last-child { margin-bottom: 0; }
+.ab-inline-link:hover { color: var(--clr-accent-dk); }
 
 /* ── Closing CTA + Cal.com ── */
 .ab-cta {
@@ -598,13 +541,13 @@
     0 0 0 1px rgba(255,255,255,.06),
     0 24px 56px rgba(0,0,0,.4),
     0 4px 12px rgba(0,0,0,.2);
-  min-height: 720px;
+  min-height: 620px;
   position: relative;
 }
 
 #ab-cal-inline {
   width: 100%;
-  min-height: 720px;
+  min-height: 620px;
 }
 
 .ab-cal-fallback {
@@ -647,9 +590,11 @@
   .ab-scenarios { grid-template-columns: 1fr; }
   .ab-diff-grid { gap: 2rem; }
 
-  .ab-founder {
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
+  /* Stack the ladder foot at tablet — text and buttons squashed
+     together when forced side-by-side */
+  .ab-ladder-foot {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -657,38 +602,17 @@
   .ab-diff-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .ab-ladder { grid-template-columns: 1fr; }
 
-  .ab-founder {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  .ab-cal-wrapper { min-height: 560px; }
+  #ab-cal-inline { min-height: 560px; }
 
-  .ab-founder-visual {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .ab-founder-stats {
-    flex: 1;
-    min-width: 220px;
-  }
-
-  .ab-ladder-foot {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .ab-cal-wrapper { min-height: 620px; }
-  #ab-cal-inline { min-height: 620px; }
+  /* Hide the hero watermark on mobile — too literal at small widths */
+  .ab-pillars-watermark { display: none; }
 }
 
 @media (max-width: 480px) {
   .ab-hero h1 { font-size: 2rem; }
   .ab-hero-cta { flex-direction: column; align-items: stretch; }
   .ab-hero-cta .btn { width: 100%; justify-content: center; }
-
-  .ab-founder-visual { flex-direction: column; align-items: center; }
-  .ab-founder-stats { width: 100%; }
 }
 
 /* ── Rate card modal ── */
