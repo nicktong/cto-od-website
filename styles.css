@@ -981,36 +981,40 @@ p { max-width: 68ch; }
 }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
   width: 100%;
 }
 
 .stat {
   background: transparent;
   border-radius: 0;
-  padding: 0;
+  padding: 0 0 0 1rem;
   text-align: left;
   box-shadow: none;
   border-left: 2px solid var(--clr-accent);
-  padding-left: 0.875rem;
+  display: grid;
+  grid-template-columns: minmax(0, auto) 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
 }
 
 .stat-num {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--clr-dark);
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.015em;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .stat-label {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: var(--fw-semibold);
   color: var(--clr-muted);
   text-transform: uppercase;
