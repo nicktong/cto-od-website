@@ -12,7 +12,19 @@
       "Bash(python3 -c \":*)",
       "Bash(python3 /tmp/gen_og_v3.py)",
       "Bash(python3 -c \"import base64; print\\(base64.b64encode\\(b''web''\\).decode\\(\\)\\); print\\(base64.b64decode\\(''d2Vi''\\).decode\\(\\)\\)\")",
-      "Bash(python3 -:*)"
+      "Bash(python3 -:*)",
+      "WebFetch(domain:unmind.com)",
+      "WebFetch(domain:vaultplatform.com)",
+      "WebFetch(domain:capitalise.com)",
+      "WebFetch(domain:ets-riskmanagement.com)",
+      "WebFetch(domain:shootgardening.com)",
+      "Bash(curl -sI \"https://logo.clearbit.com/unmind.com\")",
+      "Bash(curl -sv \"https://logo.clearbit.com/unmind.com\")",
+      "Bash(\"/Users/nicktong/Documents/CTO on:*)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

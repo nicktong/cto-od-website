@@ -662,6 +662,16 @@ p { max-width: 68ch; }
   gap: 1.25rem;
 }
 
+/* 3-card variant: centered, narrower max-width */
+.cards-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+/* Add breathing room when a dark callout follows a cards grid */
+.cards-grid + .pricing-callout { margin-top: 3.5rem; }
+
 .card {
   background: var(--clr-bg);
   border-radius: var(--radius-lg);
