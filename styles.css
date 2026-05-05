@@ -1160,9 +1160,14 @@ p { max-width: 68ch; }
   align-items: center;
 }
 
+.testimonial:first-child blockquote {
+  width: 100%;
+  max-width: 64ch;
+  text-align: center;
+}
+
 .testimonial:first-child blockquote p {
-  max-width: 60ch;
-  margin-inline: auto;
+  text-align: center;
 }
 
 .testimonial:first-child blockquote p::before {
@@ -1172,6 +1177,15 @@ p { max-width: 68ch; }
 
 .testimonial:first-child figcaption {
   justify-content: center;
+  width: 100%;
+}
+
+/* Highlighter on dark background: switch from yellow band to yellow bold text */
+.testimonial:first-child .hi {
+  background: none;
+  color: var(--clr-highlight);
+  font-weight: var(--fw-semibold);
+  padding: 0;
 }
 
 .testimonial:hover {
