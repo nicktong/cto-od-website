@@ -1155,7 +1155,23 @@ p { max-width: 68ch; }
 /* Featured testimonial gets darker bg for visual hierarchy */
 .testimonial:first-child {
   background: var(--clr-dark);
-  padding: 2.5rem 3rem;
+  padding: 3rem 3rem 2.5rem;
+  text-align: center;
+  align-items: center;
+}
+
+.testimonial:first-child blockquote p {
+  max-width: 60ch;
+  margin-inline: auto;
+}
+
+.testimonial:first-child blockquote p::before {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.testimonial:first-child figcaption {
+  justify-content: center;
 }
 
 .testimonial:hover {
