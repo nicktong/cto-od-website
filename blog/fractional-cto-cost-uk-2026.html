@@ -37,35 +37,13 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="blog.css" />
+  <script src="/js/site-chrome.js" defer></script>
 </head>
 <body>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="../" class="logo" aria-label="CTO on Demand – home">
-        <span class="logo-tagline">CTO on Demand</span>
-      </a>
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <a href="../#who">Who I Work With</a>
-        <a href="../#what">What I Do</a>
-        <a href="../#how">How I Work</a>
-        <a href="../#about">About</a>
-        <a href="index.html" class="nav-active">Blog</a>
-        <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Book a Call</a>
-      </nav>
-      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="../#who"  class="mobile-link">Who I Work With</a>
-      <a href="../#what" class="mobile-link">What I Do</a>
-      <a href="../#how"  class="mobile-link">How I Work</a>
-      <a href="../#about" class="mobile-link">About</a>
-      <a href="index.html" class="mobile-link">Blog</a>
-      <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-cta">Book a 30-minute Call</a>
-    </nav>
-  </header>
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="blog"></site-header>
 
   <main>
     <div class="blog-breadcrumb">
@@ -297,14 +275,10 @@
   </footer>
 
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', () => { const isOpen = mobileMenu.classList.toggle('is-open'); menuToggle.classList.toggle('is-open', isOpen); menuToggle.setAttribute('aria-expanded', String(isOpen)); });
     document.querySelectorAll('.email-obf').forEach(el => { const addr = atob(el.dataset.u) + '\u0040' + atob(el.dataset.d); const link = document.createElement('a'); link.href = 'mailto:' + addr; link.className = 'footer-link'; link.innerHTML = el.innerHTML.replace(/<span class="email-text">.*?<\/span>/, '<span>' + addr + '</span>'); el.replaceWith(link); });
     const form = document.getElementById('contactForm'); const submitBtn = document.getElementById('submitBtn');
     if (form) { form.addEventListener('submit', async (e) => { e.preventDefault(); if (!form.checkValidity()) { form.reportValidity(); return; } submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; document.getElementById('formError').hidden = true; try { const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }); if (res.ok) { form.hidden = true; document.getElementById('formSuccess').hidden = false; } else throw new Error(); } catch (_) { document.getElementById('formError').hidden = false; submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; } }); }
     const tocLinks = document.querySelectorAll('.toc-list a'); const headings = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean); if (headings.length) { const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { tocLinks.forEach(a => a.classList.remove('toc-active')); const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`); if (active) active.classList.add('toc-active'); } }); }, { rootMargin: '-20% 0px -75% 0px' }); headings.forEach(h => obs.observe(h)); }
-    window.addEventListener('scroll', () => { document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
   </script>
 
 </body>

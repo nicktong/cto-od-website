@@ -63,42 +63,14 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="ai-brain.css" />
+  <script src="/js/site-chrome.js" defer></script>
 </head>
 
 <body class="ab-page">
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="CTO on Demand – home">
-        <span class="logo-tagline">CTO on Demand</span>
-      </a>
-
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <a href="/#who">Who I Work With</a>
-        <a href="/#what">What I Do</a>
-        <a href="/#how">How I Work</a>
-        <a href="/#about">About</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/blog/">Blog</a>
-        <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Book a Call</a>
-      </nav>
-
-      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="/#who"     class="mobile-link">Who I Work With</a>
-      <a href="/#what"    class="mobile-link">What I Do</a>
-      <a href="/#how"     class="mobile-link">How I Work</a>
-      <a href="/#about"   class="mobile-link">About</a>
-      <a href="/#faq"     class="mobile-link">FAQ</a>
-      <a href="/blog/"    class="mobile-link">Blog</a>
-      <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-cta">Book a 30-minute Call</a>
-    </nav>
-  </header>
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="ai-brain"></site-header>
 
   <main>
 
@@ -657,29 +629,8 @@
 
   <!-- ===================== SCRIPTS ===================== -->
   <script>
-    // ── Mobile menu ──────────────────────────────────────────
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open', isOpen);
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // ── Sticky header shadow ──────────────────────────────────
-    const siteHeader = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      siteHeader.classList.toggle('scrolled', window.scrollY > 8);
-    }, { passive: true });
+    // Mobile menu + sticky header shadow are handled inside the
+    // <site-header> Web Component (js/site-chrome.js).
 
     // ── Scroll-in animations ──────────────────────────────────
     const animateObserver = new IntersectionObserver((entries) => {

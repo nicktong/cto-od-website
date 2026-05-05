@@ -110,58 +110,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="/js/site-chrome.js" defer></script>
 </head>
 <body>
 
-  <!-- ===================== TOPBAR ANNOUNCEMENT ===================== -->
-  <div class="topbar" role="region" aria-label="Availability announcement">
-    <div class="container topbar-inner">
-      <span class="topbar-dot" aria-hidden="true"></span>
-      <span class="topbar-text">
-        <strong>2 fractional CTO slots open for Q2.</strong> Booking discovery calls now.
-      </span>
-      <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="topbar-cta">
-        Book a call <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="logo" aria-label="CTO on Demand – back to top">
-        <span class="logo-tagline">CTO on Demand</span>
-      </a>
-
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <a href="#who">Who I Work With</a>
-        <a href="#what">What I Do</a>
-        <a href="#method">Method</a>
-        <a href="#ai-brain">AI Brain</a>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="blog/">Blog</a>
-        <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Book a Call</a>
-      </nav>
-
-      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#who"      class="mobile-link">Who I Work With</a>
-      <a href="#what"     class="mobile-link">What I Do</a>
-      <a href="#method"   class="mobile-link">The Method</a>
-      <a href="#how"      class="mobile-link">How I Work</a>
-      <a href="#ai-brain" class="mobile-link">AI Brain</a>
-      <a href="#about"    class="mobile-link">About</a>
-      <a href="#process"  class="mobile-link">Process</a>
-      <a href="#faq"      class="mobile-link">FAQ</a>
-      <a href="blog/"     class="mobile-link">Blog</a>
-      <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-cta">Book a 30-minute Call</a>
-    </nav>
-  </header>
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="home"></site-header>
 
   <main>
 
@@ -296,7 +251,7 @@
           <ul>
             <li><span class="nfy-x" aria-hidden="true">×</span> You want a hands-on engineer to write production code week-to-week.</li>
             <li><span class="nfy-x" aria-hidden="true">×</span> You're pre-product, pre-team, and need someone to build the MVP themselves.</li>
-            <li><span class="nfy-x" aria-hidden="true">×</span> Your product has a net-negative social impact — defence, gambling, exploitative ad-tech.</li>
+            <li><span class="nfy-x" aria-hidden="true">×</span> You're in defence, gambling, or exploitative ad-tech.</li>
             <li><span class="nfy-x" aria-hidden="true">×</span> You're looking for a body to fill a chair. The value here is in the partnership.</li>
           </ul>
         </div>
@@ -1043,29 +998,8 @@
     // Only hide [data-animate] elements once JS has confirmed it can run them.
     document.documentElement.classList.add('js');
 
-    // ── Mobile menu ──────────────────────────────────────────
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('is-open');
-      menuToggle.classList.toggle('is-open', isOpen);
-      menuToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // ── Sticky header shadow ──────────────────────────────────
-    const siteHeader = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      siteHeader.classList.toggle('scrolled', window.scrollY > 8);
-    }, { passive: true });
+    // Mobile menu + sticky header shadow are handled inside the
+    // <site-header> Web Component (js/site-chrome.js).
 
     // ── Scroll-in animations ──────────────────────────────────
     const animateObserver = new IntersectionObserver((entries) => {
@@ -1080,26 +1014,6 @@
     document.querySelectorAll('[data-animate]').forEach(el => {
       animateObserver.observe(el);
     });
-
-    // ── Active nav highlighting ───────────────────────────────
-    const navLinks  = document.querySelectorAll('.nav-desktop a[href^="#"]');
-    const sections  = Array.from(navLinks)
-      .map(a => document.querySelector(a.getAttribute('href')))
-      .filter(Boolean);
-
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('nav-active'));
-          const active = document.querySelector(
-            `.nav-desktop a[href="#${entry.target.id}"]`
-          );
-          if (active) active.classList.add('nav-active');
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-
-    sections.forEach(s => navObserver.observe(s));
 
     // ── Email obfuscation ─────────────────────────────────────
     // Base64-encoded parts assembled at runtime so the raw address
