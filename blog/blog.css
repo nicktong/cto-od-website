@@ -610,36 +610,48 @@
   border-bottom: 1px solid var(--clr-border);
 }
 
+/* Flexbox search wrapper — avoids absolute-positioning issues on iOS */
 .blog-search-wrap {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   max-width: 400px;
+  padding: 0 0.875rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  background: var(--clr-bg);
+  transition: border-color var(--ease);
   margin-bottom: 1.25rem;
 }
 
+.blog-search-wrap:focus-within {
+  border-color: var(--clr-accent);
+}
+
 .blog-search-icon {
-  position: absolute;
-  left: 0.875rem;
-  top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   color: var(--clr-muted);
   pointer-events: none;
+  display: block;
 }
 
 .blog-search-input {
-  width: 100%;
-  padding: 0.625rem 1rem 0.625rem 2.5rem;
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius-md);
+  flex: 1;
+  min-width: 0;
+  padding: 0.625rem 0;
+  border: none;
+  outline: none;
   font-size: 0.9375rem;
   font-family: var(--font-body);
   color: var(--clr-dark);
-  background: var(--clr-bg);
-  transition: border-color var(--ease);
-  outline: none;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.blog-search-input:focus {
-  border-color: var(--clr-accent);
+.blog-search-input::-webkit-search-decoration,
+.blog-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 
 .blog-search-input::placeholder {
@@ -654,6 +666,8 @@
 }
 
 .blog-tag-pill {
+  -webkit-appearance: none;
+  appearance: none;
   padding: 0.3em 0.875em;
   border-radius: 99px;
   border: 1px solid var(--clr-border);
@@ -663,6 +677,7 @@
   font-family: var(--font-body);
   color: var(--clr-muted);
   cursor: pointer;
+  white-space: nowrap;
   transition: border-color var(--ease), background var(--ease), color var(--ease);
   text-decoration: none;
 }
@@ -727,6 +742,31 @@
   font-size: 1.0625rem;
   color: var(--clr-dark);
   margin-bottom: 0.5rem;
+}
+
+/* ── Filter bar mobile overrides ── */
+@media (max-width: 640px) {
+  .blog-search-wrap {
+    max-width: 100%;
+  }
+
+  .blog-tag-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .blog-tag-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-tag-pill {
+    font-size: 0.75rem;
+    padding: 0.28em 0.75em;
+  }
 }
 
 /* Prompt callout blocks in articles */
