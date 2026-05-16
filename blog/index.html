@@ -49,90 +49,203 @@
       <div class="container">
         <span class="section-tag">Insights &amp; Guides</span>
         <h1>Engineering Leadership for Funded Startups</h1>
-        <p>Practical thinking on fractional CTO services, building engineering teams, navigating technical decisions, and leading technology organisations at Seed to Series A, written from the field, not the consulting deck.</p>
+        <p>Practical thinking on fractional CTO services, AI systems for founders, engineering teams, and technical decisions at Seed to Series A — written from the field, not the consulting deck.</p>
       </div>
     </section>
 
+    <!-- ── Filter bar ── -->
+    <div class="container">
+      <div class="blog-filter-bar">
+        <div class="blog-search-wrap">
+          <svg class="blog-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input class="blog-search-input" id="blogSearch" type="search" placeholder="Search posts…" aria-label="Search posts" />
+        </div>
+        <div class="blog-tag-pills" role="group" aria-label="Filter by topic">
+          <button class="blog-tag-pill is-active" data-tag="">All</button>
+          <button class="blog-tag-pill" data-tag="ai-brain">AI Brain</button>
+          <button class="blog-tag-pill" data-tag="ai">AI &amp; Automation</button>
+          <button class="blog-tag-pill" data-tag="founders">Founders</button>
+          <button class="blog-tag-pill" data-tag="fractional-cto">Fractional CTO</button>
+          <button class="blog-tag-pill" data-tag="leadership">Leadership</button>
+          <button class="blog-tag-pill" data-tag="engineering">Engineering</button>
+          <button class="blog-tag-pill" data-tag="workshops">Workshops</button>
+        </div>
+      </div>
+    </div>
+
     <!-- ── Blog grid ── -->
     <div class="container">
-      <div class="blog-grid" role="list">
+      <div class="blog-grid" id="blogGrid" role="list">
 
-        <!-- Featured post: spans 2 columns -->
-        <a class="blog-card blog-card-featured" href="what-is-a-fractional-cto.html" role="listitem">
-          <span class="blog-card-category">Fractional CTO Guide</span>
-          <h2>What is a Fractional CTO? The Complete Guide for UK Startups (2026)</h2>
-          <p>A fractional CTO gives your startup senior, C-suite technology leadership without the cost or commitment of a full-time hire. Here's exactly what they do, who needs one, and how to find the right fit for your stage. The most-read guide on this topic for the UK market.</p>
+        <!-- 16 May 2026 — Workshop teaser (featured) -->
+        <a class="blog-card blog-card-featured" href="live-ai-workshops-coming-soon.html" role="listitem"
+           data-tags="workshops,ai,training" data-date="2026-05-16">
+          <span class="blog-card-category">Workshops</span>
+          <h2>Coming Soon: Real-Time AI Workshops</h2>
+          <p>The thing most founders tell me isn't "AI doesn't work." It's "I wish I'd started six months ago." Getting the setup right is the hard part — and the reason most setups stall is that there's no one in the room when things don't quite click. That's what I'm building next: a live, structured training programme with real sessions, real builds, and a one-on-one with me.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="workshops">Workshops</span>
+            <span class="blog-card-tag" data-tag="ai">AI &amp; Automation</span>
+            <span class="blog-card-tag" data-tag="training">Training</span>
+          </div>
           <div class="blog-card-footer">
-            <span class="blog-card-date">5 March 2026</span>
-            <span class="blog-card-read-time">9 min read</span>
+            <span class="blog-card-date">16 May 2026</span>
+            <span class="blog-card-read-time">3 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="business-partner-not-just-a-technologist.html" role="listitem">
+        <!-- 9 May 2026 — Advanced AI agent stack -->
+        <a class="blog-card" href="build-your-first-ai-agent-stack.html" role="listitem"
+           data-tags="ai,ai-brain,founders,automation" data-date="2026-05-09">
+          <span class="blog-card-category">AI Brain</span>
+          <h2>Stop Asking One AI to Do Everything. Build a Stack Instead.</h2>
+          <p>Your AI setup worked brilliantly for two weeks. Then the outputs drifted, the tone went slightly off, and you stopped trusting it. This is one of the most common patterns I see — and the fix is simpler than you'd expect.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="ai-brain">AI Brain</span>
+            <span class="blog-card-tag" data-tag="ai">AI &amp; Automation</span>
+            <span class="blog-card-tag" data-tag="founders">Founders</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">9 May 2026</span>
+            <span class="blog-card-read-time">7 min read</span>
+          </div>
+        </a>
+
+        <!-- 4 May 2026 — Business partner -->
+        <a class="blog-card" href="business-partner-not-just-a-technologist.html" role="listitem"
+           data-tags="fractional-cto,leadership,strategy" data-date="2026-05-04">
           <span class="blog-card-category">Fractional CTO</span>
           <h2>More Than a Technologist: Why a Fractional CTO Is a Business Partner First</h2>
           <p>The most valuable thing a fractional CTO does isn't technical. It's understanding the business first, then making sure technology decisions support it, and translating between the two in language founders and boards can act on.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="fractional-cto">Fractional CTO</span>
+            <span class="blog-card-tag" data-tag="leadership">Leadership</span>
+          </div>
           <div class="blog-card-footer">
             <span class="blog-card-date">4 May 2026</span>
             <span class="blog-card-read-time">8 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="fractional-cto-cost-uk-2026.html" role="listitem">
-          <span class="blog-card-category">Pricing</span>
-          <h2>How Much Does a Fractional CTO Cost in the UK? (2026)</h2>
-          <p>Retainer rates from £3k–£7k/month, day rates, what drives the variation, and a straight comparison to full-time CTO costs.</p>
+        <!-- 2 May 2026 — Beginner AI brain -->
+        <a class="blog-card" href="why-founders-get-5-percent-from-ai.html" role="listitem"
+           data-tags="ai,ai-brain,founders,productivity" data-date="2026-05-02">
+          <span class="blog-card-category">AI Brain</span>
+          <h2>Why Most Founders Are Getting 5% From Their AI Tools</h2>
+          <p>You're paying for Claude every month. You use it for a handful of things. And you've probably thought "it's useful, but I'm not sure it's saving me that much time." You're right — it isn't. Not yet. But that's not the tool's fault.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="ai-brain">AI Brain</span>
+            <span class="blog-card-tag" data-tag="ai">AI &amp; Automation</span>
+            <span class="blog-card-tag" data-tag="founders">Founders</span>
+          </div>
           <div class="blog-card-footer">
-            <span class="blog-card-date">26 February 2026</span>
-            <span class="blog-card-read-time">8 min read</span>
+            <span class="blog-card-date">2 May 2026</span>
+            <span class="blog-card-read-time">6 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="first-90-days-fractional-cto.html" role="listitem">
+        <!-- 11 March 2026 — First 90 days -->
+        <a class="blog-card" href="first-90-days-fractional-cto.html" role="listitem"
+           data-tags="fractional-cto,process,leadership" data-date="2026-03-11">
           <span class="blog-card-category">Process</span>
           <h2>The First 90 Days: What a Fractional CTO Actually Does</h2>
           <p>A month-by-month breakdown of what a well-structured fractional CTO engagement looks like in practice, from day one through the end of the first quarter.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="fractional-cto">Fractional CTO</span>
+            <span class="blog-card-tag" data-tag="leadership">Leadership</span>
+          </div>
           <div class="blog-card-footer">
             <span class="blog-card-date">11 March 2026</span>
             <span class="blog-card-read-time">10 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="fractional-cto-vs-interim-cto.html" role="listitem">
+        <!-- 5 March 2026 — What is a fractional CTO -->
+        <a class="blog-card" href="what-is-a-fractional-cto.html" role="listitem"
+           data-tags="fractional-cto,guide,startups" data-date="2026-03-05">
+          <span class="blog-card-category">Fractional CTO Guide</span>
+          <h2>What is a Fractional CTO? The Complete Guide for UK Startups (2026)</h2>
+          <p>A fractional CTO gives your startup senior, C-suite technology leadership without the cost or commitment of a full-time hire. Here's exactly what they do, who needs one, and how to find the right fit for your stage.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="fractional-cto">Fractional CTO</span>
+            <span class="blog-card-tag" data-tag="guide">Guide</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">5 March 2026</span>
+            <span class="blog-card-read-time">9 min read</span>
+          </div>
+        </a>
+
+        <!-- 26 February 2026 — Cost -->
+        <a class="blog-card" href="fractional-cto-cost-uk-2026.html" role="listitem"
+           data-tags="fractional-cto,pricing" data-date="2026-02-26">
+          <span class="blog-card-category">Pricing</span>
+          <h2>How Much Does a Fractional CTO Cost in the UK? (2026)</h2>
+          <p>Retainer rates from £3k–£7k/month, day rates, what drives the variation, and a straight comparison to full-time CTO costs.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="fractional-cto">Fractional CTO</span>
+            <span class="blog-card-tag" data-tag="pricing">Pricing</span>
+          </div>
+          <div class="blog-card-footer">
+            <span class="blog-card-date">26 February 2026</span>
+            <span class="blog-card-read-time">8 min read</span>
+          </div>
+        </a>
+
+        <!-- 18 February 2026 — Fractional vs Interim -->
+        <a class="blog-card" href="fractional-cto-vs-interim-cto.html" role="listitem"
+           data-tags="fractional-cto,guide" data-date="2026-02-18">
           <span class="blog-card-category">Fractional CTO Guide</span>
           <h2>Fractional CTO vs Interim CTO: What's the Difference?</h2>
-          <p>Both give you senior technology leadership without a permanent hire. But they serve fundamentally different needs, here's how to choose.</p>
+          <p>Both give you senior technology leadership without a permanent hire. But they serve fundamentally different needs — here's how to choose.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="fractional-cto">Fractional CTO</span>
+            <span class="blog-card-tag" data-tag="guide">Guide</span>
+          </div>
           <div class="blog-card-footer">
             <span class="blog-card-date">18 February 2026</span>
             <span class="blog-card-read-time">7 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="psychological-safety-engineering-teams.html" role="listitem">
+        <!-- 28 January 2026 — Psychological safety -->
+        <a class="blog-card" href="psychological-safety-engineering-teams.html" role="listitem"
+           data-tags="leadership,engineering,culture" data-date="2026-01-28">
           <span class="blog-card-category">Engineering Leadership</span>
           <h2>Psychological Safety: The Most Underrated Engineering Leadership Tool</h2>
           <p>The research is unambiguous. High-performing engineering teams share one quality above all others. Here's how to build it, in practice, not in theory.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="leadership">Leadership</span>
+            <span class="blog-card-tag" data-tag="engineering">Engineering</span>
+          </div>
           <div class="blog-card-footer">
             <span class="blog-card-date">28 January 2026</span>
             <span class="blog-card-read-time">10 min read</span>
           </div>
         </a>
 
-        <!-- Standard post -->
-        <a class="blog-card" href="ai-agents-engineering-leadership.html" role="listitem">
+        <!-- 10 January 2026 — AI agents leadership -->
+        <a class="blog-card" href="ai-agents-engineering-leadership.html" role="listitem"
+           data-tags="ai,leadership,engineering" data-date="2026-01-10">
           <span class="blog-card-category">AI &amp; Engineering Leadership</span>
           <h2>From Management to Orchestration: Leading in the Age of AI Agents</h2>
-          <p>AI coding tools are changing engineering. But the real shift is in what engineering leadership itself looks like, and most leaders aren't thinking about it clearly.</p>
+          <p>AI coding tools are changing engineering. But the real shift is in what engineering leadership itself looks like — and most leaders aren't thinking about it clearly.</p>
+          <div class="blog-card-tags">
+            <span class="blog-card-tag" data-tag="ai">AI &amp; Automation</span>
+            <span class="blog-card-tag" data-tag="leadership">Leadership</span>
+            <span class="blog-card-tag" data-tag="engineering">Engineering</span>
+          </div>
           <div class="blog-card-footer">
             <span class="blog-card-date">10 January 2026</span>
             <span class="blog-card-read-time">11 min read</span>
           </div>
         </a>
+
+        <!-- No results -->
+        <div class="blog-no-results" id="blogNoResults" role="status" aria-live="polite">
+          <h3>No posts match your search</h3>
+          <p>Try a different keyword or clear the filters.</p>
+        </div>
 
       </div><!-- /blog-grid -->
     </div>
@@ -214,9 +327,85 @@
   </footer>
 
   <script>
-    document.querySelectorAll('.email-obf').forEach(el => { const addr = atob(el.dataset.u) + '\u0040' + atob(el.dataset.d); const link = document.createElement('a'); link.href = 'mailto:' + addr; link.className = 'footer-link'; link.innerHTML = el.innerHTML.replace(/<span class="email-text">.*?<\/span>/, '<span>' + addr + '</span>'); el.replaceWith(link); });
+    // Email deobfuscation
+    document.querySelectorAll('.email-obf').forEach(el => { const addr = atob(el.dataset.u) + '@' + atob(el.dataset.d); const link = document.createElement('a'); link.href = 'mailto:' + addr; link.className = 'footer-link'; link.innerHTML = el.innerHTML.replace(/<span class="email-text">.*?<\/span>/, '<span>' + addr + '</span>'); el.replaceWith(link); });
+
+    // Contact form
     const form = document.getElementById('contactForm'); const submitBtn = document.getElementById('submitBtn');
     if (form) { form.addEventListener('submit', async (e) => { e.preventDefault(); if (!form.checkValidity()) { form.reportValidity(); return; } submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; document.getElementById('formError').hidden = true; try { const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }); if (res.ok) { form.hidden = true; document.getElementById('formSuccess').hidden = false; } else throw new Error(); } catch (_) { document.getElementById('formError').hidden = false; submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; } }); }
+
+    // Blog filter + search
+    (function () {
+      const grid = document.getElementById('blogGrid');
+      const cards = Array.from(grid.querySelectorAll('.blog-card'));
+      const searchInput = document.getElementById('blogSearch');
+      const pills = Array.from(document.querySelectorAll('.blog-tag-pill'));
+      const noResults = document.getElementById('blogNoResults');
+
+      let activeTag = '';
+      let searchTerm = '';
+
+      function getUrlTag() {
+        return new URLSearchParams(window.location.search).get('tag') || '';
+      }
+
+      function setUrlTag(tag) {
+        const url = new URL(window.location.href);
+        tag ? url.searchParams.set('tag', tag) : url.searchParams.delete('tag');
+        history.replaceState(null, '', url.toString());
+      }
+
+      function applyFilter() {
+        let count = 0;
+        cards.forEach(card => {
+          const tags = (card.dataset.tags || '').split(',');
+          const text = (card.querySelector('h2').textContent + ' ' + card.querySelector('p').textContent).toLowerCase();
+          const tagMatch = !activeTag || tags.includes(activeTag);
+          const searchMatch = !searchTerm || text.includes(searchTerm);
+          const show = tagMatch && searchMatch;
+          card.classList.toggle('is-hidden', !show);
+          if (show) count++;
+        });
+        noResults.classList.toggle('is-visible', count === 0);
+      }
+
+      function setPill(tag) {
+        pills.forEach(p => p.classList.toggle('is-active', p.dataset.tag === tag));
+      }
+
+      // Init from URL
+      activeTag = getUrlTag();
+      setPill(activeTag);
+      applyFilter();
+
+      // Search
+      searchInput.addEventListener('input', () => {
+        searchTerm = searchInput.value.trim().toLowerCase();
+        applyFilter();
+      });
+
+      // Filter pills
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          activeTag = pill.dataset.tag;
+          setPill(activeTag);
+          setUrlTag(activeTag);
+          applyFilter();
+        });
+      });
+
+      // Card tags — click sets active filter
+      grid.addEventListener('click', e => {
+        const tagEl = e.target.closest('.blog-card-tag');
+        if (!tagEl) return;
+        e.preventDefault();
+        e.stopPropagation();
+        activeTag = tagEl.dataset.tag;
+        setPill(activeTag);
+        setUrlTag(activeTag);
+        applyFilter();
+      });
+    }());
   </script>
 
 </body>
