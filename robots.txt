@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ctoondemand.co.uk/sitemap.xml
+Sitemap: https://www.ctoondemand.co.uk/sitemap.xml
