@@ -1,4 +1,60 @@
+# robots.txt for ctoondemand.co.uk
+# Last updated: 2026-05-20
+#
+# Default policy: full crawl access for every well-behaved bot.
+# Per Google's "Optimizing your website for generative AI features on Google Search":
+# we want to be indexed, snippet-eligible, and discoverable by AI training systems
+# so the site can appear in AI Overviews, AI Mode, and third-party AI answers.
+
 User-agent: *
+Allow: /
+
+# Google's general crawler — also feeds AI Overviews and AI Mode via the Search index.
+User-agent: Googlebot
+Allow: /
+
+# Google image crawler (AI Overviews surfaces images).
+User-agent: Googlebot-Image
+Allow: /
+
+# Google's AdsBot — relevant if/when we run Google Ads.
+User-agent: AdsBot-Google
+Allow: /
+
+# Google-Extended: opt-in signal for Gemini grounding and AI training.
+# Explicitly allowed so the site is usable for AI grounding.
+User-agent: Google-Extended
+Allow: /
+
+# Bing / Copilot — second-largest search & AI answer engine.
+User-agent: Bingbot
+Allow: /
+
+# OpenAI search crawler (powers ChatGPT search citations).
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI training/grounding crawler.
+User-agent: GPTBot
+Allow: /
+
+# Anthropic / Claude search crawler.
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity search crawler.
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence / Siri.
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI.
+User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://ctoondemand.co.uk/sitemap.xml
