@@ -4,3 +4,9 @@ node_modules/
 .claude/launch.json
 .claude/hooks/sync-gstack-docs.log
 .gstack/
+
+# Node / Playwright (added for /book test infra)
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/

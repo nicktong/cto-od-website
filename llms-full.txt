@@ -7,7 +7,6 @@
 ---
 
 # Home — CTO on Demand
-
 URL: https://ctoondemand.co.uk/
 
 Fractional & Interim CTO Services
@@ -211,7 +210,6 @@ Yes, supporting the search and appointment of a permanent CTO is often a natural
 ---
 
 # About Nick Tong
-
 URL: https://ctoondemand.co.uk/about/
 
 25+
@@ -319,7 +317,6 @@ A fast-scaling marketplace had technical ambition but no engineering function to
 ---
 
 # The Partner CTO Method
-
 URL: https://ctoondemand.co.uk/method/
 
 The Partner CTO Method
@@ -399,7 +396,6 @@ And I won't work with companies whose product has net-negative social impact.
 ---
 
 # Services and Pricing
-
 URL: https://ctoondemand.co.uk/services/
 
 Four Ways to Engage, Depending on Your Stage
@@ -515,7 +511,6 @@ The whole point of fractional engagement is flexibility. The principles that gov
 ---
 
 # AI Brain
-
 URL: https://ctoondemand.co.uk/ai-brain/
 
 Stop copy-pasting into your AI. Start running your business through it.
@@ -656,10 +651,60 @@ If that sounds like you, the Audit is the right first step.
 
 ---
 
+# Book a Call
+URL: https://ctoondemand.co.uk/book/
+
+Let's talk
+
+Send a brief, or pick a time.
+
+A 30-minute discovery call. No pitch, no deck — an honest read on
+whether and how I can help.
+
+Draft restored from your last visit. Clear it
+
+We couldn't send this. Check your connection and try again, or
+email me directly at web@ctoondemand.co.uk.
+
+Thanks. I'll be in touch.
+
+I'll read your brief and reply within one working day. — Nick
+
+Want a slot in the meantime? Pick a time below →
+
+Or grab a slot directly →
+
+Calendar didn't load —
+book directly at cal.com →
+
+25+ Years
+In tech
+
+Seed – A
+Sweet spot
+
+Tech for good
+Primary focus
+
+If you've landed here cold
+
+Twenty-five years in technology leadership. Co-founder and CTO at
+Unmind (Series C). VP Technology at
+Vault Platform (acquired by Diligent in 2025). Now
+fractional, focused on tech for good.
+
+I work as a partner at the table, not just a technical hire. The work
+is technical; the value is in understanding the business first.
+
+About Nick →
+The Method →
+How I Work →
+
+---
+
 # Blog posts
 
 ## What is a Fractional CTO? The Complete Guide for UK Startups (2026)
-
 URL: https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html
 
 Fractional CTO Guide
@@ -812,7 +857,6 @@ Read article →
 ---
 
 ## How Much Does a Fractional CTO Cost in the UK? (2026 Pricing Guide)
-
 URL: https://ctoondemand.co.uk/blog/fractional-cto-cost-uk-2026.html
 
 Pricing
@@ -959,7 +1003,6 @@ Read article →
 ---
 
 ## Fractional CTO vs Interim CTO: What's the Difference?
-
 URL: https://ctoondemand.co.uk/blog/fractional-cto-vs-interim-cto.html
 
 Fractional CTO Guide
@@ -1101,7 +1144,6 @@ Read article →
 ---
 
 ## The First 90 Days: What a Fractional CTO Actually Does
-
 URL: https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html
 
 Process
@@ -1258,7 +1300,6 @@ Read article →
 ---
 
 ## More Than a Technologist: Why a Fractional CTO Is a Business Partner First
-
 URL: https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html
 
 Fractional CTO
@@ -1371,7 +1412,6 @@ Read article →
 ---
 
 ## Psychological Safety: The Most Underrated Engineering Leadership Tool
-
 URL: https://ctoondemand.co.uk/blog/psychological-safety-engineering-teams.html
 
 Engineering Leadership
@@ -1510,7 +1550,6 @@ Read article →
 ---
 
 ## From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
-
 URL: https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html
 
 AI & Engineering Leadership
@@ -1651,7 +1690,6 @@ Read article →
 ---
 
 ## Why Most Founders Are Getting 5% From Their AI Tools
-
 URL: https://ctoondemand.co.uk/blog/why-founders-get-5-percent-from-ai.html
 
 AI Brain
@@ -1757,7 +1795,6 @@ See the AI Brain →
 ---
 
 ## Stop Asking One AI to Do Everything. Build a Stack Instead.
-
 URL: https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html
 
 AI Brain
@@ -1880,7 +1917,6 @@ See the AI Brain →
 ---
 
 ## You Don't Need a Content Team. You Need a System.
-
 URL: https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html
 
 AI Brain
@@ -1942,7 +1978,6 @@ See the AI Brain →
 ---
 
 ## Coming Soon: Real-Time AI Workshops
-
 URL: https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html
 
 Workshops

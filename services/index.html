@@ -79,6 +79,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
   <script src="/js/site-chrome.js" defer></script>
+  <script src="/js/book-config.js" defer></script>
+  <script src="/js/storage.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/consent-banner.js" defer></script>
 </head>
 <body>
 
@@ -119,7 +123,7 @@
             </div>
             <p style="flex:1">An honest conversation about your situation, what's on your radar, and whether and how I can help. No pitch, no deck, no follow-up sequence.</p>
             <p style="font-size:.85rem;color:var(--clr-muted);margin-top:1rem"><strong style="color:var(--clr-dark)">Best for:</strong> founders testing fit before committing.</p>
-            <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="margin-top:1rem;justify-content:center">Book a call</a>
+            <a href="/book/" class="btn btn-ghost" style="margin-top:1rem;justify-content:center">Book a call</a>
           </article>
 
           <article class="card" data-animate data-delay="1" style="display:flex;flex-direction:column">
@@ -257,7 +261,7 @@
             about whether and how this approach fits.
           </p>
           <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
-            <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a 30-minute Call</a>
+            <a href="/book/" class="btn btn-primary">Book a 30-minute Call</a>
             <a href="/method/" class="btn btn-ghost">See the method</a>
           </div>
         </header>
@@ -267,6 +271,7 @@
   </main>
 
   <!-- ===================== RATE CARD MODAL ===================== -->
+  <!-- Form input rows use the shared .form-row class from styles.css. -->
   <style>
     .rc-modal { position:fixed; inset:0; z-index:1000; display:none; align-items:center; justify-content:center; padding:1rem; }
     .rc-modal.is-open { display:flex; }
@@ -276,10 +281,6 @@
     .rc-modal-close:hover { color:#000; }
     .rc-modal h3 { margin:0 0 .5rem; font-family:var(--font-display); font-size:1.4rem; }
     .rc-modal-intro { color:var(--clr-muted); font-size:.95rem; margin-bottom:1.5rem; }
-    .rc-form-row { display:flex; flex-direction:column; gap:.4rem; margin-bottom:1rem; }
-    .rc-form-row label { font-size:.85rem; font-weight:600; }
-    .rc-form-row input { padding:.65rem .85rem; border:1px solid #d4d4d4; border-radius:.5rem; font:inherit; font-size:1rem; }
-    .rc-form-row input:focus { outline:2px solid var(--clr-accent, #1756E8); outline-offset:1px; border-color:transparent; }
     .rc-success { text-align:center; padding:1rem 0; }
     .rc-success svg { color:#16a34a; margin-bottom:.5rem; }
     .rc-error { color:#dc2626; font-size:.9rem; margin-top:.5rem; }
@@ -297,15 +298,15 @@
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
         <input type="hidden" name="_subject" value="Fractional CTO rate card request" />
         <input type="hidden" name="source" value="services page rate card request" />
-        <div class="rc-form-row">
+        <div class="form-field">
           <label for="rcName">Your name <span aria-hidden="true" style="color:#dc2626">*</span></label>
           <input type="text" id="rcName" name="name" required autocomplete="name" placeholder="Jane Smith" />
         </div>
-        <div class="rc-form-row">
+        <div class="form-field">
           <label for="rcEmail">Email <span aria-hidden="true" style="color:#dc2626">*</span></label>
           <input type="email" id="rcEmail" name="email" required autocomplete="email" placeholder="jane@company.com" />
         </div>
-        <div class="rc-form-row">
+        <div class="form-field">
           <label for="rcCompany">Company <span style="font-weight:400;color:var(--clr-muted)">(optional)</span></label>
           <input type="text" id="rcCompany" name="company" autocomplete="organization" placeholder="Your company name" />
         </div>
@@ -339,7 +340,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <span class="email-text">web&#8203;[at]&#8203;ctoondemand&#8203;.co.uk</span>
           </span>
-          <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer" class="footer-link">Book a Call</a>
+          <a href="/book/" class="footer-link">Book a Call</a>
         </nav>
       </div>
     </div>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Primary SEO -->
+  <title>Book a Call | Nick Tong, Fractional CTO | CTO on Demand</title>
+  <meta name="description" content="Send a brief or pick a time. 30-minute discovery call with Nick Tong, fractional CTO. UK-based, tech-for-good focus." />
+  <link rel="canonical" href="https://ctoondemand.co.uk/book/" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://ctoondemand.co.uk/book/" />
+  <meta property="og:title"       content="Book a Call | Nick Tong, Fractional CTO" />
+  <meta property="og:description" content="Send a brief or pick a time. 30-minute discovery call with a fractional CTO." />
+  <meta property="og:image"       content="https://ctoondemand.co.uk/og-image.png" />
+  <meta property="og:locale"      content="en_GB" />
+  <meta property="og:site_name"   content="CTO on Demand" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Book a Call | Nick Tong, Fractional CTO" />
+  <meta name="twitter:description" content="30-minute discovery call. No pitch, no deck." />
+  <meta name="twitter:image"       content="https://ctoondemand.co.uk/og-image.png" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1829'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter%2Csystem-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23ffffff'%3ENT%3C/text%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Book a Call | Nick Tong, Fractional CTO",
+    "url": "https://ctoondemand.co.uk/book/",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Nick Tong",
+      "jobTitle": "Fractional CTO",
+      "url": "https://ctoondemand.co.uk/about/",
+      "sameAs": ["https://www.linkedin.com/in/nicktong-cto"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "web@ctoondemand.co.uk",
+        "availableLanguage": "en"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ctoondemand.co.uk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Book a Call",
+        "item": "https://ctoondemand.co.uk/book/"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <script src="/js/site-chrome.js" defer></script>
+  <script src="/js/book-config.js" defer></script>
+  <script src="/js/storage.js" defer></script>
+  <script src="/js/analytics.js" defer></script>
+  <script src="/js/consent-banner.js" defer></script>
+  <script src="/js/book-form.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="book"></site-header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="book-hero">
+      <div class="container">
+        <div data-animate data-delay="0">
+          <span class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Let's talk
+          </span>
+          <h1>Send a brief, or <span class="hi">pick a time</span>.</h1>
+          <p class="section-lead">
+            A 30-minute discovery call. No pitch, no deck &mdash; an honest read on
+            whether and how I can help.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORM SECTION ===================== -->
+    <section class="section" aria-labelledby="brief-heading" style="padding-top: clamp(2rem, 4vw, 3rem);">
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 id="brief-heading">Tell me <span class="hi">what's going on</span></h2>
+        </header>
+
+        <div class="brief-form" data-animate data-delay="1">
+
+          <!-- Draft restored note (hidden by default; shown by book-form.js when localStorage has a recent draft) -->
+          <div class="draft-restored-note" id="draftRestoredNote" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 5 3 12 10 12"/></svg>
+            <span>Draft restored from your last visit. <a href="#" id="clearDraftLink">Clear it</a></span>
+          </div>
+
+          <!-- Error banner (hidden until submit fails) -->
+          <div class="brief-form-error" id="briefFormError" role="alert" hidden>
+            We couldn't send this. Check your connection and try again, or
+            email me directly at <a href="mailto:web@ctoondemand.co.uk">web@ctoondemand.co.uk</a>.
+          </div>
+
+          <form id="briefForm" novalidate>
+            <!-- Honeypot: bots fill anything; humans don't see it. -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true"
+                   style="position:absolute;left:-9999px;opacity:0" />
+
+            <div class="form-field">
+              <label for="bfName">Your name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="bfName" name="name" required autocomplete="name" placeholder="Jane Smith" />
+            </div>
+
+            <div class="form-field">
+              <label for="bfEmail">Email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="bfEmail" name="email" required autocomplete="email" placeholder="jane@company.com" />
+            </div>
+
+            <div class="form-field">
+              <label for="bfCompany">Company <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="bfCompany" name="company" required autocomplete="organization" placeholder="Your company" />
+            </div>
+
+            <div class="form-field">
+              <label for="bfStage">Stage <span class="required" aria-hidden="true">*</span></label>
+              <select id="bfStage" name="stage" required>
+                <option value="" disabled selected>Select stage…</option>
+                <option value="Pre-seed">Pre-seed</option>
+                <option value="Seed">Seed</option>
+                <option value="Series A">Series A</option>
+                <option value="Scale-up">Scale-up</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="bfSituation">What's the situation? <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="bfSituation" name="situation" rows="6" required
+                        placeholder="A few sentences on where you are and what you're trying to figure out."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Send the brief</button>
+            <p class="form-reassurance">
+              I read every brief myself. You'll hear back within one working day.
+            </p>
+          </form>
+
+          <!-- Success card (hidden until submit succeeds; book-form.js swaps the form for this) -->
+          <div class="brief-form-success" id="briefFormSuccess" role="status" aria-live="polite" hidden>
+            <div class="brief-form-success-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Thanks. I'll be in touch.</h3>
+            <p>I'll read your brief and reply within one working day. &mdash; Nick</p>
+            <div class="brief-form-success-meantime">
+              Want a slot in the meantime? <a href="#calendar">Pick a time below &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Divider between the form and calendar paths -->
+        <p class="book-divider" data-animate data-delay="2">
+          <a href="#calendar">Or grab a slot directly &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CALENDAR SECTION ===================== -->
+    <section class="section section-alt" id="calendar" aria-labelledby="calendar-heading">
+      <div class="container">
+        <header class="section-header" data-animate>
+          <h2 id="calendar-heading">Pick a time that <span class="hi">works</span></h2>
+          <p class="section-lead">30 minutes. Wherever you are in the world.</p>
+        </header>
+
+        <div class="calcom-embed-wrap" data-animate data-delay="1">
+          <!-- Locked-height skeleton prevents CLS while cal.com loads -->
+          <div id="calcom-embed" class="calcom-skeleton" aria-label="Booking calendar loading"></div>
+
+          <!-- Fallback if cal.com script fails to load -->
+          <noscript>
+            <div class="calcom-fallback" style="display:block">
+              JavaScript is required to load the inline calendar.
+              <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer">Book directly on cal.com &rarr;</a>
+            </div>
+          </noscript>
+          <div class="calcom-fallback" id="calcomFallback">
+            Calendar didn't load &mdash;
+            <a href="https://cal.com/nick-tong-cto" target="_blank" rel="noopener noreferrer">book directly at cal.com &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT NICK STRIP ===================== -->
+    <section class="section" aria-labelledby="book-about-heading">
+      <div class="container">
+        <div class="book-about" data-animate>
+
+          <div class="book-about-visual">
+            <div class="book-about-photo">
+              <img src="/images/nick-tong.jpg" alt="Nick Tong, Fractional CTO" loading="lazy" />
+            </div>
+            <div class="book-about-stats">
+              <div class="book-about-stat">
+                <span class="book-about-stat-num">25+ Years</span>
+                <span class="book-about-stat-label">In tech</span>
+              </div>
+              <div class="book-about-stat">
+                <span class="book-about-stat-num">Seed &ndash; A</span>
+                <span class="book-about-stat-label">Sweet spot</span>
+              </div>
+              <div class="book-about-stat">
+                <span class="book-about-stat-num">Tech for good</span>
+                <span class="book-about-stat-label">Primary focus</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-about-content">
+            <h3 id="book-about-heading">If you've landed here cold</h3>
+            <p>
+              Twenty-five years in technology leadership. Co-founder and CTO at
+              <strong>Unmind</strong> (Series C). VP Technology at
+              <strong>Vault Platform</strong> (acquired by Diligent in 2025). Now
+              fractional, focused on tech for good.
+            </p>
+            <p>
+              I work as a partner at the table, not just a technical hire. The work
+              is technical; the value is in understanding the business first.
+            </p>
+            <div class="book-about-links">
+              <a href="/about/" class="btn btn-ghost">About Nick &rarr;</a>
+              <a href="/method/" class="btn btn-ghost">The Method &rarr;</a>
+              <a href="/services/" class="btn btn-ghost">How I Work &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner" style="grid-template-columns: 1fr; max-width: 720px;">
+      <div class="footer-info">
+        <div class="footer-brand">
+          <span class="logo-name">Nick Tong</span>
+          <span class="logo-divider" aria-hidden="true">|</span>
+          <span class="logo-tagline">CTO on Demand</span>
+        </div>
+        <p class="footer-tagline">A technology partner for funded startups and growth-stage companies, understanding your business first, then making technology work for it.</p>
+        <nav class="footer-links" aria-label="Social and contact links">
+          <a href="https://linkedin.com/in/nicktong-cto" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <span class="footer-link email-obf" data-u="d2Vi" data-d="Y3Rvb25kZW1hbmQuY28udWs=">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="email-text">web&#8203;[at]&#8203;ctoondemand&#8203;.co.uk</span>
+          </span>
+          <a href="/book/" class="footer-link">Book a Call</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Nick Tong. All rights reserved.</p>
+        <p><a href="/blog/" style="color:inherit;opacity:.6;text-decoration:none">Blog</a>&ensp;&middot;&ensp;Fractional &amp; Interim CTO Services</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== CAL.COM INLINE EMBED ===================== -->
+  <!-- Bootloader script as documented at https://cal.com/docs/core-features/embedding -->
+  <script>
+    (function (C, A, L) {
+      const p = function (a, ar) { a.q.push(ar); };
+      const d = C.document;
+      C.Cal = C.Cal || function () {
+        const cal = C.Cal; const ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]);
+          } else { p(cal, ar); }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    (function () {
+      const cfg = (window.BOOK_CONFIG && window.BOOK_CONFIG.calcom) || {};
+      const ns = cfg.namespace || '30min';
+      Cal("init", ns, { origin: "https://cal.com" });
+      Cal.ns[ns]("inline", {
+        elementOrSelector: "#calcom-embed",
+        config: { layout: cfg.layout || "month_view" },
+        calLink: cfg.slug || "nick-tong-cto"
+      });
+      Cal.ns[ns]("ui", {
+        hideEventTypeDetails: false,
+        layout: cfg.layout || "month_view",
+        theme: cfg.theme || "light",
+        styles: { branding: { brandColor: cfg.brandColor || "#1756E8" } }
+      });
+
+      /* Skeleton fallback — show if embed hasn't replaced the skeleton in 10s */
+      setTimeout(function () {
+        const skel = document.getElementById('calcom-embed');
+        if (skel && skel.classList.contains('calcom-skeleton') && !skel.querySelector('iframe')) {
+          const fb = document.getElementById('calcomFallback');
+          if (fb) fb.style.display = 'block';
+        }
+      }, 10000);
+
+      /* When cal.com injects its iframe, remove the skeleton state + track */
+      const observer = new MutationObserver(function (mutations, obs) {
+        const skel = document.getElementById('calcom-embed');
+        if (skel && skel.querySelector('iframe')) {
+          skel.classList.remove('calcom-skeleton');
+          skel.removeAttribute('aria-label');
+          if (typeof window.track === 'function') window.track('book_calendar_loaded', {});
+          obs.disconnect();
+        }
+      });
+      const target = document.getElementById('calcom-embed');
+      if (target) observer.observe(target, { childList: true, subtree: true });
+    })();
+
+    /* Track cal.com bookingSuccessful postMessage */
+    window.addEventListener('message', function (e) {
+      if (!e || !e.data) return;
+      const data = (typeof e.data === 'string') ? (function () {
+        try { return JSON.parse(e.data); } catch (err) { return null; }
+      })() : e.data;
+      if (!data) return;
+      if (data.type === 'bookingSuccessful' || (data.payload && data.payload.eventType)) {
+        if (typeof window.track === 'function') {
+          window.track('generate_lead', { form_type: 'calendar' });
+          window.track('book_calendar_slot_selected', {});
+        }
+      }
+    });
+  </script>
+
+  <script>
+    document.documentElement.classList.add('js');
+
+    /* Scroll-in animations (same pattern as the rest of the site) */
+    const animateObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          animateObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-animate]').forEach(el => animateObserver.observe(el));
+
+    /* Email obfuscation — same pattern as the rest of the site */
+    document.querySelectorAll('.email-obf').forEach(el => {
+      const u = atob(el.dataset.u);
+      const d = atob(el.dataset.d);
+      const addr = u + '@' + d;
+      const link = document.createElement('a');
+      link.href = 'mailto:' + addr;
+      link.className = 'footer-link';
+      link.innerHTML = el.innerHTML.replace(/<span class="email-text">.*?<\/span>/, '<span>' + addr + '</span>');
+      el.replaceWith(link);
+    });
+  </script>
+</body>
+</html>

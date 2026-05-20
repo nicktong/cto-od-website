@@ -11,6 +11,7 @@ Nick Tong is a fractional and interim CTO based in the UK. Previously co-founder
 - [The Partner CTO Method](https://ctoondemand.co.uk/method/): The four-phase methodology — Listen, Translate, Build, Compound — used in every engagement.
 - [Services and Pricing](https://ctoondemand.co.uk/services/): Four engagement tiers — discovery call (free), 30-day tech audit (from £4,000), fractional CTO retainer (£3,000–£7,000/month), interim CTO (from £1,000/day). Transparent UK pricing, no lock-in, audit fee credited if you upgrade.
 - [AI Brain](https://ctoondemand.co.uk/ai-brain/): Installation service that turns a Claude subscription into a compounding business asset for founders, in two to four weeks.
+- [Book a Call](https://ctoondemand.co.uk/book/): Send a brief or pick a time for a 30-minute discovery call. Form + Cal.com inline embed, no pitch deck.
 - [Blog](https://ctoondemand.co.uk/blog/): Practical articles on fractional CTO services, engineering leadership, and AI in software teams.
 
 ## Blog posts

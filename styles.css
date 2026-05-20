@@ -226,6 +226,60 @@ p { max-width: 68ch; }
 
 .btn-full { width: 100%; justify-content: center; }
 
+/* ── 4a. Forms — shared input row pattern ── */
+/* Used by every form on the site (rate card on /services, brief on /book). */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-dark);
+}
+.form-field label .optional {
+  font-weight: var(--fw-normal);
+  color: var(--clr-muted);
+}
+.form-field label .required {
+  color: #dc2626;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 0.5rem;
+  font: inherit;
+  font-size: 1rem;
+  background: #fff;
+  color: var(--clr-body);
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 8rem;
+  line-height: 1.5;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+.form-field.has-error input,
+.form-field.has-error select,
+.form-field.has-error textarea {
+  border-color: #dc2626;
+}
+.form-field .field-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
 /* ── Not for you if… contrast block ── */
 .not-for-you {
   margin-top: 2.5rem;
@@ -1782,4 +1836,288 @@ p { max-width: 68ch; }
   .about-stats { width: 100%; }
 
   .footer-bottom-inner { flex-direction: column; text-align: center; }
+}
+
+/* ============================================================
+   Sitewide consent banner — minimal bottom strip
+   ============================================================ */
+
+.consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  border-top: 1px solid var(--clr-border);
+  box-shadow: 0 -4px 16px rgba(11, 24, 41, 0.08);
+}
+.consent-banner-inner {
+  max-width: var(--container-w);
+  margin-inline: auto;
+  padding: 0.75rem var(--container-px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.consent-banner-text {
+  font-size: 0.875rem;
+  color: var(--clr-body);
+  margin: 0;
+  max-width: none;
+}
+.consent-banner-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.consent-banner .btn-sm {
+  padding: 0.5em 1em;
+  font-size: 0.8125rem;
+}
+@media (max-width: 480px) {
+  .consent-banner-inner { flex-direction: column; align-items: stretch; text-align: center; }
+  .consent-banner-actions { justify-content: center; }
+}
+
+/* ============================================================
+   /book — booking page specific styles
+   ============================================================ */
+
+/* Brief form layout — centred, narrow column for focus */
+.brief-form {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.draft-restored-note {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--clr-muted);
+  background: var(--clr-accent-bg);
+  border: 1px solid rgba(23, 86, 232, 0.18);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.draft-restored-note[hidden] { display: none; }
+.draft-restored-note svg { flex-shrink: 0; color: var(--clr-accent); }
+.draft-restored-note a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-reassurance {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--clr-muted);
+  margin-top: 0.85rem;
+}
+
+.brief-form-error {
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  color: #b91c1c;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.brief-form-error a { color: inherit; text-decoration: underline; }
+
+/* Success card — replaces the form in-place after submit */
+.brief-form-success {
+  max-width: 560px;
+  margin-inline: auto;
+  text-align: center;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+.brief-form-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--clr-accent-bg);
+  color: var(--clr-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.brief-form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.5rem;
+}
+.brief-form-success p { color: var(--clr-body); margin-inline: auto; max-width: 38ch; }
+.brief-form-success-meantime {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--clr-border);
+  font-size: 0.9rem;
+  color: var(--clr-muted);
+}
+.brief-form-success-meantime a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
+}
+
+/* Or-grab-a-slot divider between the form and calendar sections */
+.book-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-block: 1rem 0;
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+  font-weight: var(--fw-medium);
+}
+.book-divider::before,
+.book-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border);
+}
+.book-divider a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
+}
+
+/* Cal.com inline embed — locked-height skeleton prevents CLS */
+.calcom-embed-wrap {
+  max-width: 960px;
+  margin-inline: auto;
+}
+#calcom-embed {
+  min-height: 620px;
+}
+.calcom-skeleton {
+  border-radius: var(--radius-lg);
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  position: relative;
+  overflow: hidden;
+}
+.calcom-skeleton::after {
+  content: "Loading calendar…";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+  animation: calcom-pulse 1.8s ease-in-out infinite;
+}
+@keyframes calcom-pulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+.calcom-fallback {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  color: var(--clr-muted);
+}
+.calcom-fallback a {
+  color: var(--clr-accent);
+  font-weight: var(--fw-semibold);
+}
+
+/* About-Nick strip — two-column on desktop, stacks on mobile */
+.book-about {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: start;
+  max-width: 920px;
+  margin-inline: auto;
+}
+.book-about-visual { display: flex; flex-direction: column; gap: 1.25rem; }
+.book-about-photo {
+  width: 240px;
+  height: 240px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.book-about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.book-about-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  width: 240px;
+}
+.book-about-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--clr-border);
+}
+.book-about-stat:first-child { border-top: none; padding-top: 0; }
+.book-about-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-dark);
+  letter-spacing: -0.01em;
+}
+.book-about-stat-label {
+  font-size: 0.75rem;
+  color: var(--clr-muted);
+  letter-spacing: 0.02em;
+}
+.book-about-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.85rem;
+}
+.book-about-content p {
+  color: var(--clr-body);
+  margin-bottom: 1.25rem;
+}
+.book-about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Hero proportions on /book — calm, form just below the fold */
+.book-hero {
+  padding-block: clamp(4rem, 7vw, 6rem) clamp(3rem, 5vw, 5rem);
+  text-align: center;
+}
+.book-hero h1 { margin-bottom: 1.25rem; }
+.book-hero .section-lead {
+  margin-top: 0.25rem;
+  font-size: 1.0625rem;
+  max-width: 560px;
+}
+
+/* Responsive — about-strip stacks under 720px */
+@media (max-width: 720px) {
+  .book-about {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .book-about-visual { align-items: center; }
+  .book-about-content h3,
+  .book-about-content p { max-width: 38ch; margin-inline: auto; }
+  .book-about-links { justify-content: center; }
+  #calcom-embed { min-height: 560px; }
 }
