@@ -8,10 +8,13 @@
   'use strict';
 
   window.BOOK_CONFIG = {
-    /* HubSpot Forms API — fill these before launch (Open item O1). */
+    /* HubSpot Forms API.
+       Region: na2 (informational — api.hsforms.com handles routing).
+       Form check link: https://424ule.share-na2.hsforms.com/2fahT77mmRS2fJBGdK1rTLg */
     hubspot: {
-      portalId: 'REPLACE_WITH_HUBSPOT_PORTAL_ID',
-      formGuid: 'REPLACE_WITH_HUBSPOT_FORM_GUID'
+      portalId: '245450210',
+      formGuid: '7da853ef-b9a6-452d-9f24-119d2b5ad32e',
+      region:   'na2'
     },
 
     /* Cal.com inline embed — confirm slug (Open item O4). */
