@@ -64,10 +64,6 @@ function validate(body) {
   return errors;
 }
 
-function composeMessage(stage, situation) {
-  return `[Stage: ${stage}]\n\n${situation}`;
-}
-
 async function upsertContact(token, fields) {
   const url = 'https://api.hubapi.com/crm/v3/objects/contacts';
   const payload = {
@@ -75,7 +71,10 @@ async function upsertContact(token, fields) {
       firstname: fields.name,
       email: fields.email,
       company: fields.company,
-      message: composeMessage(fields.stage, fields.situation),
+      message: fields.situation,
+      // Custom property created in HubSpot — dropdown:
+      //   Pre-seed / Seed / Series A / Scale-up / Other
+      funding_stage: fields.stage,
       // Source attribution so it's clear in CRM where the lead came from.
       hs_lead_status: 'NEW',
       hs_analytics_source: 'OFFLINE',
@@ -106,7 +105,8 @@ async function upsertContact(token, fields) {
           properties: {
             firstname: fields.name,
             company: fields.company,
-            message: composeMessage(fields.stage, fields.situation)
+            funding_stage: fields.stage,
+            message: fields.situation
           }
         })
       });
