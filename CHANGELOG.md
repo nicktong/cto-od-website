@@ -5,6 +5,21 @@ All notable changes to ctoondemand.co.uk are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 versioned as `MAJOR.MINOR.PATCH.MICRO` (4-digit) per the gstack convention.
 
+## [0.2.1.0] - 2026-05-20
+
+### Added
+- **Robots + Googlebot meta on every page** with `max-snippet:-1, max-image-preview:large, max-video-preview:-1`. These are what Google's "Optimizing your website for generative AI features on Google Search" guide explicitly references as the controls for AI Overviews and AI Mode. Without them, snippets are truncated and large images never surface in AI results.
+- **Sitemap rebuilt** to include all 18 URLs (4 blog posts and `/book/` were previously missing) with `<lastmod>` derived from `git log` so freshness signals reflect reality.
+- **robots.txt expanded** with explicit allow-list for Googlebot, Googlebot-Image, AdsBot-Google, Google-Extended (Gemini grounding/training), Bingbot, OAI-SearchBot, GPTBot, ClaudeBot, PerplexityBot, Applebot, Applebot-Extended, Meta-ExternalAgent. We want to be in every major AI assistant's index.
+- **Organization + WebSite JSON-LD** on the homepage, interlinked by `@id` with the existing Person schema, for Knowledge Graph eligibility.
+- **BreadcrumbList JSON-LD** on every inner page and blog post. AI Overviews use breadcrumbs for hierarchy when summarising sources.
+- **`vercel.json`** with security headers (HSTS preload, X-Content-Type-Options, Referrer-Policy, Permissions-Policy), `X-Robots-Tag` mirroring per-page meta, content-type rules for `/sitemap.xml`, `/robots.txt`, `/llms.txt`, `/llms-full.txt`, immutable 1-year cache for fonts and `/logos`, and a permanent `www.` → apex redirect to consolidate ranking signals on the canonical host.
+- **`/llms.txt` + `/llms-full.txt`** following the llmstxt.org spec. No major AI crawler honours this yet — Anthropic, OpenAI, Google, and Perplexity have all said publicly they parse HTML, not llms.txt. Treated as speculative insurance with near-zero maintenance cost.
+- **`/docs/gstack/`** mirrors `~/.gstack/projects/nicktong-cto-od-website/` (eng-review test plans, design-review tasks, review logs). A PostToolUse hook in `.claude/settings.json` keeps the mirror current after every Bash tool call so future gstack artefacts land in the repo automatically.
+
+### Changed
+- `/book/index.html` extended with the same SEO treatment: robots/googlebot meta + `BreadcrumbList` JSON-LD.
+
 ## [0.2.0.0] - 2026-05-20
 
 ### Added
