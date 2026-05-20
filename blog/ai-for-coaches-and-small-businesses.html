@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI for Coaches and Small Businesses: The Setup I Install for Clients | CTO on Demand</title>
+  <meta name="description" content="Most AI advice is written for founders. The same techniques unlock even more value for coaches and small business owners. Here's the setup I install for clients, what changes when you're not a founder, and a prompt library you can copy from." />
+  <meta name="author" content="Nick Tong" />
+  <link rel="canonical" href="https://ctoondemand.co.uk/blog/ai-for-coaches-and-small-businesses.html" />
+
+  <meta property="og:type"        content="article" />
+  <meta property="og:url"         content="https://ctoondemand.co.uk/blog/ai-for-coaches-and-small-businesses.html" />
+  <meta property="og:title"       content="AI for Coaches and Small Businesses: The Setup I Install for Clients" />
+  <meta property="og:description" content="Most AI advice is written for founders. The same techniques unlock even more value for coaches and small businesses. Here's how I set it up for them — with a downloadable prompt library." />
+  <meta property="og:image"       content="https://ctoondemand.co.uk/og-image.png" />
+  <meta property="og:site_name"   content="CTO on Demand" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1829'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter%2Csystem-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23ffffff'%3ENT%3C/text%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI for Coaches and Small Businesses: The Setup I Install for Clients",
+    "description": "Most AI advice is written for founders. The same techniques unlock even more value for coaches and small business owners. Here's the setup I install for clients, what changes when you're not a founder, and a prompt library you can copy from.",
+    "author": { "@type": "Person", "name": "Nick Tong", "url": "https://ctoondemand.co.uk" },
+    "publisher": { "@type": "Organization", "name": "CTO on Demand", "url": "https://ctoondemand.co.uk" },
+    "datePublished": "2026-05-20",
+    "dateModified": "2026-05-20",
+    "url": "https://ctoondemand.co.uk/blog/ai-for-coaches-and-small-businesses.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <script src="/js/site-chrome.js" defer></script>
+
+  <style>
+    /* ── Lead-magnet form card ── */
+    .lead-magnet {
+      background: linear-gradient(160deg, #0B1829 0%, #1a2a44 100%);
+      color: #fff;
+      border-radius: 1.25rem;
+      padding: 2rem 2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 20px 48px rgba(11,24,41,.18);
+    }
+    .lead-magnet h3 {
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .lead-magnet > p {
+      color: rgba(255,255,255,.72);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      max-width: 56ch;
+    }
+    .lead-magnet-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 0.625rem;
+      align-items: stretch;
+    }
+    .lead-magnet-form input {
+      font-family: inherit;
+      font-size: 0.9375rem;
+      padding: 0.7em 0.9em;
+      border-radius: 0.5rem;
+      border: 1.5px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      color: #fff;
+      transition: border-color .25s ease, background .25s ease;
+    }
+    .lead-magnet-form input::placeholder { color: rgba(255,255,255,.45); }
+    .lead-magnet-form input:focus {
+      outline: none;
+      border-color: #6BA3FF;
+      background: rgba(255,255,255,.12);
+    }
+    .lead-magnet-form button {
+      background: #1756E8;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.7em 1.3em;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .25s ease;
+      white-space: nowrap;
+    }
+    .lead-magnet-form button:hover { background: #1145C4; }
+    .lead-magnet-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .lead-magnet-note {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,.45);
+      margin-top: 0.875rem;
+      max-width: none;
+    }
+    .lead-magnet-success {
+      padding: 1rem 1.25rem;
+      background: rgba(34,197,94,.12);
+      border: 1px solid rgba(34,197,94,.3);
+      border-radius: 0.625rem;
+      color: #86efac;
+      font-size: 0.9375rem;
+    }
+    .lead-magnet-success a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    @media (max-width: 640px) {
+      .lead-magnet-form { grid-template-columns: 1fr; }
+    }
+
+    /* ── Inline prompt code block ── */
+    .article-body pre.prompt-block {
+      background: #0B1829;
+      color: #d8e3f1;
+      padding: 1.25rem 1.5rem;
+      border-radius: 0.625rem;
+      font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      white-space: pre-wrap;
+    }
+    .prompt-block .prompt-label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6BA3FF;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="blog"></site-header>
+
+  <main>
+    <div class="blog-breadcrumb">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <a href="../">Home</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <a href="index.html">Blog</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current">AI for Coaches and Small Businesses</span>
+        </nav>
+      </div>
+    </div>
+
+    <section class="article-hero">
+      <div class="container">
+        <div class="article-meta-row">
+          <a class="article-category" href="index.html">AI Brain</a>
+          <span class="article-date">20 May 2026</span>
+          <span class="article-read-time">9 min read</span>
+        </div>
+        <h1>AI for coaches and small businesses: the setup I install for clients (with prompts)</h1>
+        <p class="article-standfirst">Most of the AI advice I've written has been for founders. But the same techniques unlock even more value for coaches, consultants, and small business owners. Smaller stack, fewer integrations, clearer use cases. Here's what changes when you're not running a venture-backed startup, and the prompt library I send to clients on day one.</p>
+        <div class="article-author-row">
+          <div class="article-author-avatar" aria-hidden="true">NT</div>
+          <div class="article-author-meta">
+            <strong>Nick Tong</strong>
+            <span>Fractional CTO · CTO on Demand</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container article-layout">
+
+      <article class="article-body">
+
+        <p>If you've been reading the AI Brain posts on this blog, you'll have noticed they lean towards founders. That's not because founders are the only people who benefit. It's because they're the ones who tend to find me first, usually after their tenth investor conversation about "AI strategy."</p>
+
+        <p>But in the last six months the conversations have shifted. A career coach with 200 active clients. A bookkeeper running a one-person practice. A small agency owner doing the work of four people. They all pay for Claude or ChatGPT. They all use about five percent of what they're paying for. And honestly, the setup I install for them is faster to build, easier to maintain, and pays back inside a fortnight.</p>
+
+        <p>So here's the version of the AI Brain framework that's been hiding behind the founder-shaped posts: what changes when you're not raising a Series A, and what stays the same.</p>
+
+        <h2 id="whats-different">What's different when you're not a founder</h2>
+
+        <p>The diagnostic is the same. You probably already know the feeling I described in <a href="why-founders-get-5-percent-from-ai.html">Why Most Founders Are Getting 5% From Their AI Tools</a>: every new chat starts from scratch, the outputs need rewriting, nothing accumulates. The principle is the same too, three things working together: context, workflows, and voice.</p>
+
+        <p>What changes for coaches and small business owners is the <em>shape</em> of the setup:</p>
+
+        <ul>
+          <li><strong>Fewer integrations, more depth.</strong> A founder's stack might include Linear, Mixpanel, Stripe, HubSpot, Slack, Notion. A coach's stack is usually three things: Calendar, email, and notes. That's it. Less surface area, more time per integration.</li>
+          <li><strong>Voice matters more, not less.</strong> Coaches sell their voice. Small business owners build relationships on their voice. There's no marketing team to flatten it out. The persona file is the entire game.</li>
+          <li><strong>Repetition is heavier.</strong> A founder does an investor update once a month. A coach does session prep three times a day, every day. The compound time savings are bigger.</li>
+          <li><strong>The wins are softer to investors but harder to your evenings.</strong> No one needs to walk a VC through your meeting prep workflow. But the hour you save each evening on session notes is the hour you get to spend with your kids.</li>
+        </ul>
+
+        <p>That last bullet is the one that lands most often. The founders who hire me are doing it for leverage. The coaches and small business owners who hire me are doing it for their lives back.</p>
+
+        <h2 id="pick-the-right-tool">Move 1: Pick the right tool, not just the right tier</h2>
+
+        <p>Most people pay £20 a month for one AI tool and ask it to do everything. That's the first thing I change.</p>
+
+        <p>The honest answer is that different models are good at different things, and the difference is bigger than the marketing implies. Here's what I steer clients to, depending on what they're trying to do:</p>
+
+        <ul>
+          <li><strong>Claude</strong> for reasoning, writing in your voice, long documents, building workflows that need consistency. It's my default for almost everything client-facing.</li>
+          <li><strong>ChatGPT</strong> when you need images, infographics, or video (it owns Sora). Also strong for tasks where you want a slightly more confident, faster-to-an-answer style.</li>
+          <li><strong>Gemini</strong> if you live in Google Workspace. The way it pulls from your Drive, Gmail, and Calendar is genuinely smoother than the third-party connectors on the others.</li>
+          <li><strong>Grok</strong> when you need something with fewer guardrails. I rarely recommend it for client work, but it has its niche.</li>
+        </ul>
+
+        <p>The tier question matters too. The basic £20/month plan is enough for most coaches and most small businesses. You'll know you've outgrown it when you regularly hit usage caps mid-afternoon, or when you start running two or three workflows in parallel. The £100 tier is for heavier daily use. The £200 Pro tier is for people running a business through the tool, not just using it for work.</p>
+
+        <p>Within Claude specifically, you've got three models to choose from: Haiku is fast and cheap for simple tasks like summarising a meeting note. Sonnet is the everyday workhorse, balancing speed and intelligence. Opus is what you reach for when you need deep reasoning, complex synthesis, or a piece of psychology-style analysis. The default should be Sonnet. Promote to Opus only when you need it.</p>
+
+        <div class="article-callout">
+          <p><strong>A short rule of thumb.</strong> If a task makes you slightly nervous to delegate to a junior, use Opus or Sonnet with extended thinking. If you'd happily delegate it to a sharp intern, Sonnet is fine. If it's a one-paragraph rewrite or a quick summary, Haiku will do it in half the time for a fraction of the cost.</p>
+        </div>
+
+        <h2 id="connect-the-boring-stuff">Move 2: Connect the boring stuff</h2>
+
+        <p>This is the move that most people skip and then regret. Claude, ChatGPT, and Gemini all have native connectors to the tools you already use. Set them up once and you stop copy-pasting context for the rest of your career.</p>
+
+        <p>For a coach, the three I always wire up are Calendar, Gmail, and Granola (or whatever your meeting recorder is). Claude can now answer "what's the rest of my week look like?" without you describing it. It can draft a follow-up email and reference the actual conversation you had. It can prep for tomorrow's session using last session's transcript.</p>
+
+        <p>For a small business owner, add Stripe and a bookkeeping integration if you have one (Xero, FreeAgent, Quickbooks). Suddenly Claude can answer questions like "which invoices are overdue?" or "draft a chase email for everything over 30 days." That's the kind of question you'd otherwise spend twenty minutes pulling together yourself.</p>
+
+        <p>One thing nobody warns you about: most of these integrations are one account per integration at a time. If you've got a personal Gmail and a business Gmail, you'll need to pick one or do some account-switching gymnastics. Plan around it.</p>
+
+        <h2 id="three-workflows">Move 3: Build the three workflows that move the needle</h2>
+
+        <p>The mistake most people make is trying to set up fifteen things at once. The trick is to find the three things you do most often and turn just those into workflows. Everything else stays as ad-hoc chat for now.</p>
+
+        <p>For a coach, the three I install first are usually:</p>
+
+        <ol>
+          <li><strong>Session prep from notes.</strong> Yesterday's notes go in. Tomorrow's prep comes out: where you left off, the question to open with, the thing the client said they'd think about, and the one risk to watch for.</li>
+          <li><strong>Post-session capture.</strong> A transcript or a voice note goes in. Out comes a structured client record (themes, breakthroughs, blockers, agreed actions) and a short follow-up email in your voice.</li>
+          <li><strong>Programme design from a discovery call.</strong> Discovery call transcript in. A draft 8 or 12-week arc comes out, with session themes and the questions you'd use to open each one. You'll rewrite half of it. That's fine. The half you didn't rewrite is the half you got back.</li>
+        </ol>
+
+        <p>For a small business owner, the three are usually:</p>
+
+        <ol>
+          <li><strong>Quote from enquiry.</strong> Customer email goes in. A polished quote comes out, in your tone, with your pricing logic baked in.</li>
+          <li><strong>Invoice triage and chase.</strong> The inbox of receipts, invoices, and "remember to follow up on this" sticky notes goes in. A prioritised list comes out, plus drafted chasers for late payers.</li>
+          <li><strong>Daily ops brief.</strong> Today's calendar, the unread emails, today's Stripe activity. Out comes a 30-second read that tells you what needs your attention today and what's just noise.</li>
+        </ol>
+
+        <p>Here's the meeting-prep prompt I give coaches as a starting point. It assumes you've created a small <code>about-you.md</code> file in your Claude Project with two or three paragraphs on who you are, who you work with, and how you write. (The full library at the bottom of this post has the prompt for building that file, plus the rest of these workflows.)</p>
+
+        <pre class="prompt-block"><span class="prompt-label">Coach · Session prep from notes</span>
+You are helping me prep for a coaching session in the next hour.
+
+Inputs:
+&lt;client-notes&gt;
+[paste the last session's notes, the client's latest message,
+or a transcript]
+&lt;/client-notes&gt;
+
+&lt;goal&gt;
+[one line on what I want to achieve in this session]
+&lt;/goal&gt;
+
+Use about-you.md for context on how I coach. Use style.md for tone.
+
+Output, in this order:
+1. Where we left off (3 bullets, max)
+2. The one question I should open with
+3. Two things the client said last time that they probably haven't done
+4. One risk or watch-out for this session
+5. A 2-sentence intention for me as the coach
+
+Keep the whole thing under 200 words. No buzzwords.
+If anything's missing from the inputs, ask before you draft.</pre>
+
+        <p>You can lift that into a Claude Project today and have something working before the next session. It will not be perfect. The fix isn't a better prompt; it's iterating the <code>about-you.md</code> and <code>style.md</code> files in the project's knowledge base. After three or four sessions, the outputs stop needing edits.</p>
+
+        <h2 id="tighten-discipline">Move 4: Tighten the discipline</h2>
+
+        <p>This is the move that separates "I use AI sometimes" from "AI is genuinely part of my operating model." It's also the one that nobody talks about because it sounds boring.</p>
+
+        <p>Three small disciplines do most of the work:</p>
+
+        <p><strong>Keep your project instructions tight.</strong> About twenty lines. If you write a thousand-word prompt up front, every single request gets that thousand-word tax on top of it. The outputs get slower and worse. Cut to what you actually need every time. Promote optional context to the knowledge base instead.</p>
+
+        <p><strong>Don't upload raw documents to your knowledge base. Summarise first.</strong> Take your 60-page coaching manual, run it through Claude once with a prompt like "extract the key principles, frameworks, and decision rules as a structured reference document." Upload the structured reference, not the original. Smaller, tighter, more useful.</p>
+
+        <p><strong>Write a style file.</strong> Two short sections: how you write (sentence length, voice, what you sound like) and what you never write (banned phrases, AI tells, the words that make you wince). Mine bans "delve," "in the realm of," "leverage" as a verb, and any sentence that starts with "It's important to note." Yours will be different. The point is that you have one.</p>
+
+        <p>If you want a template for the style file, it's in the prompt library at the bottom of this post.</p>
+
+        <h2 id="stack-almanac">A side project that shows what's possible</h2>
+
+        <p>Over a couple of weekends earlier this year I built <a href="https://stackalmanac.com" target="_blank" rel="noopener noreferrer">Stack Almanac</a>, a personal project to scratch an itch. It's an AI-powered supplement tracker and advisor that adjusts recommendations based on your data, your goals, and your physiology (rather than the supplement industry's default assumption that everyone using it is a thirty-year-old man).</p>
+
+        <p>The reason I mention it: it took about 32 hours of focused work, mostly in Claude Code. Five years ago it would have been a six-month engineering project costing more than a hundred thousand pounds. That gap, what one person with Claude can ship now vs. what a small team used to ship, is the part of this story that most people haven't quite processed yet. It's also why my engagements look the way they do: an installation, not a permanent retainer.</p>
+
+        <p>Anyway, you don't need to build a supplement tracker to feel that gap. You'll feel it the first time the AI you've set up properly drafts a session note in your voice while you're still pouring the next coffee.</p>
+
+        <!-- ===================== LEAD MAGNET ===================== -->
+        <div class="lead-magnet" id="prompt-library">
+          <h3>Get the full prompt library</h3>
+          <p>Ten prompts I install for clients, covering the foundations (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Drop your email and I'll send you the link.</p>
+          <form class="lead-magnet-form" id="promptLibForm" action="https://formspree.io/f/xpqydglp" method="POST" novalidate>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="Prompt library download — AI for Coaches and Small Businesses" />
+            <input type="hidden" name="source" value="blog · ai-for-coaches-and-small-businesses" />
+            <input type="text"  name="name"  required autocomplete="name"  placeholder="Your name" />
+            <input type="email" name="email" required autocomplete="email" placeholder="you@yourbusiness.com" />
+            <button type="submit" id="promptLibBtn">Send me the library</button>
+          </form>
+          <p class="lead-magnet-note">No newsletter. No follow-up sequence. Just the library, with one short note from me on how to get started.</p>
+          <div class="lead-magnet-success" id="promptLibSuccess" hidden role="status" aria-live="polite">
+            <strong>Sent.</strong> The library is at <a href="../ai-brain/prompts/" target="_blank" rel="noopener noreferrer">ctoondemand.co.uk/ai-brain/prompts/</a> — opening it now. You'll also get an email confirmation.
+          </div>
+          <!--
+            HubSpot Forms embed (optional, paired with Formspree).
+            Replace YOUR_PORTAL_ID and YOUR_FORM_ID once you have them.
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                portalId: "YOUR_PORTAL_ID",
+                formId:   "YOUR_FORM_ID",
+                target:   "#promptLibHubspot"
+              });
+            </script>
+          -->
+        </div>
+
+        <h2 id="where-this-builds-on">Where this builds on what's already covered</h2>
+
+        <p>This post sits on top of three earlier posts on this blog. If you haven't read them yet, they're the foundation:</p>
+
+        <ul>
+          <li><a href="why-founders-get-5-percent-from-ai.html">Why Most Founders Are Getting 5% From Their AI Tools</a> — the diagnostic. Why most setups aren't compounding.</li>
+          <li><a href="build-your-first-ai-agent-stack.html">Stop Asking One AI to Do Everything. Build a Stack Instead.</a> — the architecture. Why you want multiple narrow agents rather than one wide one.</li>
+          <li><a href="ai-content-pipeline-founders.html">You Don't Need a Content Team. You Need a System.</a> — the pipeline pattern, applied to content but generalisable.</li>
+        </ul>
+
+        <p>This post is the one I'd send to a coach or a small business owner who's read those three and wants to know "OK but what's actually different for me?"</p>
+
+        <h2 id="if-you-want-help">If you want help installing this</h2>
+
+        <p>If you'd rather skip the trial-and-error and have someone install it properly with you, that's what <a href="../ai-brain/">AI Brain</a> is for. The Audit is a half-day diagnostic. The Starter installs your single highest-leverage workflow over two weeks. The Sprint is a four-week build that installs the whole framework, including a joint session with your co-founder or business partner. <a href="../ai-brain/#ladder">See the four ways to start</a> if you want pricing transparency.</p>
+
+        <p>Or just <a href="https://cal.com/nick-tong-cto/30min" target="_blank" rel="noopener noreferrer">book a 30-minute call</a> and we'll talk through whether AI Brain is actually the right fit for what you're trying to do. If it isn't, I'll tell you, and point you at something that is.</p>
+
+      </article>
+
+      <!-- ===================== SIDEBAR / TOC ===================== -->
+      <aside class="article-toc-wrapper" aria-label="Article contents">
+        <div class="article-toc">
+          <p class="article-toc-label">On this page</p>
+          <ol class="toc-list">
+            <li><a href="#whats-different">What's different when you're not a founder</a></li>
+            <li><a href="#pick-the-right-tool">Pick the right tool and tier</a></li>
+            <li><a href="#connect-the-boring-stuff">Connect the boring stuff</a></li>
+            <li><a href="#three-workflows">Three workflows that move the needle</a></li>
+            <li><a href="#tighten-discipline">Tighten the discipline</a></li>
+            <li><a href="#stack-almanac">A side project that shows what's possible</a></li>
+            <li><a href="#prompt-library">Get the prompt library</a></li>
+            <li><a href="#where-this-builds-on">Where this builds on</a></li>
+            <li><a href="#if-you-want-help">If you want help</a></li>
+          </ol>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- ===================== RELATED ARTICLES ===================== -->
+    <section class="article-related">
+      <div class="container">
+        <h2>Continue reading</h2>
+        <div class="related-grid">
+          <a class="related-card" href="why-founders-get-5-percent-from-ai.html">
+            <span class="related-card-category">AI Brain</span>
+            <h3>Why Most Founders Are Getting 5% From Their AI Tools</h3>
+            <p>The diagnostic, and what an AI brain actually is. The foundation post for everything else.</p>
+            <span class="related-card-arrow">Read article →</span>
+          </a>
+          <a class="related-card" href="build-your-first-ai-agent-stack.html">
+            <span class="related-card-category">AI Brain</span>
+            <h3>Stop Asking One AI to Do Everything. Build a Stack Instead.</h3>
+            <p>Why single-agent setups break and how to build a small stack of focused agents that stay reliable.</p>
+            <span class="related-card-arrow">Read article →</span>
+          </a>
+          <a class="related-card" href="ai-content-pipeline-founders.html">
+            <span class="related-card-category">AI Brain</span>
+            <h3>You Don't Need a Content Team. You Need a System.</h3>
+            <p>The same architectural shift, applied to content production.</p>
+            <span class="related-card-arrow">Read article →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-info">
+        <div class="footer-brand">
+          <span class="logo-name">Nick Tong</span>
+          <span class="logo-divider" aria-hidden="true">|</span>
+          <span class="logo-tagline">CTO on Demand</span>
+        </div>
+        <p class="footer-tagline">Senior technology leadership for funded startups and growth-stage companies, without the full-time hire.</p>
+        <nav class="footer-links" aria-label="Social and contact links">
+          <a href="https://linkedin.com/in/nicktong-cto" target="_blank" rel="noopener noreferrer" class="footer-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <span class="footer-link email-obf" data-u="d2Vi" data-d="Y3Rvb25kZW1hbmQuY28udWs=">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="email-text">web&#8203;[at]&#8203;ctoondemand&#8203;.co.uk</span>
+          </span>
+        </nav>
+      </div>
+      <div class="footer-form">
+        <h2 class="footer-form-heading">Get in Touch</h2>
+        <p>Tell me a little about your situation and I'll be in touch within one business day.</p>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpqydglp" method="POST" novalidate aria-label="Contact form">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">What's on your radar? <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your situation, what's the challenge and what are you hoping to achieve?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
+          <p class="form-note">* Required fields</p>
+        </form>
+        <div class="form-success" id="formSuccess" hidden aria-live="polite">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div><strong>Message sent, thanks!</strong><p>I'll be in touch within one business day.</p></div>
+        </div>
+        <div class="form-error" id="formError" hidden aria-live="polite">
+          <p>Something went wrong. Please try again, or email me directly.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Nick Tong. All rights reserved.</p>
+        <p><a href="index.html" style="color:inherit;opacity:.6">Blog</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Email de-obfuscation
+    document.querySelectorAll('.email-obf').forEach(el => { const addr = atob(el.dataset.u) + '@' + atob(el.dataset.d); const link = document.createElement('a'); link.href = 'mailto:' + addr; link.className = 'footer-link'; link.innerHTML = el.innerHTML.replace(/<span class="email-text">.*?<\/span>/, '<span>' + addr + '</span>'); el.replaceWith(link); });
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+        document.getElementById('formError').hidden = true;
+        try {
+          const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+          if (res.ok) { form.hidden = true; document.getElementById('formSuccess').hidden = false; }
+          else throw new Error();
+        } catch (_) {
+          document.getElementById('formError').hidden = false;
+          submitBtn.disabled = false; submitBtn.textContent = 'Send Message';
+        }
+      });
+    }
+
+    // Prompt library lead-magnet form
+    const libForm    = document.getElementById('promptLibForm');
+    const libBtn     = document.getElementById('promptLibBtn');
+    const libSuccess = document.getElementById('promptLibSuccess');
+    const LIB_URL    = '../ai-brain/prompts/';
+    if (libForm) {
+      libForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!libForm.checkValidity()) { libForm.reportValidity(); return; }
+
+        // Open the gated tab synchronously inside the user gesture so popup
+        // blockers don't kill it. Redirect once Formspree confirms.
+        const popup = window.open('about:blank', '_blank', 'noopener,noreferrer');
+
+        libBtn.disabled = true;
+        libBtn.textContent = 'Sending…';
+
+        try {
+          const res = await fetch(libForm.action, { method: 'POST', body: new FormData(libForm), headers: { 'Accept': 'application/json' } });
+          if (!res.ok) throw new Error();
+
+          if (popup && !popup.closed) popup.location.href = LIB_URL;
+          libForm.hidden = true;
+          libSuccess.hidden = false;
+        } catch (_) {
+          if (popup && !popup.closed) popup.close();
+          libBtn.disabled = false;
+          libBtn.textContent = 'Send me the library';
+          alert('Something went wrong sending the form. Please try again, or open the library directly at /ai-brain/prompts/');
+        }
+      });
+    }
+
+    // TOC active-link tracking
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const headings = Array.from(tocLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    if (headings.length) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            tocLinks.forEach(a => a.classList.remove('toc-active'));
+            const active = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+            if (active) active.classList.add('toc-active');
+          }
+        });
+      }, { rootMargin: '-20% 0px -75% 0px' });
+      headings.forEach(h => obs.observe(h));
+    }
+  </script>
+
+</body>
+</html>
