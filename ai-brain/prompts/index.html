@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../styles.css" />
-  <link rel="stylesheet" href="../ai-brain.css" />
+  <script src="/js/site-chrome.js" defer></script>
 
   <style>
     .pl-page { background: #FFFFFF; }
@@ -185,34 +185,9 @@
 
 <body class="pl-page">
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="CTO on Demand – home">
-        <span class="logo-tagline">CTO on Demand</span>
-      </a>
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <a href="/#who">Who I Work With</a>
-        <a href="/#what">What I Do</a>
-        <a href="/#how">How I Work</a>
-        <a href="/#about">About</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/blog/">Blog</a>
-        <a href="https://cal.com/nick-tong-cto/30min" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Book a Call</a>
-      </nav>
-      <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="/#who"     class="mobile-link">Who I Work With</a>
-      <a href="/#what"    class="mobile-link">What I Do</a>
-      <a href="/#about"   class="mobile-link">About</a>
-      <a href="/blog/"    class="mobile-link">Blog</a>
-      <a href="/ai-brain/" class="mobile-link">AI Brain</a>
-      <a href="https://cal.com/nick-tong-cto/30min" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-cta">Book a 30-minute Call</a>
-    </nav>
-  </header>
+  <!-- ===================== SHARED SITE CHROME ===================== -->
+  <site-topbar></site-topbar>
+  <site-header current="ai-brain"></site-header>
 
   <main>
 
@@ -753,12 +728,12 @@ Length: under 1,000 words.</div>
 
   </main>
 
-  <footer class="ab-footer-trust">
+  <footer style="background: var(--clr-section-alt); border-top: 1px solid var(--clr-border); padding-block: 2.5rem; text-align: center;">
     <div class="container">
-      <p>
-        <strong>CTO on Demand Limited.</strong> Registered in England and Wales. Built around capability transfer, not permanent retainer.
+      <p style="max-width: 70ch; margin-inline: auto; font-size: 0.875rem; color: var(--clr-muted); line-height: 1.7;">
+        <strong style="color: var(--clr-dark)">CTO on Demand Limited.</strong> Registered in England and Wales. Built around capability transfer, not permanent retainer.
       </p>
-      <p style="margin-top:1rem;font-size:0.8125rem">
+      <p style="margin-top: 1rem; font-size: 0.8125rem;">
         <a href="/" style="color:var(--clr-accent);text-decoration:none;font-weight:600">Main site</a>
         &nbsp;·&nbsp;
         <a href="/blog/" style="color:inherit;text-decoration:none">Blog</a>
@@ -771,17 +746,6 @@ Length: under 1,000 words.</div>
   </footer>
 
   <script>
-    // Mobile menu
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener('click', () => {
-        const isOpen = mobileMenu.classList.toggle('is-open');
-        menuToggle.classList.toggle('is-open', isOpen);
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-    }
-
     // Copy buttons on prompt blocks
     document.querySelectorAll('.pl-copy').forEach(btn => {
       btn.addEventListener('click', async () => {
