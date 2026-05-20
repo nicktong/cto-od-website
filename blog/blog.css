@@ -4,10 +4,10 @@
    ============================================================ */
 
 /* ── Article page layout ── */
+/* Hero uses the canonical warm cream background like the rest of the site.
+   The blue-gradient previously here made the blog feel disconnected. */
 .article-hero {
-  background:
-    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23,86,232,.1) 0%, transparent 55%),
-    linear-gradient(160deg, #EBF0FC 0%, #FFFFFF 50%);
+  background: var(--clr-bg);
   padding-block: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 3.5rem);
   border-bottom: 1px solid var(--clr-border);
 }
@@ -77,10 +77,24 @@
   gap: 0.875rem;
 }
 
+/* Real photo avatar for article author — matches /about treatment.
+   The initials-circle variant lived here previously; preserved as
+   .article-author-avatar.initials for any future use. */
 .article-author-avatar {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--clr-section-alt);
+}
+.article-author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.article-author-avatar.initials {
   background: var(--clr-dark);
   color: #fff;
   font-size: 0.75rem;
@@ -88,7 +102,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   letter-spacing: 0.02em;
 }
 
@@ -421,11 +434,11 @@
 }
 
 .related-card {
-  background: var(--clr-bg);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: var(--shadow-card);
-  transition: box-shadow var(--ease), transform var(--ease);
+  transition: border-color var(--ease), transform var(--ease);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -433,8 +446,8 @@
 }
 
 .related-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  border-color: var(--clr-accent);
+  transform: translateY(-1px);
 }
 
 .related-card-category {
@@ -468,9 +481,7 @@
 
 /* ── Blog index ── */
 .blog-hero {
-  background:
-    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(23,86,232,.1) 0%, transparent 55%),
-    linear-gradient(160deg, #EBF0FC 0%, #FFFFFF 50%);
+  background: var(--clr-bg);
   padding-block: clamp(3rem, 6vw, 5rem) clamp(2rem, 4vw, 3rem);
   border-bottom: 1px solid var(--clr-border);
 }
@@ -498,21 +509,24 @@
   grid-column: span 2;
 }
 
+/* Editorial card — subtle warm-cream border on cream-alt background.
+   No box-shadow (heavy shadows on a card grid read as AI-template SaaS).
+   Hover gets a 1px accent border + tiny lift instead. */
 .blog-card {
-  background: var(--clr-bg);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: 0.875rem;
-  transition: box-shadow var(--ease), transform var(--ease);
+  transition: border-color var(--ease), transform var(--ease);
   text-decoration: none;
 }
 
 .blog-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  border-color: var(--clr-accent);
+  transform: translateY(-1px);
 }
 
 .blog-card-category {
