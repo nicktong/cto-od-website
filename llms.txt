@@ -1,0 +1,40 @@
+# CTO on Demand — Nick Tong
+
+> Fractional and Interim CTO services for funded UK startups and growth-stage companies. A technology partner who starts by understanding the business, then makes technology decisions support where it's going. Seed to Series A sweet spot, 25+ years experience.
+
+Nick Tong is a fractional and interim CTO based in the UK. Previously co-founder and CTO at Unmind (Series C), VP Technology at Vault Platform (acquired by Diligent, 2025). The work is "business-first" technology leadership: listen, translate, build, compound. Pricing is published openly on the site; engagements run from a free 30-minute discovery call up to a full interim CTO appointment.
+
+## Core pages
+
+- [Home](https://ctoondemand.co.uk/): What CTO on Demand does, who it's for, and how an engagement starts.
+- [About Nick Tong](https://ctoondemand.co.uk/about/): Background, prior roles, and operating principles.
+- [The Partner CTO Method](https://ctoondemand.co.uk/method/): The four-phase methodology — Listen, Translate, Build, Compound — used in every engagement.
+- [Services and Pricing](https://ctoondemand.co.uk/services/): Four engagement tiers — discovery call (free), 30-day tech audit (from £4,000), fractional CTO retainer (£3,000–£7,000/month), interim CTO (from £1,000/day). Transparent UK pricing, no lock-in, audit fee credited if you upgrade.
+- [AI Brain](https://ctoondemand.co.uk/ai-brain/): Installation service that turns a Claude subscription into a compounding business asset for founders, in two to four weeks.
+- [Blog](https://ctoondemand.co.uk/blog/): Practical articles on fractional CTO services, engineering leadership, and AI in software teams.
+
+## Blog posts
+
+- [What is a Fractional CTO? The Complete Guide for UK Startups (2026)](https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html): Definition, scope, who needs one, how to evaluate fit.
+- [How Much Does a Fractional CTO Cost in the UK in 2026?](https://ctoondemand.co.uk/blog/fractional-cto-cost-uk-2026.html): Day rates, monthly retainers, what each tier actually delivers.
+- [Fractional CTO vs Interim CTO: What's the Difference?](https://ctoondemand.co.uk/blog/fractional-cto-vs-interim-cto.html): When to hire which, and how scope and commitment differ.
+- [First 90 Days as a Fractional CTO](https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html): The playbook for the opening phase of an engagement.
+- [Business Partner, Not Just a Technologist](https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html): Why technical excellence alone fails founders.
+- [Psychological Safety in Engineering Teams](https://ctoondemand.co.uk/blog/psychological-safety-engineering-teams.html): What it is, why it compounds, and how to install it.
+- [AI Agents and Engineering Leadership](https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html): How AI agents change what an engineering organisation actually does.
+- [Why Most Founders Are Getting 5% From Their AI Tools](https://ctoondemand.co.uk/blog/why-founders-get-5-percent-from-ai.html): The gap between a Claude subscription and a Claude-driven operating model.
+- [Build Your First AI Agent Stack](https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html): Stop asking one AI to do everything — build a stack instead.
+- [You Don't Need a Content Team. You Need a System.](https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html): A five-agent content pipeline for founders.
+- [Coming Soon: Real-Time AI Workshops](https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html): Live workshops where founders see Claude installed into their business in real time.
+
+## Optional
+
+- [Full content (concatenated)](https://ctoondemand.co.uk/llms-full.txt): All key page content in a single file, for LLM grounding.
+- [Sitemap (XML)](https://ctoondemand.co.uk/sitemap.xml)
+- [LinkedIn](https://www.linkedin.com/in/nicktong-cto): Connect with Nick directly.
+
+## Contact
+
+- Book a 30-minute discovery call: https://cal.com/nick-tong-cto
+- Email: web@ctoondemand.co.uk
+- Based in the UK. Engagements primarily with UK and EU funded startups, Seed to Series A.
