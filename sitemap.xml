@@ -43,7 +43,31 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html</loc>
+    <loc>https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -61,16 +85,10 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html</loc>
+    <loc>https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ctoondemand.co.uk/blog/psychological-safety-engineering-teams.html</loc>
@@ -79,7 +97,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html</loc>
+    <loc>https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -89,23 +107,5 @@
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

@@ -704,121 +704,109 @@ How I Work →
 
 # Blog posts
 
-## What is a Fractional CTO? The Complete Guide for UK Startups (2026)
-URL: https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html
+## From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
+URL: https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html
 
-Fractional CTO Guide
-5 March 2026
-9 min read
+AI & Engineering Leadership
+10 January 2026
+11 min read
 
-What is a Fractional CTO? The Complete Guide for UK Startups
+From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
 
-A fractional CTO gives your startup access to senior, C-suite technology leadership without the cost or commitment of a full-time hire. Here's exactly what they do, when you need one, and how to find the right fit for your stage.
+AI coding tools are already changing how engineering teams work. But the real transformation isn't about writing code faster, it's about a fundamental shift in what engineering leadership looks like. The CTO who adapts to this shift will have a decisive advantage. The one who doesn't will be managing a team that's slowly optimising the wrong things.
 
 NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
 
-The definition: what a fractional CTO actually is
+The shift that's already underway
 
-A fractional CTO is an experienced technology leader who works with your company on a part-time basis (typically one to three days per week) rather than as a permanent, full-time employee. The word "fractional" refers to the fraction of their working time you're buying. Everything else (the seniority, the strategic thinking, the hands-on decision-making) is the same as you'd expect from a full-time Chief Technology Officer.
+Most technology leaders are framing the AI coding revolution as a productivity story. GitHub Copilot suggestions accepted, lines of code written, sprint velocity improved. These are real gains and they're measurable. But they're also the least interesting part of what's happening.
 
-This model has existed for decades in finance (fractional CFOs are common in mid-market businesses) but has accelerated sharply in the tech startup world over the past few years, driven by two forces: the rising cost of full-time CTO talent and the growing sophistication of the fractional market itself.
+The more significant change is structural. We're moving from a model where software is built by a team of humans writing code, to a model where software is built by humans and agents working together, humans setting direction, providing context, reviewing outputs, and making judgment calls; agents doing an increasing proportion of the implementation work.
 
-A good fractional CTO is not a consultant who delivers reports. They are a member of your leadership team. They attend your board meetings, they challenge your roadmap, they interview senior engineers, they own the technology strategy. The only meaningful difference is that they're not there five days a week.
+This is already true at the task level with tools like Copilot and Claude. It's becoming true at the feature level with tools like Devin, Cursor, and GitHub Copilot Workspace. It will become true at the project level. The question isn't whether this is happening (it is) it's what kind of leadership it requires.
 
-The core value proposition: you get genuine C-suite technology leadership (strategic thinking, hiring judgment, board-level communication) for a fraction of the cost and commitment of a permanent CTO hire.
+Management versus orchestration: what's actually different
 
-What a fractional CTO actually does day-to-day
+Traditional engineering management is built around a set of assumptions: that the people doing the work need clarity on what to build, context about why it matters, feedback on how they're doing, and space to solve problems. A good engineering manager excels at these things across a team of humans.
 
-The scope varies by company and engagement, but most fractional CTOs will cover some combination of the following:
+Orchestration is different in important ways. When your team includes both people and AI agents, the coordination problem changes:
 
-Technology strategy and roadmap
+Context is more explicit
 
-Setting the direction for your product and engineering investment over the next 12–18 months. This means aligning tech priorities with business objectives, managing technical debt deliberately, and making the architectural decisions that will determine your ability to scale.
+A human engineer can ask a clarifying question when a requirement is unclear. They pick up context from the standup conversation, the product review, the offhand comment in Slack. AI agents can't do this. They operate on what they're given. Writing a good prompt or a well-scoped task description isn't just nice to have, it becomes a core engineering skill. Teams that invest in it outperform those that don't.
 
-Engineering team leadership
+This changes what the CTO needs to model. The best engineering leaders will be the ones who can write precise, well-bounded problem statements, not vague requirements, but clear descriptions of the problem, the constraints, the success criteria, and the context the agent needs to operate effectively. This is a skill that takes deliberate practice to develop.
 
-Running one-to-ones with senior engineers, introducing engineering best practices, building psychological safety in the team, and creating the conditions where great engineers want to stay. A strong fractional CTO often becomes the engineering team's primary leader, even on a part-time schedule.
+Review and judgment move up the value chain
 
-Strategic hiring
+When agents can produce a working implementation in minutes, the bottleneck shifts from "can we write this code?" to "is this the right code?" The review process becomes more important, not less. Engineers who thrive in this environment are those with strong architectural intuition, who can look at an AI-generated implementation and quickly assess whether it's solving the right problem in the right way.
 
-One of the highest-leverage things a fractional CTO does is hire. They know what "good" looks like at each level. They can structure your engineering interview process, write compelling job descriptions, assess technical portfolios, and avoid the common mistake of hiring fast and regretting it slowly.
+The implication for team building is significant. The ratio of "can implement quickly" to "can review and judge effectively" is changing. Teams that optimise only for implementation speed will generate a lot of code that passes review but isn't architecturally sound. The leaders who understand this will build teams with a different balance of skills.
 
-Vendor and architecture decisions
+The failure modes are different
 
-Choosing the right cloud provider, evaluating whether to build or buy, selecting data infrastructure, assessing security posture, these decisions have long tails. A fractional CTO brings the pattern recognition to make them well.
+Human engineers fail by misunderstanding requirements, making mistakes, taking shortcuts under pressure. AI agents fail by hallucinating plausible-sounding but incorrect solutions, optimising for the metric they're given rather than the outcome you want, and confidently doing the wrong thing with no signal that anything is wrong. The bugs that slip through an AI-assisted workflow are often harder to spot than traditional bugs, they look correct.
 
-Board and investor relations
+This doesn't mean AI agents are unreliable. It means the engineering process around them needs to account for their specific failure modes. Testing practices, code review norms, and deployment gates all need to evolve to provide appropriate verification of AI-generated code.
 
-Translating complex technical decisions into language your board and investors understand. Helping you tell a coherent technology story in fundraising decks. Answering the CTO-level questions in a due diligence process.
+The uncomfortable truth: most companies that think they're "using AI in engineering" are using AI to write code faster in a process that was already slightly broken. The real question is whether your engineering process is designed for the kind of code AI produces, and most aren't.
 
-Technical due diligence
+What this means for engineering leaders right now
 
-If you're being acquired or raising a significant round, a fractional CTO can prepare your codebase, documentation, and technical narrative for scrutiny. They can also run due diligence on a company you're acquiring.
+I'm not interested in the version of this argument that says "AI will replace engineers." That's the wrong frame and it leads to the wrong decisions. The more useful frame is: what does excellent engineering leadership look like in 18 months, and what do you need to do now to build towards it?
 
-Who needs a fractional CTO?
+Develop real AI literacy, fast
 
-Not every company is the right fit for a fractional model. The sweet spot is typically:
+Not "knows that AI tools exist" literacy. Not "has tried ChatGPT a few times" literacy. Genuine, hands-on understanding of how these tools work, what they're good at, where they fall down, and how to design workflows around them. This means spending time with the tools, not just reading about them. A CTO who can't personally evaluate the quality of AI-assisted code, or who doesn't understand how an agentic workflow operates, is making significant decisions with significant blind spots.
 
-Seed to Series B startups that have raised capital and are building a real engineering team, but aren't yet large enough to justify a full-time CTO salary.
+The most valuable perspective here isn't the product manager's ("this saves us time") or the marketing team's, "AI-native startup." It's the engineering leader's: what does this actually mean for how we build software, and are we building the right practices around it?
 
-Founder-led technical companies where the founding CTO has become the constraint, brilliant at building, not yet skilled at leading a 15-person engineering function.
+Rethink your hiring framework
 
-Non-technical founders who need a trusted technical voice to translate between the engineering team and the board.
+If a significant portion of implementation work is AI-assisted, the skills you're hiring for change. I'm not suggesting that implementation skill doesn't matter, it does, deeply. Understanding what good code looks like is inseparable from the ability to write it. But the profile of your senior engineers should increasingly include: strong judgment about system design, ability to review AI outputs with discernment, capacity to write clear problem statements, and comfort operating in a high-ambiguity environment where the tools are changing under your feet.
 
-Companies in transition, after a CTO departure, ahead of a fundraise, or during a significant architectural change, who need senior cover while they hire permanently.
+The engineers who will be most valuable in this environment are the ones with deep foundations (people who understand systems at multiple levels of abstraction) combined with the curiosity to engage seriously with how AI tools are changing the craft. That's a specific profile, and it's worth hiring for deliberately.
 
-Established businesses launching a digital product for the first time, who need technology leadership without a permanent technology executive.
+Invest in your prompting and workflow culture
 
-Fractional CTO vs full-time CTO: the real comparison
+Most teams treat prompting as an individual skill, everyone figures it out for themselves. This is inefficient and produces wildly inconsistent results. The teams that are getting real leverage from AI agents are treating prompt engineering as a team practice: sharing effective patterns, building internal libraries of well-designed prompts for common tasks, reviewing AI-assisted PRs in a way that captures learnings about what worked and what didn't.
 
-The obvious difference is cost. A full-time CTO at a UK Series A startup will cost between £120,000 and £180,000 in base salary, plus 20–30% in employer oncosts (National Insurance, pension, benefits). A fractional CTO costs between £3,000 and £7,000 per month on a retainer, or £1,000–£1,600 per day. For a company that needs two days of CTO-level leadership per week, the fractional model is often 60–70% cheaper than the full-time alternative.
+This is the engineering culture analogue of code review practices, pair programming norms, and architectural decision records. It takes deliberate leadership to build, but the teams that build it will consistently outperform those that don't.
 
-But cost isn't the only consideration. There are tradeoffs worth being honest about:
+Know when not to use agents
 
-Availability. A fractional CTO isn't there every day. Time-sensitive issues need a clear escalation path. The best fractional engagements build in an async-first operating rhythm so this isn't a constant constraint.
+Counterintuitively, one of the most important AI leadership skills is knowing when not to use AI. There are categories of work where human judgment, craft, and contextual intuition are still the highest-quality approach, complex system design decisions, security-sensitive implementations, novel algorithm development, and any work where the problem statement itself isn't yet clear. An over-reliance on AI for these tasks produces output that looks plausible but lacks the depth that comes from genuine human engagement with a hard problem.
 
-Commitment. The fractional model works on trust. You need to genuinely include them in key decisions, not just call on them for fire-fighting. Fractional CTOs who feel they're being used tactically rather than strategically tend to disengage.
+The engineering leader who can make these distinctions clearly (and build a culture where the team has the judgment to make them too) will consistently make better decisions than the one who applies AI indiscriminately.
 
-Transition planning. If you know you'll need a full-time CTO within 12 months, a good fractional CTO will help you define that profile and recruit for it. The best fractional CTOs actively work themselves out of the role when the time is right.
+Most companies are worrying about AI for the wrong reasons
 
-How to find and hire a fractional CTO in the UK
+The conversations I have with founders and boards about AI in engineering tend to cluster around two concerns: "are we falling behind?" and "are we spending too much on AI tools?" Both are worth thinking about. Neither is the most important question.
 
-The fractional CTO market in the UK is less developed than in the US, but it's growing quickly. Here's how most successful engagements begin:
+The more important questions are: Is our engineering process designed to take genuine advantage of AI-assisted development, or are we just bolting tools onto a workflow that was designed for pre-AI engineering? Are we building the judgment in our engineering team to review and evaluate AI outputs effectively? And are we honest about what AI is actually good at, versus where it creates the illusion of productivity without the substance?
 
-Referral networks
+The companies that will look back on 2025–2027 as a period of genuine competitive advantage from AI will be the ones that engaged with these questions seriously. The ones that treated it as a checklist ("we adopted Copilot, we added AI to our pitch deck") will have generated a lot of code that works until it doesn't.
 
-The most common route. Ask your investors, your existing advisors, or your peer network. The fractional CTO market is relationship-driven. A warm introduction to someone who's worked closely with a company at your stage is worth far more than any job posting.
+What this means for the CTO role specifically
 
-Specialist platforms
+I spend a lot of time in fractional and interim CTO engagements helping companies navigate exactly this transition. The CTO-level questions that come up repeatedly aren't primarily about which AI tools to adopt. They're about:
 
-A small number of platforms specifically match fractional executives with growing companies. These are useful if you don't have a strong warm-referral network, though the quality varies significantly.
+How do we build the right engineering culture for an AI-augmented team?
 
-Direct outreach
+How do we evaluate the actual quality of AI-assisted code, beyond whether it passes tests?
 
-Many senior CTOs who have moved into a fractional model maintain a LinkedIn presence specifically to attract inbound enquiries. Search for "fractional CTO UK" and you'll find a number of independent operators. Look for evidence of genuine startup experience, not just big-company credentials.
+How do we maintain architectural coherence when a significant portion of code is generated?
 
-What to look for
+How do we build a hiring and development culture that prepares engineers for this environment?
 
-When evaluating a fractional CTO, the questions that matter most are: Have they operated at the stage you're at? Do they understand how to build a team, not just code? Can they communicate in the room with your board? And critically, do they have the emotional intelligence to lead people, not just processes?
+And how do we tell a credible story to the board about our AI strategy, not just "we use it," but "here's how it's changing our engineering capability in a specific, measurable way"?
 
-Red flags to watch for: anyone who can't tell you specifically what decisions they've made and what the outcomes were, anyone who leads with technical jargon before understanding your business problems, and anyone whose day rate is suspiciously low (it usually means they're doing it to fill a gap between full-time roles, not as a deliberate model).
+These are leadership questions, not tool questions. The technology is moving faster than the leadership thinking about it, and in my experience, the gap between companies that get this right and those that don't isn't about the tools they've chosen. It's about the quality of the leadership thinking about how to use them.
 
-What to expect in the first 30 days
-
-A well-structured fractional CTO engagement typically starts with a discovery phase. In the first two to four weeks, they should be listening far more than talking: interviewing the engineering team, reviewing the codebase and infrastructure, understanding the product roadmap, and meeting your key investors and board members.
-
-By the end of month one, you should have a clear technology audit, an honest assessment of where you are technically, what the risks are, and what needs to change. This becomes the foundation for the roadmap work that follows.
-
-What you should not expect in the first 30 days: major architectural changes, large hiring decisions, or sweeping process overhauls. Speed in the wrong direction compounds your problems. A good fractional CTO earns the right to change things by understanding them first.
-
-The bottom line
-
-A fractional CTO is a genuinely powerful model for the right company at the right stage. Done well, it gives you the strategic technology leadership your business needs to scale, without betting the company on a permanent hire before you're ready. Done poorly (with misaligned expectations or too narrow a scope), it can feel like an expensive advisory retainer that doesn't move the needle.
-
-The difference is almost always in how clearly both sides define what good looks like from day one.
+The shift from management to orchestration is real, and it's accelerating. The engineering leaders who adapt to it, who develop genuine AI literacy, rethink their hiring and team-building frameworks, and build the right cultural practices around AI-assisted development, will have a meaningful advantage in the next three years. Those who treat it as a tooling question will be left optimising the wrong things.
 
 Share:
 
@@ -826,32 +814,483 @@ LinkedIn
 
 In this article
 
-Need a Fractional CTO?
+Navigating AI in your engineering team?
 
-Book a free 30-minute call to discuss your situation, no pitch, just an honest conversation.
+Book a call. I work with founders and CTOs on exactly these leadership and strategy questions.
 Book a Call
 
 Continue Reading
 
-Fractional CTO Guide
+Engineering Leadership
 
-Fractional CTO vs Interim CTO: What's the Difference?
+Psychological Safety: The Most Underrated Engineering Leadership Tool
 
-The two models are often confused. Here's how to decide which one your business actually needs right now.
+The research is unambiguous. High-performing engineering teams share one quality above all others. Here's how to build it.
 Read article →
 
-Pricing
+Fractional CTO Guide
 
-How Much Does a Fractional CTO Cost in the UK? (2026)
+What is a Fractional CTO? The Complete Guide
 
-Retainer rates, day rates, and what drives the variation. Plus a straight comparison to full-time CTO costs.
+Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
 Read article →
 
 Process
 
 The First 90 Days: What a Fractional CTO Actually Does
 
-A month-by-month breakdown of what a structured fractional CTO engagement looks like in practice.
+A month-by-month breakdown of what a well-run fractional CTO engagement looks like in practice.
+Read article →
+
+---
+
+## You Don't Need a Content Team. You Need a System.
+URL: https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html
+
+AI Brain
+17 May 2026
+5 min read
+
+You Don't Need a Content Team. You Need a System.
+
+You are not slow at producing content because you lack ideas. You are slow because you are running a production process through a single chat window.
+
+NT
+
+Nick Tong
+Fractional CTO · CTO on Demand
+
+Most founders have domain knowledge, pattern recognition, and opinions that would land with the right buyers. What they do not have is a way to move that material from their head to a published post without it becoming a project. So it stays in their head. Or it gets drafted once, feels off, and gets quietly abandoned.
+
+The reflex fix is to open a chat window and type a prompt. Nielsen Norman Group's 2024 controlled study found that AI cuts drafting time by more than 50 percent — a real gain. But the same study found that quality improvements concentrated in people with adjacent domain expertise already. A founder with editorial instincts gets faster and better. A founder without them gets faster. The output is only as good as the judgment behind the prompt.
+
+The problem is not the prompt. The problem is that most founders are running a single-threaded process.
+
+When you are the one prompting, reviewing, editing, redirecting, and publishing, you are still the bottleneck. Everything waits on your attention. This is why founders who say AI is "a bit useful" are not wrong. They have made individual moments more efficient without changing how work moves. The investment did not compound because the workflow did not change.
+
+The shift is architectural, not prompting-level
+
+A properly designed agent pipeline separates the roles that a single chat window collapses into one. One agent handles research. One handles structuring. One holds the founder's voice and context. One drafts. One reviews against a brief. None of them wait for the founder to type the next instruction. The founder defines the system once. The system runs.
+
+McKinsey's January 2025 report found that employees are three times more likely to be using generative AI than their leaders expect — because individuals are improvising in chat windows, making themselves personally faster. What the organisation is not getting is the compounding benefit that comes when the process is designed rather than improvised. Ad hoc prompting is individual speed. A pipeline is an editorial operation that runs without you in the room.
+
+Ad hoc prompting is individual speed. A pipeline is an editorial operation that runs without you in the room.
+
+A well-built pipeline makes the output sound like you, consistently
+
+Most founders type their context fresh each session — who they are, who they are writing for, what they care about. That context disappears when the window closes. The next post starts cold. Over time the output is inconsistent, averaged out, recognisably AI-shaped. A pipeline bakes that context in: the voice rules, the positioning, the things the founder would never say.
+
+This matters commercially. The 2024 Edelman-LinkedIn B2B Thought Leadership study found that 52 percent of B2B decision-makers spend over an hour a week reading thought leadership, and 9 in 10 say consistent production makes them more receptive to sales outreach. The bar is not one excellent post. It is a steady, recognisable presence over time.
+
+The honest caveat
+
+A pipeline does not fix thin thinking. Cornell and Science published research in late 2025 showing that researchers using LLMs posted around 33 percent more papers, but high-scoring AI-polished work was actually less likely to be accepted. More output at lower signal is not a strategy. A pipeline amplifies what a founder brings to it. If the views are sharp, the system makes them consistent and reachable. If the views are generic, the system makes that problem faster and louder.
+
+The pipeline is not the product. The founder's point of view is the product. The pipeline is how it gets out of their head and into the market.
+
+That is what the AI Brain engagement builds: a structured process for mapping a founder's voice, designing the agent pipeline that handles production, and handing it over ready to run. Details and registration at ctoondemand.co.uk/ai-brain/.
+
+Most founders already know what they want to say. The question is whether they have a system that will say it for them every week — or just whenever they can face the effort.
+
+Share:
+
+LinkedIn
+
+In this article
+
+Build your content pipeline
+
+Voice mapping, agent pipeline design, and a system handed over ready to run.
+See the AI Brain →
+
+---
+
+## Stop Asking One AI to Do Everything. Build a Stack Instead.
+URL: https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html
+
+AI Brain
+9 May 2026
+7 min read
+
+Stop Asking One AI to Do Everything. Build a Stack Instead.
+
+Your AI setup worked brilliantly for two weeks. Then the outputs started drifting. The tone went slightly off. It started mixing up context. You stopped trusting it — and then you stopped using it. This is one of the most common patterns I see, and the fix is simpler than you'd expect.
+
+NT
+
+Nick Tong
+Fractional CTO · CTO on Demand
+
+Why single-agent setups break
+
+When you ask one Claude setup to handle email triage, meeting prep, weekly planning, follow-ups, and research, you're asking one "person" to hold too much at once. The context bleeds between tasks. The outputs average out across everything it's trying to be. The more it has to do, the worse it gets at all of it.
+
+This isn't a bug in Claude. It's an architecture problem.
+
+Single-agent setups are fragile by design. They're sensitive to session length, to how you phrase things, to how much context has accumulated in the conversation. They feel powerful when they work and frustrating when they don't — and you can rarely tell in advance which it'll be.
+
+The failure mode is slow and invisible. The output is almost right. The tone is close but slightly off. You edit it a bit more than you used to. Eventually you're doing more work than before, just in a different place. And then you stop using it.
+
+The principle behind agent stacks
+
+The solution is narrow scope. Each agent does one thing, takes specific inputs, and produces a defined output. When something breaks, you know exactly which agent to fix. When something works, you can trust it to keep working.
+
+This is the same principle that makes good software reliable: not one function that does everything, but small, well-defined pieces that each do one thing well and hand off cleanly to the next.
+
+The reliability comes from constraints. Each agent has a clear job. It doesn't try to do more. And when you need to improve something, you improve one piece at a time — not the whole system at once.
+
+A practical 3-agent stack for founders
+
+The majority of operational overhead most founders deal with every week comes down to three things: knowing what to focus on, being prepared for the meetings that matter, and making sure nothing falls through the cracks afterwards. Here's one agent for each.
+
+Agent 1: Triage
+
+What it does: Sorts everything that landed in your inbox, Slack, or head into a clear priority list. No drafting, no responses — just prioritisation.
+Input: A dump of messages, tasks, and whatever's on your mind.
+Output: A clear, sorted list — what needs your attention today, what can wait, what to delegate, what to ignore.
+
+Triage prompt
+Here's everything that came in this morning: [paste inbox / Slack summary / task list].
+
+Separate into:
+- Decisions only I can make
+- Things I can delegate (suggest who)
+- Things that can wait until later this week
+- Things I should ignore entirely
+
+Be specific and be brutal.
+
+Agent 2: Meeting Prep
+
+What it does: Builds a structured brief before every call that matters.
+Input: The meeting details, who you're meeting, any past notes or emails.
+Output: A short, structured brief — who, where we left off, talking points, the one question to ask.
+
+This runs best as a Claude Project with your persona.md already loaded, so the brief sounds like you and doesn't need to be rewritten before the meeting.
+
+Meeting prep prompt
+I'm meeting [name / company] at [time].
+Context: [paste notes, emails, or any background].
+Goal: [what I want from this meeting].
+
+Brief format:
+1. Who they are (one sentence)
+2. Where we left off
+3. 2-3 talking points
+4. The one question I should make sure I ask
+
+Agent 3: Follow-up
+
+What it does: Turns meeting notes or a transcript into a clear record of what was decided, who owns what, and a ready-to-send recap.
+Input: Your notes or a transcript from the meeting.
+Output: Decisions made, next steps with owners and timelines, a concise follow-up email.
+
+Follow-up prompt
+Here are my notes from the meeting: [paste notes or transcript].
+
+Extract:
+- Decisions made (with context)
+- Next steps, each with an owner and a deadline
+- One thing that's still unresolved
+
+Then draft a short, professional follow-up email in my voice.
+Keep it under 200 words.
+
+How they fit together
+
+Triage tells you what to focus on. Prep gets you ready for the things that matter. Follow-up closes the loop so decisions stick and next steps actually happen.
+
+Each one does one job. None of them tries to do the others' job. And because the scope is narrow, when the output isn't quite right, you can usually fix it with one or two small adjustments — not a full rebuild.
+
+Once these three are running reliably, you start to see where the same pattern applies elsewhere. Hiring prep. Client briefs. Board pack summaries. Investor updates. The principle is always the same: clear inputs, one job, defined outputs.
+
+Where to take this next
+
+Building this properly — with the right project structure, the right persona files loaded in each agent, and the right workflow instructions — takes a focused day or two of setup. Done well, it runs reliably without you having to rebuild it every few weeks.
+
+That's the work we do inside the AI Brain engagement. We build these systems together, in your tools, around the workflows you actually run. Not a generic template — a setup built for your specific business.
+
+If you want to see what that looks like in practice, the previous post is a good starting point: Why Most Founders Are Getting 5% From Their AI Tools.
+
+Next up: a look at what a live AI training programme looks like and why the live format changes what you actually build. Read it here →
+
+Share:
+
+LinkedIn
+
+In this article
+
+Build this for your business
+
+We build focused agent stacks together — in your tools, around your actual workflows.
+See the AI Brain →
+
+---
+
+## More Than a Technologist: Why a Fractional CTO Is a Business Partner First
+URL: https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html
+
+Fractional CTO
+4 May 2026
+8 min read
+
+More Than a Technologist: Why a Fractional CTO Is a Business Partner First
+
+A client said something to me this weekend that has stayed with me. They told me what they valued most about working together wasn't the tech, it was that I took the time to understand their business, and translated technology decisions in a language they could actually act on. They saw me as a partner, not just the technical person they brought on board. Here's what that actually looks like in practice, and why it changes the engagement.
+
+NT
+
+Nick Tong
+Fractional CTO · CTO on Demand
+
+The misconception most founders walk in with
+
+When founders first reach out about a fractional CTO, they almost always describe a technical problem. The platform is creaking. The team has grown but delivery has slowed. There's a security audit looming. The codebase is a mess. The architecture won't survive the next 10× of users. These are real problems and I take them seriously.
+
+But the framing tells me what's about to happen. They're describing the symptom they can see, not the situation they're actually in. They've been trained (by job specs, by conferences, by every fractional CTO marketing page) to think of the role as a technical hire who comes in to fix technical things. So that's what they ask for.
+
+Two weeks into the engagement, the conversation has almost always shifted. We're no longer just talking about the platform. We're talking about how the commercial model is evolving, what the next funding round needs to demonstrate, where the customer pain is concentrated, what the team actually feels capable of. The technical work is happening, but the more valuable conversation is the one about how the business is genuinely trying to grow, and what that means for the technology.
+
+That shift, from technical-problem-fixer to business-partner, isn't an accident. It's the work.
+
+What "starting with the business" actually looks like
+
+The first thirty days of a fractional engagement are sometimes described as a tech audit. That's accurate but incomplete. The technical review is real, codebase, infrastructure, architecture, security posture, delivery pipeline, all the things you'd expect. But it sits inside a wider exercise that I think is more important: understanding how the business actually works.
+
+That means a sequence of conversations that have very little to do with technology in their first hour. With the founders, about the commercial model, the unit economics, where they think growth comes from in the next twelve months. With sales or commercial leads, about which deals are easy to win and which ones get stuck and why. With the product team, about which features customers genuinely value and which ones look good in screenshots but rarely get used. With finance, about what the runway picture really looks like and what assumptions sit behind it. With investors where appropriate, about what the next round is going to need to demonstrate and what stories already exist in the market.
+
+By the end of those conversations I have a picture that the founders themselves often don't have written down anywhere. Where the business is genuinely trying to go. Which constraints are real and which are just inherited assumptions. Where the leverage is concentrated. What the team thinks the strategy is, versus what the founders think the strategy is. Then (and only then) I look at the technology with that picture in mind.
+
+The technical recommendations that come out the other side are different as a result. They're not "here's what good engineering looks like in the abstract." They're "here's the platform investment that supports the commercial model you're actually pursuing, and here's the architectural risk that matters because of where the business is going next." The technology serves the business, not the other way around.
+
+Translating in both directions
+
+The other thing the partnership role demands, which the technical-hire framing doesn't, is fluent translation in both directions.
+
+Founders and boards often need to make decisions that have technical consequences they cannot fully evaluate. Should we rebuild the data layer now or in a year? Is this acquisition target's tech stack going to slow us down? Can we promise the enterprise customer SOC 2 by Q3? These questions don't have purely technical answers. They have answers that depend on commercial priorities, risk tolerance, capital constraints, and where the business is heading. My job is to give the founders the information they need to make those decisions in language they can act on, not buried in jargon, not hedged into uselessness, but clear, complete, and honest.
+
+Equally important is the translation in the other direction. When the engineering team raises a concern that sounds technical, my job is often to translate what they're actually saying into commercial terms the rest of the leadership can engage with. "We have a brittle deployment pipeline" is technical language. "Every release is a coin-flip on whether we have an outage during a sales demo, and engineers are spending one day a week fighting fires that should not exist" is commercial language. Same problem. Two different rooms understand it.
+
+The companies where this translation works well don't experience the technology team and the rest of the business as separate worlds. The engineers feel heard at a leadership level. The leadership feels confident in technical decisions because they understand the trade-offs. Decisions get made faster, with more conviction, with fewer surprises down the road.
+
+A real example, slightly anonymised
+
+A wellbeing platform I worked with had a clear commercial ambition: become the default mental health partner for large enterprise customers. They'd raised a meaningful round and the pressure to land marquee customers was real.
+
+If I'd come in as a pure technical hire, the conversation would have been about platform scaling, multi-tenancy, audit logging, and the engineering hires needed to support the load. All real. All necessary. But the highest-leverage move wasn't any of those things.
+
+The conversation that mattered was about positioning. The enterprise market was about to be defined by AI capability. Not the obvious AI hype, the genuine, embedded conversational and analytical capabilities that would let the platform have a different relationship with employees than the competitors who were just doing static content. That was a commercial insight as much as a technical one. And it pointed to a single hire that would change everything: a senior data scientist with the right background to lead the AI direction.
+
+Making that hire wasn't a technical decision. It was a commercial bet about where the market was going, what customers would value in eighteen months, and what story the next round of investors would need to hear. The technology consequences flowed from there (and they were significant) but the conversation started in the business, not in the codebase. That hire opened a product direction the team hadn't been able to reach before, and the technical positioning became a thread in the investment narrative that followed.
+
+That's what business-first technology leadership looks like in practice. It is not the absence of technical work. It is the presence of business context underneath every technical decision.
+
+Why this changes the relationship
+
+Founders who experience this approach for the first time often describe it the same way: they stop treating me as someone they bring in for the tech, and start treating me as someone they think with. The engagement shifts from contractor to partner. The conversations get harder, more honest, and more useful. The decisions get better.
+
+This matters commercially as much as it matters relationally. A partner gets brought into the rooms where strategic decisions are being made. A contractor gets briefed afterwards. A partner gets to flag a misaligned commercial bet before the engineering plan is locked in. A contractor gets handed a roadmap and asked to deliver it. Both can do good work. Only one of them genuinely changes the trajectory of the business.
+
+It also matters for what gets built. Engineering teams led by a CTO who genuinely understands the commercial picture build different things, sequence them differently, and make different trade-offs than teams led by someone optimising for technical purity. The output looks similar from a distance. The compounding effect over twelve months is enormous.
+
+Where this becomes operational: AI Brain
+
+The "business partner" framing is a way of working. But it has a productized counterpart, and it's the most concrete expression of the same philosophy.
+
+AI Brain is an offering I built specifically for founders who want AI installed into how the business actually runs, rather than treated as a separate technical project. The work isn't generic AI consulting. It starts with the same conversations a fractional engagement starts with: what does your business actually do, where is leverage concentrated, what are the three to five jobs you do every week that consume disproportionate time. Then it installs the systems, skills, and connections that turn those workflows into something the business compounds on, rather than something the founder retypes every Monday.
+
+If the partnership philosophy resonates and you want a smaller, sharper engagement than a full fractional retainer, AI Brain is often the right starting point. It's a four-week Sprint that produces a working system rather than a deck full of recommendations.
+
+The job title says CTO. The work is about being a partner who happens to bring deep technical expertise into the room. If you're looking for someone who'll just take a roadmap and execute it, there are plenty of skilled engineers and engineering managers who'll do that well. If you want someone who'll sit with you, understand the business properly, and help you make decisions that move it forward, that's the engagement worth booking.
+
+Share:
+
+LinkedIn
+
+In this article
+
+Looking for a partner, not just a technologist?
+
+That's the engagement I run. Book a 30-minute call, no pitch, just an honest conversation about whether and how I can help.
+Book a Call
+
+Continue Reading
+
+Process
+
+The First 90 Days: What a Fractional CTO Actually Does
+
+A month-by-month breakdown of what a well-run fractional CTO engagement looks like in practice.
+Read article →
+
+Engineering Leadership
+
+Psychological Safety: The Most Underrated Engineering Leadership Tool
+
+What psychological safety actually means in practice, and how to build it inside an engineering team.
+Read article →
+
+Fractional CTO Guide
+
+What is a Fractional CTO? The Complete Guide
+
+Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
+Read article →
+
+---
+
+## The First 90 Days: What a Fractional CTO Actually Does
+URL: https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html
+
+Process
+11 March 2026
+10 min read
+
+The First 90 Days: What a Fractional CTO Actually Does
+
+The first three months of a fractional CTO engagement are where trust is built, the real problems are identified, and the foundation for everything that follows is laid. Here's a month-by-month account of how it should go.
+
+NT
+
+Nick Tong
+Fractional CTO · CTO on Demand
+
+Before day one: the brief
+
+The 90-day period actually starts before the engagement formally begins. The most important thing a fractional CTO should do before their first day is understand the brief well enough to know what success looks like. That means a proper conversation with the founding team or CEO about:
+
+What's prompting this now? (The specific trigger matters.)
+
+What does the engineering team know about this engagement?
+
+What does the board know? What are their technology concerns?
+
+What's the company's biggest technology risk in the next 12 months?
+
+What does a great first 30 days look like from your perspective?
+
+This conversation also sets the operating norms: which meetings they attend, how they communicate with the team, how decisions get escalated, and what "part-time" actually means in practice (a calendar block, not a vague agreement).
+
+Days 1–30: Listen before you act
+
+The most common mistake a new fractional CTO makes is coming in too fast. They've been hired because they have strong views about technology and leadership. They see problems within the first week. The instinct is to start fixing them immediately, and this is almost always the wrong instinct.
+
+The first month is for understanding, not changing. Here's what that looks like in practice:
+
+Meet everyone who matters
+
+1:1s with every engineer, product manager, and relevant stakeholder in the first two to three weeks. Not to evaluate, to listen. "Tell me about the biggest frustration you have with how we build things" will surface more useful information than any architecture review.
+
+Pay particular attention to the most senior engineers in the team. They know where the bodies are buried. They also know whether this engagement is going to work, their buy-in matters enormously.
+
+Review the codebase and infrastructure
+
+Not to rewrite it, but to understand it. What are the key services? Where is the coupling that will bite you when you scale? What does the deployment pipeline look like? Where is the security posture weakest? This review is diagnostic, not prescriptive, the recommendations come later.
+
+Map the technical debt
+
+Every codebase has technical debt. The question is whether it's being managed deliberately or accumulated accidentally. A one-month debt map should categorise debt by: risk (could this cause an outage?), velocity impact (is this slowing down delivery?), and cost to fix (is this a weekend or a six-month project?).
+
+Understand the product roadmap
+
+The technology strategy has to serve the product and business strategy. Before you can have a view on where the architecture needs to go, you need to understand where the product is going. What are the next three major product bets? What will those require technically that you can't deliver today?
+
+What you should produce by end of month one
+
+A technology audit: an honest, written assessment of where the engineering function is today. Covering: team structure and capability, codebase health, infrastructure and security posture, process maturity, and the top five technology risks. This document becomes the shared truth for every conversation that follows.
+
+A note on quick wins: If you spot something obviously broken in week one (a security misconfiguration, an on-call rotation that's burning out the team, a process that's creating unnecessary overhead) fix it. Small, visible improvements build trust quickly. The point is to avoid strategic moves before you have enough context. Tactical fixes are fine.
+
+Days 31–60: Build the roadmap and earn authority
+
+Month two is where the diagnostic work translates into direction. You have enough context now to have informed opinions. The job shifts from listening to proposing, and navigating the inevitable pushback.
+
+Present the technology audit
+
+Share the month-one audit with the leadership team and board. This is the fractional CTO's first major moment of credibility, or the first sign that they don't have a grip on the situation. Present it clearly: what's working, what isn't, what the risks are, and what you're recommending.
+
+Be honest. CEOs and boards have generally seen enough sanitised reports. An audit that only tells good news isn't useful. The point is to create a shared and accurate picture of the technical reality, even if parts of that picture are uncomfortable.
+
+Build the technology roadmap
+
+Not a five-year technology vision. A 12-month roadmap that answers: what are we going to fix, what are we going to build, and in what order? This roadmap should be tied explicitly to the product and business roadmap, not a wish list of engineering improvements divorced from customer value.
+
+It should also include a technical debt reduction programme. The single biggest mistake engineering teams make is treating debt reduction as something they'll do "when things calm down." Things never calm down. Debt needs to be budgeted (typically 20–30% of sprint capacity) as part of the regular rhythm.
+
+Assess the team
+
+By month two, you have enough data to have a clear view of the team's strengths and gaps. Who are the engineers who have the potential to be leads? Where are the capability gaps that will constrain delivery in the next six months? Are there any people problems that need to be addressed, performance conversations, misaligned incentives, or cultural issues that the team has been tiptoeing around?
+
+Start hiring (if needed)
+
+If the audit identified capability gaps that need external hiring, month two is when the hiring process starts. A fractional CTO should own the technical hiring process, defining the role, writing the job description, building the interview process, and leading the final technical assessment. This is one of the highest-leverage things they do.
+
+Days 61–90: Deliver and establish rhythm
+
+Month three is about shifting from "new person" to "established leader." By this point, the team should have a clear sense of the CTO's operating style, values, and priorities. The leadership team should have confidence in the technology direction. The roadmap should be in motion.
+
+First roadmap deliverables
+
+Some item from the technology roadmap should be visibly in flight or complete by the end of month three. This doesn't need to be a major architectural overhaul, it might be a significantly improved deployment pipeline, a security improvement that was flagged as a risk, or the first hire from the new engineering hiring process. Visible progress validates the roadmap and builds confidence.
+
+Establish the operating cadence
+
+A fractional CTO works best when the engagement has a clear weekly rhythm. Typically: a weekly team standup or leadership touchpoint, a fortnightly 1:1 with the CEO, monthly board or leadership team reporting on technology, and a quarterly OKR review aligned with the product roadmap. Once this cadence is established, the part-time nature of the engagement becomes far less of a constraint, because everyone knows when the CTO touchpoints are and can plan around them.
+
+Build the team's independence
+
+One of the most important (and often overlooked) goals of a fractional CTO is to increase the engineering team's ability to operate well in their absence. This means clear architectural principles documented, well-designed processes that don't require a CTO to adjudicate every decision, senior engineers who have been given genuine ownership and authority, and a culture of clear communication about blockers.
+
+A fractional CTO who creates dependency isn't doing their job. The best ones leave every room smarter than they found it.
+
+What success looks like at 90 days
+
+By the end of the first three months, a successful fractional CTO engagement should have produced:
+
+A clear, shared technology audit and roadmap, no surprises lurking in the codebase that only one person knows about.
+
+An engineering team that is clearer about priorities, more energised, and less reactive.
+
+The first visible outputs of the technology strategy, whether that's a hire, a technical improvement, or a process change.
+
+A board and leadership team with genuine confidence in the technology function.
+
+A clear picture of what the next 12 months look like, and what milestones will indicate that the engagement has achieved its purpose.
+
+The first 90 days are foundational. Companies that treat the fractional CTO engagement as "someone to answer questions and attend the odd meeting" will rarely see these outcomes. Companies that genuinely integrate them into the leadership team (giving them authority, inclusion in key decisions, and honest access to the team) almost always do.
+
+Share:
+
+LinkedIn
+
+In this article
+
+Ready to get started?
+
+Book a 30-minute call. We'll talk through your situation and what a first 90 days could look like for you.
+Book a Call
+
+Continue Reading
+
+Fractional CTO Guide
+
+What is a Fractional CTO? The Complete Guide
+
+Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
+Read article →
+
+Engineering Leadership
+
+Psychological Safety: The Most Underrated Engineering Leadership Tool
+
+The research is unambiguous. High-performing engineering teams share one quality above all others.
+Read article →
+
+Pricing
+
+How Much Does a Fractional CTO Cost in the UK? (2026)
+
+Retainer rates, day rates, and how to think about the ROI of senior technology leadership.
 Read article →
 
 ---
@@ -1143,125 +1582,61 @@ Read article →
 
 ---
 
-## The First 90 Days: What a Fractional CTO Actually Does
-URL: https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html
+## Coming Soon: Real-Time AI Workshops
+URL: https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html
 
-Process
-11 March 2026
-10 min read
+Workshops
+16 May 2026
+3 min read
 
-The First 90 Days: What a Fractional CTO Actually Does
+Coming Soon: Real-Time AI Workshops
 
-The first three months of a fractional CTO engagement are where trust is built, the real problems are identified, and the foundation for everything that follows is laid. Here's a month-by-month account of how it should go.
+The thing founders tell me most often isn't "AI doesn't work." It's "I wish I'd started this six months ago." Getting the setup right is the hard part — and the reason most setups stall is that there's no one in the room when things don't quite click. That's what I'm building next.
 
 NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
 
-Before day one: the brief
+What the workshops are
 
-The 90-day period actually starts before the engagement formally begins. The most important thing a fractional CTO should do before their first day is understand the brief well enough to know what success looks like. That means a proper conversation with the founding team or CEO about:
+A structured, 7-day training programme delivered in real time. Not a recorded course you watch alone at midnight. Not a Slack group with a PDF. A live, small-group experience with a clear programme, real things to build, and people to build alongside.
 
-What's prompting this now? (The specific trigger matters.)
+Here's what's included:
 
-What does the engineering team know about this engagement?
+Weekly live sessions — small groups, not webinars. You'll be in the room, not watching a stream.
 
-What does the board know? What are their technology concerns?
+Course criteria between sessions — practical builds, not theory. You leave each week with something working.
 
-What's the company's biggest technology risk in the next 12 months?
+A buddy to sign up with — someone with similar goals to move through the programme alongside, compare notes with, and troubleshoot with.
 
-What does a great first 30 days look like from your perspective?
+A one-on-one session with me during the training — time to look at your specific setup and work through whatever isn't landing.
 
-This conversation also sets the operating norms: which meetings they attend, how they communicate with the team, how decisions get escalated, and what "part-time" actually means in practice (a calendar block, not a vague agreement).
+The first cohorts will be intentionally small. That's not a scarcity tactic — it's the point. I want to be able to give proper attention to what each person is building, not run a broadcast.
 
-Days 1–30: Listen before you act
+Why live matters
 
-The most common mistake a new fractional CTO makes is coming in too fast. They've been hired because they have strong views about technology and leadership. They see problems within the first week. The instinct is to start fixing them immediately, and this is almost always the wrong instinct.
+There's a gap between watching a video and being in the room.
 
-The first month is for understanding, not changing. Here's what that looks like in practice:
+In a recorded course, you watch someone else's problem get solved. In a live session, when something isn't working for your specific context, we fix it right there. The questions you didn't know you had come up — and they get answered before the end of the session, not in a forum thread three days later.
 
-Meet everyone who matters
+Being live also means I can be far more responsive. If something isn't landing, we slow down. If the group is ready to go deeper, we go deeper. That flexibility doesn't exist in a recording — and it makes a real difference to what people actually finish with.
 
-1:1s with every engineer, product manager, and relevant stakeholder in the first two to three weeks. Not to evaluate, to listen. "Tell me about the biggest frustration you have with how we build things" will surface more useful information than any architecture review.
+The buddy element is there for the same reason. The people who make the most progress tend to be the ones who have someone to compare notes with, to challenge their assumptions, and to work alongside when a build isn't quite coming together.
 
-Pay particular attention to the most senior engineers in the team. They know where the bodies are buried. They also know whether this engagement is going to work, their buy-in matters enormously.
+Live sessions, a structured programme, a buddy, and a one-on-one. Everything is designed around actually finishing with something working — not just understanding the concepts.
 
-Review the codebase and infrastructure
+Be first to know
 
-Not to rewrite it, but to understand it. What are the key services? Where is the coupling that will bite you when you scale? What does the deployment pipeline look like? Where is the security posture weakest? This review is diagnostic, not prescriptive, the recommendations come later.
+The details are still being finalised. What I know is that the first cohort will be small and I'll be reaching out personally to people on the list when dates are confirmed.
 
-Map the technical debt
+If this sounds like what you've been looking for, fill out the form below and let me know you're interested. I'll be in touch when we're ready to go.
 
-Every codebase has technical debt. The question is whether it's being managed deliberately or accumulated accidentally. A one-month debt map should categorise debt by: risk (could this cause an outage?), velocity impact (is this slowing down delivery?), and cost to fix (is this a weekend or a six-month project?).
+In the meantime, the two posts below are a good place to start if you want to make progress before the workshops launch:
 
-Understand the product roadmap
+Why Most Founders Are Getting 5% From Their AI Tools — what an AI brain is and three things you can do this week.
 
-The technology strategy has to serve the product and business strategy. Before you can have a view on where the architecture needs to go, you need to understand where the product is going. What are the next three major product bets? What will those require technically that you can't deliver today?
-
-What you should produce by end of month one
-
-A technology audit: an honest, written assessment of where the engineering function is today. Covering: team structure and capability, codebase health, infrastructure and security posture, process maturity, and the top five technology risks. This document becomes the shared truth for every conversation that follows.
-
-A note on quick wins: If you spot something obviously broken in week one (a security misconfiguration, an on-call rotation that's burning out the team, a process that's creating unnecessary overhead) fix it. Small, visible improvements build trust quickly. The point is to avoid strategic moves before you have enough context. Tactical fixes are fine.
-
-Days 31–60: Build the roadmap and earn authority
-
-Month two is where the diagnostic work translates into direction. You have enough context now to have informed opinions. The job shifts from listening to proposing, and navigating the inevitable pushback.
-
-Present the technology audit
-
-Share the month-one audit with the leadership team and board. This is the fractional CTO's first major moment of credibility, or the first sign that they don't have a grip on the situation. Present it clearly: what's working, what isn't, what the risks are, and what you're recommending.
-
-Be honest. CEOs and boards have generally seen enough sanitised reports. An audit that only tells good news isn't useful. The point is to create a shared and accurate picture of the technical reality, even if parts of that picture are uncomfortable.
-
-Build the technology roadmap
-
-Not a five-year technology vision. A 12-month roadmap that answers: what are we going to fix, what are we going to build, and in what order? This roadmap should be tied explicitly to the product and business roadmap, not a wish list of engineering improvements divorced from customer value.
-
-It should also include a technical debt reduction programme. The single biggest mistake engineering teams make is treating debt reduction as something they'll do "when things calm down." Things never calm down. Debt needs to be budgeted (typically 20–30% of sprint capacity) as part of the regular rhythm.
-
-Assess the team
-
-By month two, you have enough data to have a clear view of the team's strengths and gaps. Who are the engineers who have the potential to be leads? Where are the capability gaps that will constrain delivery in the next six months? Are there any people problems that need to be addressed, performance conversations, misaligned incentives, or cultural issues that the team has been tiptoeing around?
-
-Start hiring (if needed)
-
-If the audit identified capability gaps that need external hiring, month two is when the hiring process starts. A fractional CTO should own the technical hiring process, defining the role, writing the job description, building the interview process, and leading the final technical assessment. This is one of the highest-leverage things they do.
-
-Days 61–90: Deliver and establish rhythm
-
-Month three is about shifting from "new person" to "established leader." By this point, the team should have a clear sense of the CTO's operating style, values, and priorities. The leadership team should have confidence in the technology direction. The roadmap should be in motion.
-
-First roadmap deliverables
-
-Some item from the technology roadmap should be visibly in flight or complete by the end of month three. This doesn't need to be a major architectural overhaul, it might be a significantly improved deployment pipeline, a security improvement that was flagged as a risk, or the first hire from the new engineering hiring process. Visible progress validates the roadmap and builds confidence.
-
-Establish the operating cadence
-
-A fractional CTO works best when the engagement has a clear weekly rhythm. Typically: a weekly team standup or leadership touchpoint, a fortnightly 1:1 with the CEO, monthly board or leadership team reporting on technology, and a quarterly OKR review aligned with the product roadmap. Once this cadence is established, the part-time nature of the engagement becomes far less of a constraint, because everyone knows when the CTO touchpoints are and can plan around them.
-
-Build the team's independence
-
-One of the most important (and often overlooked) goals of a fractional CTO is to increase the engineering team's ability to operate well in their absence. This means clear architectural principles documented, well-designed processes that don't require a CTO to adjudicate every decision, senior engineers who have been given genuine ownership and authority, and a culture of clear communication about blockers.
-
-A fractional CTO who creates dependency isn't doing their job. The best ones leave every room smarter than they found it.
-
-What success looks like at 90 days
-
-By the end of the first three months, a successful fractional CTO engagement should have produced:
-
-A clear, shared technology audit and roadmap, no surprises lurking in the codebase that only one person knows about.
-
-An engineering team that is clearer about priorities, more energised, and less reactive.
-
-The first visible outputs of the technology strategy, whether that's a hire, a technical improvement, or a process change.
-
-A board and leadership team with genuine confidence in the technology function.
-
-A clear picture of what the next 12 months look like, and what milestones will indicate that the engagement has achieved its purpose.
-
-The first 90 days are foundational. Companies that treat the fractional CTO engagement as "someone to answer questions and attend the odd meeting" will rarely see these outcomes. Companies that genuinely integrate them into the leadership team (giving them authority, inclusion in key decisions, and honest access to the team) almost always do.
+Stop Asking One AI to Do Everything — how to build a focused stack that stays reliable.
 
 Share:
 
@@ -1269,145 +1644,10 @@ LinkedIn
 
 In this article
 
-Ready to get started?
+Register your interest
 
-Book a 30-minute call. We'll talk through your situation and what a first 90 days could look like for you.
-Book a Call
-
-Continue Reading
-
-Fractional CTO Guide
-
-What is a Fractional CTO? The Complete Guide
-
-Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
-Read article →
-
-Engineering Leadership
-
-Psychological Safety: The Most Underrated Engineering Leadership Tool
-
-The research is unambiguous. High-performing engineering teams share one quality above all others.
-Read article →
-
-Pricing
-
-How Much Does a Fractional CTO Cost in the UK? (2026)
-
-Retainer rates, day rates, and how to think about the ROI of senior technology leadership.
-Read article →
-
----
-
-## More Than a Technologist: Why a Fractional CTO Is a Business Partner First
-URL: https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html
-
-Fractional CTO
-4 May 2026
-8 min read
-
-More Than a Technologist: Why a Fractional CTO Is a Business Partner First
-
-A client said something to me this weekend that has stayed with me. They told me what they valued most about working together wasn't the tech, it was that I took the time to understand their business, and translated technology decisions in a language they could actually act on. They saw me as a partner, not just the technical person they brought on board. Here's what that actually looks like in practice, and why it changes the engagement.
-
-NT
-
-Nick Tong
-Fractional CTO · CTO on Demand
-
-The misconception most founders walk in with
-
-When founders first reach out about a fractional CTO, they almost always describe a technical problem. The platform is creaking. The team has grown but delivery has slowed. There's a security audit looming. The codebase is a mess. The architecture won't survive the next 10× of users. These are real problems and I take them seriously.
-
-But the framing tells me what's about to happen. They're describing the symptom they can see, not the situation they're actually in. They've been trained (by job specs, by conferences, by every fractional CTO marketing page) to think of the role as a technical hire who comes in to fix technical things. So that's what they ask for.
-
-Two weeks into the engagement, the conversation has almost always shifted. We're no longer just talking about the platform. We're talking about how the commercial model is evolving, what the next funding round needs to demonstrate, where the customer pain is concentrated, what the team actually feels capable of. The technical work is happening, but the more valuable conversation is the one about how the business is genuinely trying to grow, and what that means for the technology.
-
-That shift, from technical-problem-fixer to business-partner, isn't an accident. It's the work.
-
-What "starting with the business" actually looks like
-
-The first thirty days of a fractional engagement are sometimes described as a tech audit. That's accurate but incomplete. The technical review is real, codebase, infrastructure, architecture, security posture, delivery pipeline, all the things you'd expect. But it sits inside a wider exercise that I think is more important: understanding how the business actually works.
-
-That means a sequence of conversations that have very little to do with technology in their first hour. With the founders, about the commercial model, the unit economics, where they think growth comes from in the next twelve months. With sales or commercial leads, about which deals are easy to win and which ones get stuck and why. With the product team, about which features customers genuinely value and which ones look good in screenshots but rarely get used. With finance, about what the runway picture really looks like and what assumptions sit behind it. With investors where appropriate, about what the next round is going to need to demonstrate and what stories already exist in the market.
-
-By the end of those conversations I have a picture that the founders themselves often don't have written down anywhere. Where the business is genuinely trying to go. Which constraints are real and which are just inherited assumptions. Where the leverage is concentrated. What the team thinks the strategy is, versus what the founders think the strategy is. Then (and only then) I look at the technology with that picture in mind.
-
-The technical recommendations that come out the other side are different as a result. They're not "here's what good engineering looks like in the abstract." They're "here's the platform investment that supports the commercial model you're actually pursuing, and here's the architectural risk that matters because of where the business is going next." The technology serves the business, not the other way around.
-
-Translating in both directions
-
-The other thing the partnership role demands, which the technical-hire framing doesn't, is fluent translation in both directions.
-
-Founders and boards often need to make decisions that have technical consequences they cannot fully evaluate. Should we rebuild the data layer now or in a year? Is this acquisition target's tech stack going to slow us down? Can we promise the enterprise customer SOC 2 by Q3? These questions don't have purely technical answers. They have answers that depend on commercial priorities, risk tolerance, capital constraints, and where the business is heading. My job is to give the founders the information they need to make those decisions in language they can act on, not buried in jargon, not hedged into uselessness, but clear, complete, and honest.
-
-Equally important is the translation in the other direction. When the engineering team raises a concern that sounds technical, my job is often to translate what they're actually saying into commercial terms the rest of the leadership can engage with. "We have a brittle deployment pipeline" is technical language. "Every release is a coin-flip on whether we have an outage during a sales demo, and engineers are spending one day a week fighting fires that should not exist" is commercial language. Same problem. Two different rooms understand it.
-
-The companies where this translation works well don't experience the technology team and the rest of the business as separate worlds. The engineers feel heard at a leadership level. The leadership feels confident in technical decisions because they understand the trade-offs. Decisions get made faster, with more conviction, with fewer surprises down the road.
-
-A real example, slightly anonymised
-
-A wellbeing platform I worked with had a clear commercial ambition: become the default mental health partner for large enterprise customers. They'd raised a meaningful round and the pressure to land marquee customers was real.
-
-If I'd come in as a pure technical hire, the conversation would have been about platform scaling, multi-tenancy, audit logging, and the engineering hires needed to support the load. All real. All necessary. But the highest-leverage move wasn't any of those things.
-
-The conversation that mattered was about positioning. The enterprise market was about to be defined by AI capability. Not the obvious AI hype, the genuine, embedded conversational and analytical capabilities that would let the platform have a different relationship with employees than the competitors who were just doing static content. That was a commercial insight as much as a technical one. And it pointed to a single hire that would change everything: a senior data scientist with the right background to lead the AI direction.
-
-Making that hire wasn't a technical decision. It was a commercial bet about where the market was going, what customers would value in eighteen months, and what story the next round of investors would need to hear. The technology consequences flowed from there (and they were significant) but the conversation started in the business, not in the codebase. That hire opened a product direction the team hadn't been able to reach before, and the technical positioning became a thread in the investment narrative that followed.
-
-That's what business-first technology leadership looks like in practice. It is not the absence of technical work. It is the presence of business context underneath every technical decision.
-
-Why this changes the relationship
-
-Founders who experience this approach for the first time often describe it the same way: they stop treating me as someone they bring in for the tech, and start treating me as someone they think with. The engagement shifts from contractor to partner. The conversations get harder, more honest, and more useful. The decisions get better.
-
-This matters commercially as much as it matters relationally. A partner gets brought into the rooms where strategic decisions are being made. A contractor gets briefed afterwards. A partner gets to flag a misaligned commercial bet before the engineering plan is locked in. A contractor gets handed a roadmap and asked to deliver it. Both can do good work. Only one of them genuinely changes the trajectory of the business.
-
-It also matters for what gets built. Engineering teams led by a CTO who genuinely understands the commercial picture build different things, sequence them differently, and make different trade-offs than teams led by someone optimising for technical purity. The output looks similar from a distance. The compounding effect over twelve months is enormous.
-
-Where this becomes operational: AI Brain
-
-The "business partner" framing is a way of working. But it has a productized counterpart, and it's the most concrete expression of the same philosophy.
-
-AI Brain is an offering I built specifically for founders who want AI installed into how the business actually runs, rather than treated as a separate technical project. The work isn't generic AI consulting. It starts with the same conversations a fractional engagement starts with: what does your business actually do, where is leverage concentrated, what are the three to five jobs you do every week that consume disproportionate time. Then it installs the systems, skills, and connections that turn those workflows into something the business compounds on, rather than something the founder retypes every Monday.
-
-If the partnership philosophy resonates and you want a smaller, sharper engagement than a full fractional retainer, AI Brain is often the right starting point. It's a four-week Sprint that produces a working system rather than a deck full of recommendations.
-
-The job title says CTO. The work is about being a partner who happens to bring deep technical expertise into the room. If you're looking for someone who'll just take a roadmap and execute it, there are plenty of skilled engineers and engineering managers who'll do that well. If you want someone who'll sit with you, understand the business properly, and help you make decisions that move it forward, that's the engagement worth booking.
-
-Share:
-
-LinkedIn
-
-In this article
-
-Looking for a partner, not just a technologist?
-
-That's the engagement I run. Book a 30-minute call, no pitch, just an honest conversation about whether and how I can help.
-Book a Call
-
-Continue Reading
-
-Process
-
-The First 90 Days: What a Fractional CTO Actually Does
-
-A month-by-month breakdown of what a well-run fractional CTO engagement looks like in practice.
-Read article →
-
-Engineering Leadership
-
-Psychological Safety: The Most Underrated Engineering Leadership Tool
-
-What psychological safety actually means in practice, and how to build it inside an engineering team.
-Read article →
-
-Fractional CTO Guide
-
-What is a Fractional CTO? The Complete Guide
-
-Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
-Read article →
+Fill in the form and I'll reach out personally when dates are confirmed.
+Express Interest →
 
 ---
 
@@ -1549,109 +1789,121 @@ Read article →
 
 ---
 
-## From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
-URL: https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html
+## What is a Fractional CTO? The Complete Guide for UK Startups (2026)
+URL: https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html
 
-AI & Engineering Leadership
-10 January 2026
-11 min read
+Fractional CTO Guide
+5 March 2026
+9 min read
 
-From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
+What is a Fractional CTO? The Complete Guide for UK Startups
 
-AI coding tools are already changing how engineering teams work. But the real transformation isn't about writing code faster, it's about a fundamental shift in what engineering leadership looks like. The CTO who adapts to this shift will have a decisive advantage. The one who doesn't will be managing a team that's slowly optimising the wrong things.
+A fractional CTO gives your startup access to senior, C-suite technology leadership without the cost or commitment of a full-time hire. Here's exactly what they do, when you need one, and how to find the right fit for your stage.
 
 NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
 
-The shift that's already underway
+The definition: what a fractional CTO actually is
 
-Most technology leaders are framing the AI coding revolution as a productivity story. GitHub Copilot suggestions accepted, lines of code written, sprint velocity improved. These are real gains and they're measurable. But they're also the least interesting part of what's happening.
+A fractional CTO is an experienced technology leader who works with your company on a part-time basis (typically one to three days per week) rather than as a permanent, full-time employee. The word "fractional" refers to the fraction of their working time you're buying. Everything else (the seniority, the strategic thinking, the hands-on decision-making) is the same as you'd expect from a full-time Chief Technology Officer.
 
-The more significant change is structural. We're moving from a model where software is built by a team of humans writing code, to a model where software is built by humans and agents working together, humans setting direction, providing context, reviewing outputs, and making judgment calls; agents doing an increasing proportion of the implementation work.
+This model has existed for decades in finance (fractional CFOs are common in mid-market businesses) but has accelerated sharply in the tech startup world over the past few years, driven by two forces: the rising cost of full-time CTO talent and the growing sophistication of the fractional market itself.
 
-This is already true at the task level with tools like Copilot and Claude. It's becoming true at the feature level with tools like Devin, Cursor, and GitHub Copilot Workspace. It will become true at the project level. The question isn't whether this is happening (it is) it's what kind of leadership it requires.
+A good fractional CTO is not a consultant who delivers reports. They are a member of your leadership team. They attend your board meetings, they challenge your roadmap, they interview senior engineers, they own the technology strategy. The only meaningful difference is that they're not there five days a week.
 
-Management versus orchestration: what's actually different
+The core value proposition: you get genuine C-suite technology leadership (strategic thinking, hiring judgment, board-level communication) for a fraction of the cost and commitment of a permanent CTO hire.
 
-Traditional engineering management is built around a set of assumptions: that the people doing the work need clarity on what to build, context about why it matters, feedback on how they're doing, and space to solve problems. A good engineering manager excels at these things across a team of humans.
+What a fractional CTO actually does day-to-day
 
-Orchestration is different in important ways. When your team includes both people and AI agents, the coordination problem changes:
+The scope varies by company and engagement, but most fractional CTOs will cover some combination of the following:
 
-Context is more explicit
+Technology strategy and roadmap
 
-A human engineer can ask a clarifying question when a requirement is unclear. They pick up context from the standup conversation, the product review, the offhand comment in Slack. AI agents can't do this. They operate on what they're given. Writing a good prompt or a well-scoped task description isn't just nice to have, it becomes a core engineering skill. Teams that invest in it outperform those that don't.
+Setting the direction for your product and engineering investment over the next 12–18 months. This means aligning tech priorities with business objectives, managing technical debt deliberately, and making the architectural decisions that will determine your ability to scale.
 
-This changes what the CTO needs to model. The best engineering leaders will be the ones who can write precise, well-bounded problem statements, not vague requirements, but clear descriptions of the problem, the constraints, the success criteria, and the context the agent needs to operate effectively. This is a skill that takes deliberate practice to develop.
+Engineering team leadership
 
-Review and judgment move up the value chain
+Running one-to-ones with senior engineers, introducing engineering best practices, building psychological safety in the team, and creating the conditions where great engineers want to stay. A strong fractional CTO often becomes the engineering team's primary leader, even on a part-time schedule.
 
-When agents can produce a working implementation in minutes, the bottleneck shifts from "can we write this code?" to "is this the right code?" The review process becomes more important, not less. Engineers who thrive in this environment are those with strong architectural intuition, who can look at an AI-generated implementation and quickly assess whether it's solving the right problem in the right way.
+Strategic hiring
 
-The implication for team building is significant. The ratio of "can implement quickly" to "can review and judge effectively" is changing. Teams that optimise only for implementation speed will generate a lot of code that passes review but isn't architecturally sound. The leaders who understand this will build teams with a different balance of skills.
+One of the highest-leverage things a fractional CTO does is hire. They know what "good" looks like at each level. They can structure your engineering interview process, write compelling job descriptions, assess technical portfolios, and avoid the common mistake of hiring fast and regretting it slowly.
 
-The failure modes are different
+Vendor and architecture decisions
 
-Human engineers fail by misunderstanding requirements, making mistakes, taking shortcuts under pressure. AI agents fail by hallucinating plausible-sounding but incorrect solutions, optimising for the metric they're given rather than the outcome you want, and confidently doing the wrong thing with no signal that anything is wrong. The bugs that slip through an AI-assisted workflow are often harder to spot than traditional bugs, they look correct.
+Choosing the right cloud provider, evaluating whether to build or buy, selecting data infrastructure, assessing security posture, these decisions have long tails. A fractional CTO brings the pattern recognition to make them well.
 
-This doesn't mean AI agents are unreliable. It means the engineering process around them needs to account for their specific failure modes. Testing practices, code review norms, and deployment gates all need to evolve to provide appropriate verification of AI-generated code.
+Board and investor relations
 
-The uncomfortable truth: most companies that think they're "using AI in engineering" are using AI to write code faster in a process that was already slightly broken. The real question is whether your engineering process is designed for the kind of code AI produces, and most aren't.
+Translating complex technical decisions into language your board and investors understand. Helping you tell a coherent technology story in fundraising decks. Answering the CTO-level questions in a due diligence process.
 
-What this means for engineering leaders right now
+Technical due diligence
 
-I'm not interested in the version of this argument that says "AI will replace engineers." That's the wrong frame and it leads to the wrong decisions. The more useful frame is: what does excellent engineering leadership look like in 18 months, and what do you need to do now to build towards it?
+If you're being acquired or raising a significant round, a fractional CTO can prepare your codebase, documentation, and technical narrative for scrutiny. They can also run due diligence on a company you're acquiring.
 
-Develop real AI literacy, fast
+Who needs a fractional CTO?
 
-Not "knows that AI tools exist" literacy. Not "has tried ChatGPT a few times" literacy. Genuine, hands-on understanding of how these tools work, what they're good at, where they fall down, and how to design workflows around them. This means spending time with the tools, not just reading about them. A CTO who can't personally evaluate the quality of AI-assisted code, or who doesn't understand how an agentic workflow operates, is making significant decisions with significant blind spots.
+Not every company is the right fit for a fractional model. The sweet spot is typically:
 
-The most valuable perspective here isn't the product manager's ("this saves us time") or the marketing team's, "AI-native startup." It's the engineering leader's: what does this actually mean for how we build software, and are we building the right practices around it?
+Seed to Series B startups that have raised capital and are building a real engineering team, but aren't yet large enough to justify a full-time CTO salary.
 
-Rethink your hiring framework
+Founder-led technical companies where the founding CTO has become the constraint, brilliant at building, not yet skilled at leading a 15-person engineering function.
 
-If a significant portion of implementation work is AI-assisted, the skills you're hiring for change. I'm not suggesting that implementation skill doesn't matter, it does, deeply. Understanding what good code looks like is inseparable from the ability to write it. But the profile of your senior engineers should increasingly include: strong judgment about system design, ability to review AI outputs with discernment, capacity to write clear problem statements, and comfort operating in a high-ambiguity environment where the tools are changing under your feet.
+Non-technical founders who need a trusted technical voice to translate between the engineering team and the board.
 
-The engineers who will be most valuable in this environment are the ones with deep foundations (people who understand systems at multiple levels of abstraction) combined with the curiosity to engage seriously with how AI tools are changing the craft. That's a specific profile, and it's worth hiring for deliberately.
+Companies in transition, after a CTO departure, ahead of a fundraise, or during a significant architectural change, who need senior cover while they hire permanently.
 
-Invest in your prompting and workflow culture
+Established businesses launching a digital product for the first time, who need technology leadership without a permanent technology executive.
 
-Most teams treat prompting as an individual skill, everyone figures it out for themselves. This is inefficient and produces wildly inconsistent results. The teams that are getting real leverage from AI agents are treating prompt engineering as a team practice: sharing effective patterns, building internal libraries of well-designed prompts for common tasks, reviewing AI-assisted PRs in a way that captures learnings about what worked and what didn't.
+Fractional CTO vs full-time CTO: the real comparison
 
-This is the engineering culture analogue of code review practices, pair programming norms, and architectural decision records. It takes deliberate leadership to build, but the teams that build it will consistently outperform those that don't.
+The obvious difference is cost. A full-time CTO at a UK Series A startup will cost between £120,000 and £180,000 in base salary, plus 20–30% in employer oncosts (National Insurance, pension, benefits). A fractional CTO costs between £3,000 and £7,000 per month on a retainer, or £1,000–£1,600 per day. For a company that needs two days of CTO-level leadership per week, the fractional model is often 60–70% cheaper than the full-time alternative.
 
-Know when not to use agents
+But cost isn't the only consideration. There are tradeoffs worth being honest about:
 
-Counterintuitively, one of the most important AI leadership skills is knowing when not to use AI. There are categories of work where human judgment, craft, and contextual intuition are still the highest-quality approach, complex system design decisions, security-sensitive implementations, novel algorithm development, and any work where the problem statement itself isn't yet clear. An over-reliance on AI for these tasks produces output that looks plausible but lacks the depth that comes from genuine human engagement with a hard problem.
+Availability. A fractional CTO isn't there every day. Time-sensitive issues need a clear escalation path. The best fractional engagements build in an async-first operating rhythm so this isn't a constant constraint.
 
-The engineering leader who can make these distinctions clearly (and build a culture where the team has the judgment to make them too) will consistently make better decisions than the one who applies AI indiscriminately.
+Commitment. The fractional model works on trust. You need to genuinely include them in key decisions, not just call on them for fire-fighting. Fractional CTOs who feel they're being used tactically rather than strategically tend to disengage.
 
-Most companies are worrying about AI for the wrong reasons
+Transition planning. If you know you'll need a full-time CTO within 12 months, a good fractional CTO will help you define that profile and recruit for it. The best fractional CTOs actively work themselves out of the role when the time is right.
 
-The conversations I have with founders and boards about AI in engineering tend to cluster around two concerns: "are we falling behind?" and "are we spending too much on AI tools?" Both are worth thinking about. Neither is the most important question.
+How to find and hire a fractional CTO in the UK
 
-The more important questions are: Is our engineering process designed to take genuine advantage of AI-assisted development, or are we just bolting tools onto a workflow that was designed for pre-AI engineering? Are we building the judgment in our engineering team to review and evaluate AI outputs effectively? And are we honest about what AI is actually good at, versus where it creates the illusion of productivity without the substance?
+The fractional CTO market in the UK is less developed than in the US, but it's growing quickly. Here's how most successful engagements begin:
 
-The companies that will look back on 2025–2027 as a period of genuine competitive advantage from AI will be the ones that engaged with these questions seriously. The ones that treated it as a checklist ("we adopted Copilot, we added AI to our pitch deck") will have generated a lot of code that works until it doesn't.
+Referral networks
 
-What this means for the CTO role specifically
+The most common route. Ask your investors, your existing advisors, or your peer network. The fractional CTO market is relationship-driven. A warm introduction to someone who's worked closely with a company at your stage is worth far more than any job posting.
 
-I spend a lot of time in fractional and interim CTO engagements helping companies navigate exactly this transition. The CTO-level questions that come up repeatedly aren't primarily about which AI tools to adopt. They're about:
+Specialist platforms
 
-How do we build the right engineering culture for an AI-augmented team?
+A small number of platforms specifically match fractional executives with growing companies. These are useful if you don't have a strong warm-referral network, though the quality varies significantly.
 
-How do we evaluate the actual quality of AI-assisted code, beyond whether it passes tests?
+Direct outreach
 
-How do we maintain architectural coherence when a significant portion of code is generated?
+Many senior CTOs who have moved into a fractional model maintain a LinkedIn presence specifically to attract inbound enquiries. Search for "fractional CTO UK" and you'll find a number of independent operators. Look for evidence of genuine startup experience, not just big-company credentials.
 
-How do we build a hiring and development culture that prepares engineers for this environment?
+What to look for
 
-And how do we tell a credible story to the board about our AI strategy, not just "we use it," but "here's how it's changing our engineering capability in a specific, measurable way"?
+When evaluating a fractional CTO, the questions that matter most are: Have they operated at the stage you're at? Do they understand how to build a team, not just code? Can they communicate in the room with your board? And critically, do they have the emotional intelligence to lead people, not just processes?
 
-These are leadership questions, not tool questions. The technology is moving faster than the leadership thinking about it, and in my experience, the gap between companies that get this right and those that don't isn't about the tools they've chosen. It's about the quality of the leadership thinking about how to use them.
+Red flags to watch for: anyone who can't tell you specifically what decisions they've made and what the outcomes were, anyone who leads with technical jargon before understanding your business problems, and anyone whose day rate is suspiciously low (it usually means they're doing it to fill a gap between full-time roles, not as a deliberate model).
 
-The shift from management to orchestration is real, and it's accelerating. The engineering leaders who adapt to it, who develop genuine AI literacy, rethink their hiring and team-building frameworks, and build the right cultural practices around AI-assisted development, will have a meaningful advantage in the next three years. Those who treat it as a tooling question will be left optimising the wrong things.
+What to expect in the first 30 days
+
+A well-structured fractional CTO engagement typically starts with a discovery phase. In the first two to four weeks, they should be listening far more than talking: interviewing the engineering team, reviewing the codebase and infrastructure, understanding the product roadmap, and meeting your key investors and board members.
+
+By the end of month one, you should have a clear technology audit, an honest assessment of where you are technically, what the risks are, and what needs to change. This becomes the foundation for the roadmap work that follows.
+
+What you should not expect in the first 30 days: major architectural changes, large hiring decisions, or sweeping process overhauls. Speed in the wrong direction compounds your problems. A good fractional CTO earns the right to change things by understanding them first.
+
+The bottom line
+
+A fractional CTO is a genuinely powerful model for the right company at the right stage. Done well, it gives you the strategic technology leadership your business needs to scale, without betting the company on a permanent hire before you're ready. Done poorly (with misaligned expectations or too narrow a scope), it can feel like an expensive advisory retainer that doesn't move the needle.
+
+The difference is almost always in how clearly both sides define what good looks like from day one.
 
 Share:
 
@@ -1659,32 +1911,32 @@ LinkedIn
 
 In this article
 
-Navigating AI in your engineering team?
+Need a Fractional CTO?
 
-Book a call. I work with founders and CTOs on exactly these leadership and strategy questions.
+Book a free 30-minute call to discuss your situation, no pitch, just an honest conversation.
 Book a Call
 
 Continue Reading
 
-Engineering Leadership
-
-Psychological Safety: The Most Underrated Engineering Leadership Tool
-
-The research is unambiguous. High-performing engineering teams share one quality above all others. Here's how to build it.
-Read article →
-
 Fractional CTO Guide
 
-What is a Fractional CTO? The Complete Guide
+Fractional CTO vs Interim CTO: What's the Difference?
 
-Everything you need to know about the fractional model, from definition to day-to-day scope to how to hire one.
+The two models are often confused. Here's how to decide which one your business actually needs right now.
+Read article →
+
+Pricing
+
+How Much Does a Fractional CTO Cost in the UK? (2026)
+
+Retainer rates, day rates, and what drives the variation. Plus a straight comparison to full-time CTO costs.
 Read article →
 
 Process
 
 The First 90 Days: What a Fractional CTO Actually Does
 
-A month-by-month breakdown of what a well-run fractional CTO engagement looks like in practice.
+A month-by-month breakdown of what a structured fractional CTO engagement looks like in practice.
 Read article →
 
 ---
@@ -1791,257 +2043,5 @@ Build your AI brain properly
 
 Context, workflows, and voice — built around your specific business and how you actually work.
 See the AI Brain →
-
----
-
-## Stop Asking One AI to Do Everything. Build a Stack Instead.
-URL: https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html
-
-AI Brain
-9 May 2026
-7 min read
-
-Stop Asking One AI to Do Everything. Build a Stack Instead.
-
-Your AI setup worked brilliantly for two weeks. Then the outputs started drifting. The tone went slightly off. It started mixing up context. You stopped trusting it — and then you stopped using it. This is one of the most common patterns I see, and the fix is simpler than you'd expect.
-
-NT
-
-Nick Tong
-Fractional CTO · CTO on Demand
-
-Why single-agent setups break
-
-When you ask one Claude setup to handle email triage, meeting prep, weekly planning, follow-ups, and research, you're asking one "person" to hold too much at once. The context bleeds between tasks. The outputs average out across everything it's trying to be. The more it has to do, the worse it gets at all of it.
-
-This isn't a bug in Claude. It's an architecture problem.
-
-Single-agent setups are fragile by design. They're sensitive to session length, to how you phrase things, to how much context has accumulated in the conversation. They feel powerful when they work and frustrating when they don't — and you can rarely tell in advance which it'll be.
-
-The failure mode is slow and invisible. The output is almost right. The tone is close but slightly off. You edit it a bit more than you used to. Eventually you're doing more work than before, just in a different place. And then you stop using it.
-
-The principle behind agent stacks
-
-The solution is narrow scope. Each agent does one thing, takes specific inputs, and produces a defined output. When something breaks, you know exactly which agent to fix. When something works, you can trust it to keep working.
-
-This is the same principle that makes good software reliable: not one function that does everything, but small, well-defined pieces that each do one thing well and hand off cleanly to the next.
-
-The reliability comes from constraints. Each agent has a clear job. It doesn't try to do more. And when you need to improve something, you improve one piece at a time — not the whole system at once.
-
-A practical 3-agent stack for founders
-
-The majority of operational overhead most founders deal with every week comes down to three things: knowing what to focus on, being prepared for the meetings that matter, and making sure nothing falls through the cracks afterwards. Here's one agent for each.
-
-Agent 1: Triage
-
-What it does: Sorts everything that landed in your inbox, Slack, or head into a clear priority list. No drafting, no responses — just prioritisation.
-Input: A dump of messages, tasks, and whatever's on your mind.
-Output: A clear, sorted list — what needs your attention today, what can wait, what to delegate, what to ignore.
-
-Triage prompt
-Here's everything that came in this morning: [paste inbox / Slack summary / task list].
-
-Separate into:
-- Decisions only I can make
-- Things I can delegate (suggest who)
-- Things that can wait until later this week
-- Things I should ignore entirely
-
-Be specific and be brutal.
-
-Agent 2: Meeting Prep
-
-What it does: Builds a structured brief before every call that matters.
-Input: The meeting details, who you're meeting, any past notes or emails.
-Output: A short, structured brief — who, where we left off, talking points, the one question to ask.
-
-This runs best as a Claude Project with your persona.md already loaded, so the brief sounds like you and doesn't need to be rewritten before the meeting.
-
-Meeting prep prompt
-I'm meeting [name / company] at [time].
-Context: [paste notes, emails, or any background].
-Goal: [what I want from this meeting].
-
-Brief format:
-1. Who they are (one sentence)
-2. Where we left off
-3. 2-3 talking points
-4. The one question I should make sure I ask
-
-Agent 3: Follow-up
-
-What it does: Turns meeting notes or a transcript into a clear record of what was decided, who owns what, and a ready-to-send recap.
-Input: Your notes or a transcript from the meeting.
-Output: Decisions made, next steps with owners and timelines, a concise follow-up email.
-
-Follow-up prompt
-Here are my notes from the meeting: [paste notes or transcript].
-
-Extract:
-- Decisions made (with context)
-- Next steps, each with an owner and a deadline
-- One thing that's still unresolved
-
-Then draft a short, professional follow-up email in my voice.
-Keep it under 200 words.
-
-How they fit together
-
-Triage tells you what to focus on. Prep gets you ready for the things that matter. Follow-up closes the loop so decisions stick and next steps actually happen.
-
-Each one does one job. None of them tries to do the others' job. And because the scope is narrow, when the output isn't quite right, you can usually fix it with one or two small adjustments — not a full rebuild.
-
-Once these three are running reliably, you start to see where the same pattern applies elsewhere. Hiring prep. Client briefs. Board pack summaries. Investor updates. The principle is always the same: clear inputs, one job, defined outputs.
-
-Where to take this next
-
-Building this properly — with the right project structure, the right persona files loaded in each agent, and the right workflow instructions — takes a focused day or two of setup. Done well, it runs reliably without you having to rebuild it every few weeks.
-
-That's the work we do inside the AI Brain engagement. We build these systems together, in your tools, around the workflows you actually run. Not a generic template — a setup built for your specific business.
-
-If you want to see what that looks like in practice, the previous post is a good starting point: Why Most Founders Are Getting 5% From Their AI Tools.
-
-Next up: a look at what a live AI training programme looks like and why the live format changes what you actually build. Read it here →
-
-Share:
-
-LinkedIn
-
-In this article
-
-Build this for your business
-
-We build focused agent stacks together — in your tools, around your actual workflows.
-See the AI Brain →
-
----
-
-## You Don't Need a Content Team. You Need a System.
-URL: https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html
-
-AI Brain
-17 May 2026
-5 min read
-
-You Don't Need a Content Team. You Need a System.
-
-You are not slow at producing content because you lack ideas. You are slow because you are running a production process through a single chat window.
-
-NT
-
-Nick Tong
-Fractional CTO · CTO on Demand
-
-Most founders have domain knowledge, pattern recognition, and opinions that would land with the right buyers. What they do not have is a way to move that material from their head to a published post without it becoming a project. So it stays in their head. Or it gets drafted once, feels off, and gets quietly abandoned.
-
-The reflex fix is to open a chat window and type a prompt. Nielsen Norman Group's 2024 controlled study found that AI cuts drafting time by more than 50 percent — a real gain. But the same study found that quality improvements concentrated in people with adjacent domain expertise already. A founder with editorial instincts gets faster and better. A founder without them gets faster. The output is only as good as the judgment behind the prompt.
-
-The problem is not the prompt. The problem is that most founders are running a single-threaded process.
-
-When you are the one prompting, reviewing, editing, redirecting, and publishing, you are still the bottleneck. Everything waits on your attention. This is why founders who say AI is "a bit useful" are not wrong. They have made individual moments more efficient without changing how work moves. The investment did not compound because the workflow did not change.
-
-The shift is architectural, not prompting-level
-
-A properly designed agent pipeline separates the roles that a single chat window collapses into one. One agent handles research. One handles structuring. One holds the founder's voice and context. One drafts. One reviews against a brief. None of them wait for the founder to type the next instruction. The founder defines the system once. The system runs.
-
-McKinsey's January 2025 report found that employees are three times more likely to be using generative AI than their leaders expect — because individuals are improvising in chat windows, making themselves personally faster. What the organisation is not getting is the compounding benefit that comes when the process is designed rather than improvised. Ad hoc prompting is individual speed. A pipeline is an editorial operation that runs without you in the room.
-
-Ad hoc prompting is individual speed. A pipeline is an editorial operation that runs without you in the room.
-
-A well-built pipeline makes the output sound like you, consistently
-
-Most founders type their context fresh each session — who they are, who they are writing for, what they care about. That context disappears when the window closes. The next post starts cold. Over time the output is inconsistent, averaged out, recognisably AI-shaped. A pipeline bakes that context in: the voice rules, the positioning, the things the founder would never say.
-
-This matters commercially. The 2024 Edelman-LinkedIn B2B Thought Leadership study found that 52 percent of B2B decision-makers spend over an hour a week reading thought leadership, and 9 in 10 say consistent production makes them more receptive to sales outreach. The bar is not one excellent post. It is a steady, recognisable presence over time.
-
-The honest caveat
-
-A pipeline does not fix thin thinking. Cornell and Science published research in late 2025 showing that researchers using LLMs posted around 33 percent more papers, but high-scoring AI-polished work was actually less likely to be accepted. More output at lower signal is not a strategy. A pipeline amplifies what a founder brings to it. If the views are sharp, the system makes them consistent and reachable. If the views are generic, the system makes that problem faster and louder.
-
-The pipeline is not the product. The founder's point of view is the product. The pipeline is how it gets out of their head and into the market.
-
-That is what the AI Brain engagement builds: a structured process for mapping a founder's voice, designing the agent pipeline that handles production, and handing it over ready to run. Details and registration at ctoondemand.co.uk/ai-brain/.
-
-Most founders already know what they want to say. The question is whether they have a system that will say it for them every week — or just whenever they can face the effort.
-
-Share:
-
-LinkedIn
-
-In this article
-
-Build your content pipeline
-
-Voice mapping, agent pipeline design, and a system handed over ready to run.
-See the AI Brain →
-
----
-
-## Coming Soon: Real-Time AI Workshops
-URL: https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html
-
-Workshops
-16 May 2026
-3 min read
-
-Coming Soon: Real-Time AI Workshops
-
-The thing founders tell me most often isn't "AI doesn't work." It's "I wish I'd started this six months ago." Getting the setup right is the hard part — and the reason most setups stall is that there's no one in the room when things don't quite click. That's what I'm building next.
-
-NT
-
-Nick Tong
-Fractional CTO · CTO on Demand
-
-What the workshops are
-
-A structured, 7-day training programme delivered in real time. Not a recorded course you watch alone at midnight. Not a Slack group with a PDF. A live, small-group experience with a clear programme, real things to build, and people to build alongside.
-
-Here's what's included:
-
-Weekly live sessions — small groups, not webinars. You'll be in the room, not watching a stream.
-
-Course criteria between sessions — practical builds, not theory. You leave each week with something working.
-
-A buddy to sign up with — someone with similar goals to move through the programme alongside, compare notes with, and troubleshoot with.
-
-A one-on-one session with me during the training — time to look at your specific setup and work through whatever isn't landing.
-
-The first cohorts will be intentionally small. That's not a scarcity tactic — it's the point. I want to be able to give proper attention to what each person is building, not run a broadcast.
-
-Why live matters
-
-There's a gap between watching a video and being in the room.
-
-In a recorded course, you watch someone else's problem get solved. In a live session, when something isn't working for your specific context, we fix it right there. The questions you didn't know you had come up — and they get answered before the end of the session, not in a forum thread three days later.
-
-Being live also means I can be far more responsive. If something isn't landing, we slow down. If the group is ready to go deeper, we go deeper. That flexibility doesn't exist in a recording — and it makes a real difference to what people actually finish with.
-
-The buddy element is there for the same reason. The people who make the most progress tend to be the ones who have someone to compare notes with, to challenge their assumptions, and to work alongside when a build isn't quite coming together.
-
-Live sessions, a structured programme, a buddy, and a one-on-one. Everything is designed around actually finishing with something working — not just understanding the concepts.
-
-Be first to know
-
-The details are still being finalised. What I know is that the first cohort will be small and I'll be reaching out personally to people on the list when dates are confirmed.
-
-If this sounds like what you've been looking for, fill out the form below and let me know you're interested. I'll be in touch when we're ready to go.
-
-In the meantime, the two posts below are a good place to start if you want to make progress before the workshops launch:
-
-Why Most Founders Are Getting 5% From Their AI Tools — what an AI brain is and three things you can do this week.
-
-Stop Asking One AI to Do Everything — how to build a focused stack that stays reliable.
-
-Share:
-
-LinkedIn
-
-In this article
-
-Register your interest
-
-Fill in the form and I'll reach out personally when dates are confirmed.
-Express Interest →
 
 ---
