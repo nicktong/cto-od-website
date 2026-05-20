@@ -314,31 +314,17 @@ If anything's missing from the inputs, ask before you draft.</pre>
         <!-- ===================== LEAD MAGNET ===================== -->
         <div class="lead-magnet" id="prompt-library">
           <h3>Get the full prompt library</h3>
-          <p>Ten prompts I install for clients, covering the foundations (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Drop your email and I'll send you the link.</p>
-          <form class="lead-magnet-form" id="promptLibForm" action="https://formspree.io/f/xpqydglp" method="POST" novalidate>
+          <p>Ten prompts I install for clients, covering the foundations (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Drop your details and you'll be redirected straight to the library.</p>
+          <form class="lead-magnet-form" id="promptLibForm" novalidate>
             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-            <input type="hidden" name="_subject" value="Prompt library download — AI for Coaches and Small Businesses" />
-            <input type="hidden" name="source" value="blog · ai-for-coaches-and-small-businesses" />
             <input type="text"  name="name"  required autocomplete="name"  placeholder="Your name" />
             <input type="email" name="email" required autocomplete="email" placeholder="you@yourbusiness.com" />
-            <button type="submit" id="promptLibBtn">Send me the library</button>
+            <button type="submit" id="promptLibBtn">Unlock the library</button>
           </form>
-          <p class="lead-magnet-note">No newsletter. No follow-up sequence. Just the library, with one short note from me on how to get started.</p>
+          <p class="lead-magnet-note">By submitting, you agree to be added to my contacts so I can email you with updates to the library. I don't send a newsletter. Unsubscribe at any time.</p>
           <div class="lead-magnet-success" id="promptLibSuccess" hidden role="status" aria-live="polite">
-            <strong>Sent.</strong> The library is at <a href="../ai-brain/prompts/" target="_blank" rel="noopener noreferrer">ctoondemand.co.uk/ai-brain/prompts/</a> — opening it now. You'll also get an email confirmation.
+            <strong>Unlocked.</strong> Redirecting you to the library now. Your access lasts 30 days on this device. If the redirect doesn't fire, <a href="/ai-brain/prompts/" id="promptLibFallback">click here</a>.
           </div>
-          <!--
-            HubSpot Forms embed (optional, paired with Formspree).
-            Replace YOUR_PORTAL_ID and YOUR_FORM_ID once you have them.
-            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-            <script>
-              hbspt.forms.create({
-                portalId: "YOUR_PORTAL_ID",
-                formId:   "YOUR_FORM_ID",
-                target:   "#promptLibHubspot"
-              });
-            </script>
-          -->
         </div>
 
         <h2 id="where-this-builds-on">Where this builds on what's already covered</h2>
@@ -493,35 +479,56 @@ If anything's missing from the inputs, ask before you draft.</pre>
       });
     }
 
-    // Prompt library lead-magnet form
+    // Prompt library lead-magnet form — posts to /api/prompts which
+    // upserts a HubSpot contact and returns a signed access token.
+    // We persist the token to localStorage so the prompts page picks
+    // it up on arrival, and pass it in the URL too as a backup.
     const libForm    = document.getElementById('promptLibForm');
     const libBtn     = document.getElementById('promptLibBtn');
     const libSuccess = document.getElementById('promptLibSuccess');
-    const LIB_URL    = '../ai-brain/prompts/';
+    const LIB_URL    = '/ai-brain/prompts/';
+    const STORAGE_KEY = 'ctood:promptLibToken';
+
     if (libForm) {
       libForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         if (!libForm.checkValidity()) { libForm.reportValidity(); return; }
 
-        // Open the gated tab synchronously inside the user gesture so popup
-        // blockers don't kill it. Redirect once Formspree confirms.
-        const popup = window.open('about:blank', '_blank', 'noopener,noreferrer');
-
         libBtn.disabled = true;
-        libBtn.textContent = 'Sending…';
+        libBtn.textContent = 'Unlocking…';
+
+        const fd = new FormData(libForm);
+        const payload = {
+          name: fd.get('name'),
+          email: fd.get('email'),
+          _gotcha: fd.get('_gotcha') || ''
+        };
 
         try {
-          const res = await fetch(libForm.action, { method: 'POST', body: new FormData(libForm), headers: { 'Accept': 'application/json' } });
-          if (!res.ok) throw new Error();
+          const res = await fetch('/api/prompts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok || !data.ok || !data.token) {
+            throw new Error(data.error || 'unknown');
+          }
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({ token: data.token, savedAt: Date.now() }));
+          } catch (_) { /* non-fatal */ }
 
-          if (popup && !popup.closed) popup.location.href = LIB_URL;
           libForm.hidden = true;
           libSuccess.hidden = false;
-        } catch (_) {
-          if (popup && !popup.closed) popup.close();
+          const fallback = document.getElementById('promptLibFallback');
+          if (fallback) fallback.href = LIB_URL + '?t=' + encodeURIComponent(data.token);
+
+          // Redirect after a short pause so the user sees confirmation
+          setTimeout(() => { location.href = LIB_URL + '?t=' + encodeURIComponent(data.token); }, 800);
+        } catch (err) {
           libBtn.disabled = false;
-          libBtn.textContent = 'Send me the library';
-          alert('Something went wrong sending the form. Please try again, or open the library directly at /ai-brain/prompts/');
+          libBtn.textContent = 'Unlock the library';
+          alert('Something went wrong sending the form. Please try again, or email web@ctoondemand.co.uk if it persists.');
         }
       });
     }

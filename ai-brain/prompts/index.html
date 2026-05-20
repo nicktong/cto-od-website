@@ -6,8 +6,8 @@
   <meta name="robots" content="noindex, nofollow" />
 
   <title>AI Brain Prompt Library | CTO on Demand</title>
-  <meta name="description" content="Ten prompts I install for clients — foundations, plus three workflows each for coaches, small businesses, and founders." />
-  <link rel="canonical" href="https://ctoondemand.co.uk/ai-brain/prompts/" />
+  <meta name="description" content="Ten prompts I install for clients — foundations, plus three workflows each for coaches, small businesses, and founders. Email required for access." />
+  <link rel="canonical" href="https://www.ctoondemand.co.uk/ai-brain/prompts/" />
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B1829'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter%2Csystem-ui%2Csans-serif' font-weight='700' font-size='13' fill='%23ffffff'%3ENT%3C/text%3E%3C/svg%3E" />
 
@@ -34,9 +34,7 @@
       text-transform: uppercase; color: var(--clr-accent);
       margin-bottom: 1rem;
     }
-    .pl-eyebrow::before {
-      content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--clr-accent);
-    }
+    .pl-eyebrow::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--clr-accent); }
     .pl-hero h1 {
       font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800; letter-spacing: -0.025em; line-height: 1.1;
@@ -50,7 +48,6 @@
     .pl-section { padding-block: clamp(3rem, 5vw, 4rem); border-bottom: 1px solid var(--clr-border); }
     .pl-section:last-of-type { border-bottom: none; }
     .pl-section-inner { max-width: 820px; margin-inline: auto; }
-
     .pl-section-tag {
       font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--clr-accent);
@@ -65,14 +62,61 @@
       margin-bottom: 2rem; max-width: 60ch;
     }
 
-    .pl-prompt {
-      margin: 2.25rem 0;
-      padding: 0;
+    /* ── Gate form ── */
+    .pl-gate {
+      max-width: 560px; margin: 0 auto; margin-top: 2rem;
+      background: linear-gradient(160deg, #0B1829 0%, #1a2a44 100%);
+      color: #fff; border-radius: 1.25rem;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 20px 48px rgba(11,24,41,.18);
     }
+    .pl-gate h2 {
+      font-family: var(--font-display); color: #fff;
+      font-size: 1.625rem; letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .pl-gate p {
+      color: rgba(255,255,255,.72); font-size: 0.9375rem; line-height: 1.6;
+      margin-bottom: 1.5rem; max-width: none;
+    }
+    .pl-gate-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .pl-gate-form input {
+      font-family: inherit; font-size: 0.9375rem;
+      padding: 0.75em 0.95em; border-radius: 0.5rem;
+      border: 1.5px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06); color: #fff;
+      transition: border-color .25s ease, background .25s ease;
+    }
+    .pl-gate-form input::placeholder { color: rgba(255,255,255,.45); }
+    .pl-gate-form input:focus {
+      outline: none; border-color: #6BA3FF;
+      background: rgba(255,255,255,.12);
+    }
+    .pl-gate-form button {
+      background: #1756E8; color: #fff; border: none;
+      border-radius: 0.5rem;
+      padding: 0.8em 1.4em; font-size: 0.9375rem; font-weight: 600;
+      cursor: pointer;
+      transition: background .25s ease;
+      margin-top: 0.25rem;
+    }
+    .pl-gate-form button:hover { background: #1145C4; }
+    .pl-gate-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .pl-gate-note {
+      font-size: 0.75rem; color: rgba(255,255,255,.45);
+      margin-top: 1rem; max-width: none;
+    }
+    .pl-gate-error {
+      background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.3);
+      color: #fecaca; font-size: 0.875rem;
+      padding: 0.75rem 1rem; border-radius: 0.5rem; margin-top: 1rem;
+    }
+
+    /* ── Prompt blocks ── */
+    .pl-prompt { margin: 2.25rem 0; padding: 0; }
     .pl-prompt-head {
       display: flex; align-items: baseline; justify-content: space-between;
-      gap: 1rem; flex-wrap: wrap;
-      margin-bottom: 0.5rem;
+      gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;
     }
     .pl-prompt-num {
       font-family: var(--font-display);
@@ -85,10 +129,7 @@
       padding: 0.2em 0.6em; border-radius: 99px;
       background: var(--clr-accent-bg);
     }
-    .pl-prompt h3 {
-      font-size: 1.25rem; letter-spacing: -0.015em;
-      margin-bottom: 0.5rem;
-    }
+    .pl-prompt h3 { font-size: 1.25rem; letter-spacing: -0.015em; margin-bottom: 0.5rem; }
     .pl-prompt-desc {
       color: var(--clr-muted); font-size: 0.9375rem; line-height: 1.6;
       margin-bottom: 1rem; max-width: 60ch;
@@ -120,6 +161,7 @@
     }
     .pl-tip strong { color: var(--clr-dark); }
 
+    /* ── TOC ── */
     .pl-toc {
       background: var(--clr-section-alt);
       border-radius: 1rem; padding: 1.5rem 1.75rem;
@@ -135,19 +177,27 @@
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.5rem;
     }
     @media (max-width: 640px) { .pl-toc ol { grid-template-columns: 1fr; } }
-    .pl-toc li {
-      font-size: 0.9375rem; color: var(--clr-body); line-height: 1.5;
-    }
-    .pl-toc a {
-      color: inherit; text-decoration: none;
-      display: flex; gap: 0.625rem;
-    }
+    .pl-toc li { font-size: 0.9375rem; color: var(--clr-body); line-height: 1.5; }
+    .pl-toc a { color: inherit; text-decoration: none; display: flex; gap: 0.625rem; }
     .pl-toc a:hover { color: var(--clr-accent); }
-    .pl-toc-num {
-      color: var(--clr-muted); font-weight: 600;
-      min-width: 1.5rem;
-    }
+    .pl-toc-num { color: var(--clr-muted); font-weight: 600; min-width: 1.5rem; }
 
+    /* ── Loading state ── */
+    .pl-loading {
+      text-align: center; padding: 3rem 1rem;
+      color: var(--clr-muted); font-size: 0.9375rem;
+    }
+    .pl-loading-spinner {
+      display: inline-block; width: 20px; height: 20px;
+      border: 2px solid var(--clr-border);
+      border-top-color: var(--clr-accent);
+      border-radius: 50%;
+      animation: pl-spin 0.8s linear infinite;
+      vertical-align: middle; margin-right: 0.5rem;
+    }
+    @keyframes pl-spin { to { transform: rotate(360deg); } }
+
+    /* ── CTA ── */
     .pl-cta {
       margin-top: 4rem;
       background: linear-gradient(160deg, #0B1829 0%, #1a2a44 100%);
@@ -160,17 +210,13 @@
       margin-bottom: 0.75rem;
     }
     .pl-cta p {
-      color: rgba(255,255,255,.7); font-size: 0.9375rem;
-      line-height: 1.6; max-width: 50ch;
-      margin-inline: auto; margin-bottom: 1.5rem;
+      color: rgba(255,255,255,.7); font-size: 0.9375rem; line-height: 1.6;
+      max-width: 50ch; margin-inline: auto; margin-bottom: 1.5rem;
     }
     .pl-cta-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
     .pl-cta .btn-primary { background: #1756E8; color: #fff; }
     .pl-cta .btn-primary:hover { background: #1145C4; }
-    .pl-cta .btn-ghost {
-      background: transparent; color: #fff;
-      border: 1.5px solid rgba(255,255,255,.25);
-    }
+    .pl-cta .btn-ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.25); }
     .pl-cta .btn-ghost:hover { background: rgba(255,255,255,.08); }
 
     .pl-back {
@@ -180,6 +226,9 @@
       transition: color .25s ease;
     }
     .pl-back:hover { color: var(--clr-accent); }
+
+    /* Honeypot — visually hidden */
+    .pl-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
   </style>
 </head>
 
@@ -197,530 +246,49 @@
         <a href="/ai-brain/" class="pl-back">← Back to AI Brain</a>
         <span class="pl-eyebrow">AI Brain · Prompt Library</span>
         <h1>Ten prompts I install for clients.</h1>
-        <p>The foundations I set up first (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Copy them, customise them, and start running them today. If you'd rather have someone install the whole setup for you, the <a href="/ai-brain/#ladder" style="color:var(--clr-accent);font-weight:600">AI Brain engagement</a> covers that.</p>
+        <p>The foundations I set up first (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Drop your details and the library loads below — you'll keep access on this device for 30 days. If you'd rather have someone install the whole setup for you, the <a href="/ai-brain/#ladder" style="color:var(--clr-accent);font-weight:600">AI Brain engagement</a> covers that.</p>
+      </div>
+    </section>
 
-        <div class="pl-toc" aria-label="Library contents">
-          <h3>What's inside</h3>
-          <ol>
-            <li><a href="#p1"><span class="pl-toc-num">01</span><span>The about-you brief</span></a></li>
-            <li><a href="#p2"><span class="pl-toc-num">02</span><span>The style guardrails</span></a></li>
-            <li><a href="#p3"><span class="pl-toc-num">03</span><span>Knowledge hygiene workflow</span></a></li>
-            <li><a href="#p4"><span class="pl-toc-num">04</span><span>Coach · Session prep from notes</span></a></li>
-            <li><a href="#p5"><span class="pl-toc-num">05</span><span>Coach · Post-session capture</span></a></li>
-            <li><a href="#p6"><span class="pl-toc-num">06</span><span>Coach · Programme design</span></a></li>
-            <li><a href="#p7"><span class="pl-toc-num">07</span><span>Small business · Quote from enquiry</span></a></li>
-            <li><a href="#p8"><span class="pl-toc-num">08</span><span>Small business · Invoice triage &amp; chase</span></a></li>
-            <li><a href="#p9"><span class="pl-toc-num">09</span><span>Small business · Daily ops brief</span></a></li>
-            <li><a href="#p10"><span class="pl-toc-num">10</span><span>Founder · Pitch deck self-critique</span></a></li>
-          </ol>
+    <!-- ===================== GATE / LOADING / CONTENT ===================== -->
+    <section class="pl-section">
+      <div class="container pl-section-inner">
+
+        <!-- Gate form (shown when no valid token) -->
+        <div class="pl-gate" id="plGate" hidden>
+          <h2>Get the library</h2>
+          <p>Drop your name and email and the ten prompts load right below. No newsletter, no follow-up sequence — your details just let me track who's reading and give me a way to send updates if I add new prompts later.</p>
+          <form class="pl-gate-form" id="plGateForm" novalidate>
+            <input type="text" class="pl-honeypot" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="text"  name="name"  required autocomplete="name"  placeholder="Your name" />
+            <input type="email" name="email" required autocomplete="email" placeholder="you@yourbusiness.com" />
+            <button type="submit" id="plGateSubmit">Unlock the library</button>
+          </form>
+          <p class="pl-gate-note">By submitting, you agree to be added to my contacts so I can email you with updates to the library. I don't send a newsletter. Unsubscribe at any time.</p>
+          <div class="pl-gate-error" id="plGateError" hidden role="alert"></div>
         </div>
-      </div>
-    </section>
 
-    <!-- ===================== FOUNDATIONS ===================== -->
-    <section class="pl-section">
-      <div class="container pl-section-inner">
-        <p class="pl-section-tag">Section 1 of 4</p>
-        <h2>Foundations</h2>
-        <p class="pl-section-lead">Three files every Claude Project should have before you build anything else. Spend 30 minutes on these and the rest of the library works ten times better.</p>
-
-        <!-- ============== P1 ============== -->
-        <article class="pl-prompt" id="p1">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 01</span>
-            <span class="pl-prompt-aud">Universal</span>
-          </div>
-          <h3>The about-you brief</h3>
-          <p class="pl-prompt-desc">Use this once to draft an <code>about-you.md</code> file. Upload it to your Claude Project's knowledge base. From now on, every conversation in that project starts with Claude already knowing who you are.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>I want to create an about-you.md file for a Claude Project that I use to run
-my work. Treat this as an interview, not a draft.
-
-Ask me one question at a time, in this order:
-
-1. What's your role in one sentence, including who you serve and what
-   outcome you sell them.
-2. What three workflows do you repeat most often in a typical week?
-3. Who are the three to five recurring "characters" in your week (clients,
-   collaborators, suppliers, your accountant, your co-founder)? Just their
-   names, roles, and one line on how to handle each.
-4. What do you NOT want Claude to help with? (Things outside your scope,
-   or things you'd rather still do yourself.)
-5. What are the two or three constraints I should always respect? (Budget,
-   time-of-day, family commitments, accessibility, regulatory.)
-
-After each answer, summarise it back in one line and confirm before moving on.
-
-When all five are answered, produce the final about-you.md as a single
-markdown document, with these sections:
-- One-line role
-- Weekly workflows
-- People I work with
-- Out of scope
-- Constraints
-- Last updated
-
-Keep it under 350 words total. Tight is better than thorough.</div>
-          <p class="pl-tip"><strong>Tip.</strong> The first version won't be perfect. Run it once a month for the first three months and let Claude rewrite it from a fresh interview each time. After three iterations it will be sharp.</p>
-        </article>
-
-        <!-- ============== P2 ============== -->
-        <article class="pl-prompt" id="p2">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 02</span>
-            <span class="pl-prompt-aud">Universal</span>
-          </div>
-          <h3>The style guardrails</h3>
-          <p class="pl-prompt-desc">A two-section file (<code>style.md</code>) that defines how you write and what you never write. Upload to the project; reference from every workflow prompt. The single biggest reason AI output sounds "off" is that this file doesn't exist.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>Help me build a style.md file for my Claude Project. The file has two sections:
-
-## How I write
-A short paragraph (3-4 sentences) capturing my voice. Cover:
-- Sentence length and rhythm
-- Tone (warm, direct, technical, conversational, formal)
-- Vocabulary level (plain English, industry-specific, mixed)
-- How I handle uncertainty (do I hedge, do I commit, do I show working)
-
-## What I never write
-A list of phrases, words, and patterns I want banned outright. Cover:
-- Generic AI tells ("It's important to note", "delve into", "in the realm of",
-  "leverage" as a verb, "elevate", "in the digital age")
-- Filler openers ("In this article we'll explore", "Let's dive in")
-- Hedging that adds nothing ("It may be worth considering", "perhaps you might")
-- Punctuation habits I dislike (em-dashes, exclamation marks, semicolons —
-  pick what's right for you)
-- Any words or phrases specific to my industry that have become hollow
-
-Process:
-1. Ask me to paste three pieces of writing I'm proud of (an email, a post,
-   a piece of client-facing copy).
-2. Extract the voice signals from those samples — sentence length range,
-   typical openers, recurring word choices.
-3. Draft section one based on what you see.
-4. Then ask me what makes me wince in AI output. Draft section two from
-   my answers and from common AI-slop patterns.
-5. Show me the final style.md.
-
-Total length: under 400 words. Specific beats comprehensive.</div>
-          <p class="pl-tip"><strong>Tip.</strong> Once <code>style.md</code> exists, every workflow prompt in this library can end with one line: "Apply style.md." That single instruction does more work than any clever rewording.</p>
-        </article>
-
-        <!-- ============== P3 ============== -->
-        <article class="pl-prompt" id="p3">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 03</span>
-            <span class="pl-prompt-aud">Universal</span>
-          </div>
-          <h3>Knowledge hygiene workflow</h3>
-          <p class="pl-prompt-desc">Run this once on every long document before you add it to a Claude Project's knowledge base. The output is smaller, tighter, and far more useful than the original.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>I'm about to add a long document to my Claude Project's knowledge base.
-Before I do, I want to extract a tighter version that Claude can actually
-use as reference material.
-
-&lt;document&gt;
-[paste the full text, or attach the file]
-&lt;/document&gt;
-
-&lt;purpose&gt;
-[one line on why I want this in the project — e.g. "so Claude can reference
-my coaching framework when drafting session plans"]
-&lt;/purpose&gt;
-
-Produce a structured reference document with these sections (skip any
-section that doesn't apply):
-
-1. Core principles — the rules or beliefs the document is built on (max 7)
-2. Frameworks — any named models, processes, or step-by-step methods
-3. Decision rules — if/then logic worth remembering ("when X, do Y")
-4. Vocabulary — terms with specific meaning in this context
-5. Out of scope — what this document explicitly does NOT cover
-6. Source — original document title and date
-
-Constraints:
-- Under 800 words total
-- Each section is bullets, not prose
-- Skip examples and case studies unless they're load-bearing
-- If something contradicts itself in the source, flag it; don't try to resolve
-
-If the document is fewer than 1,000 words to begin with, tell me it's
-probably small enough to upload as-is and skip the rest.</div>
-          <p class="pl-tip"><strong>Why this matters.</strong> Knowledge bases work better when they're sparse. Twenty pages of crisp reference material beats two hundred pages of meandering source. The tighter the input, the better Claude's outputs.</p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ===================== COACHES ===================== -->
-    <section class="pl-section">
-      <div class="container pl-section-inner">
-        <p class="pl-section-tag">Section 2 of 4</p>
-        <h2>For coaches and consultants</h2>
-        <p class="pl-section-lead">Three workflows I install for coaches in their first week. Each one assumes you've done prompts 01 and 02 already. If you haven't, do those first — these get noticeably better when <code>about-you.md</code> and <code>style.md</code> are in place.</p>
-
-        <!-- ============== P4 ============== -->
-        <article class="pl-prompt" id="p4">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 04</span>
-            <span class="pl-prompt-aud">Coach</span>
-          </div>
-          <h3>Session prep from notes</h3>
-          <p class="pl-prompt-desc">Drop yesterday's notes (or a transcript) in, and a short, structured prep brief comes out for tomorrow's session. The version I install for clients runs in under a minute and replaces about 15 minutes of "let me re-read this and gather myself before the call."</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>You are helping me prep for a coaching session in the next hour.
-
-&lt;client-notes&gt;
-[paste the last session's notes, the client's latest message,
-or a transcript]
-&lt;/client-notes&gt;
-
-&lt;goal&gt;
-[one line on what I want to achieve in this session]
-&lt;/goal&gt;
-
-Use about-you.md for how I coach. Apply style.md.
-
-Output, in this exact order:
-1. Where we left off (3 bullets, max)
-2. The one question I should open with
-3. Two things the client said last time that they probably haven't done
-4. One risk or watch-out for this session (a place they'll likely retreat
-   to, a topic they'll avoid, a decision they're putting off)
-5. A 2-sentence intention for me as the coach, in my own voice
-
-Constraints:
-- Under 200 words total
-- No generic coaching advice (no "create a safe space," no "hold space")
-- If anything's missing from the inputs, ask one clarifying question
-  before drafting</div>
-          <p class="pl-tip"><strong>Iteration note.</strong> The first three or four times this runs, the "risk or watch-out" section will feel generic. Each time it does, add a sentence to your <code>about-you.md</code> describing how this client typically retreats. After a few cycles it will start sounding like you wrote it.</p>
-        </article>
-
-        <!-- ============== P5 ============== -->
-        <article class="pl-prompt" id="p5">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 05</span>
-            <span class="pl-prompt-aud">Coach</span>
-          </div>
-          <h3>Post-session capture</h3>
-          <p class="pl-prompt-desc">Turn a session transcript or your own voice note into a structured client record and a follow-up email in your voice. The follow-up is the part most coaches skip and most clients secretly want.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>I've just finished a session with a client. Help me capture it properly.
-
-&lt;session-input&gt;
-[paste the transcript, your voice-note transcription, or your shorthand notes]
-&lt;/session-input&gt;
-
-&lt;client-context&gt;
-Name: [first name only]
-Where they are in the programme: [e.g. session 4 of 12, or "third
-discovery conversation"]
-What I want them to leave with: [one sentence]
-&lt;/client-context&gt;
-
-Apply style.md.
-
-Produce TWO outputs:
-
-OUTPUT 1: Structured client record (for my own file)
-- Themes that came up (max 5, ordered by weight)
-- Breakthroughs (specific moments, with the words the client used)
-- Blockers (what's getting in the way, in their words)
-- Actions they agreed to before next session (with the verb they used)
-- One thing I should remember about how they're showing up
-
-OUTPUT 2: Follow-up email (to send today)
-- Subject line, under 8 words
-- Opening that references something specific from the session, not generic
-- One sentence acknowledging the work they did
-- The actions they committed to, as a short bulleted list
-- Closing that's mine, not "looking forward to next time"
-- Under 150 words total
-
-If any part of the session input is unclear or contradictory, flag it
-in a third section called "Check before sending."</div>
-          <p class="pl-tip"><strong>Privacy note.</strong> If you're using a free-tier model, anonymise client names before pasting. On Pro tiers, this is usually opt-out covered by Anthropic's enterprise privacy commitments, but check your settings.</p>
-        </article>
-
-        <!-- ============== P6 ============== -->
-        <article class="pl-prompt" id="p6">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 06</span>
-            <span class="pl-prompt-aud">Coach</span>
-          </div>
-          <h3>Programme design from a discovery call</h3>
-          <p class="pl-prompt-desc">Discovery call transcript in. A draft 8 or 12-week coaching arc comes out, with session themes and the opening questions for each one. You'll edit half of it. That's the point. The half you don't edit is the half you got back.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>Draft a coaching programme arc based on a discovery call I just had.
-
-&lt;discovery-call&gt;
-[paste the transcript or your notes]
-&lt;/discovery-call&gt;
-
-&lt;programme-shape&gt;
-Duration: [6 / 8 / 12] weeks
-Session length: [60 / 90] minutes
-Cadence: [weekly / fortnightly]
-&lt;/programme-shape&gt;
-
-Use about-you.md for how I coach. Apply style.md.
-
-Output structure:
-
-1. The client in one paragraph — what they came for, what's underneath
-   what they came for, and the shift I think this programme is really
-   about.
-
-2. The arc, session by session. For each session:
-   - Theme (3-5 words, not abstract)
-   - The one shift I'm aiming for
-   - The opening question I'd actually use
-   - One thing the client should leave with
-
-3. Risks I see — places this programme could go wrong, or places
-   the client is likely to want to "fix" something I shouldn't be
-   fixing for them.
-
-4. Three questions I should ask the client BEFORE we start, to make
-   sure I've designed this for them and not for someone I've already
-   coached.
-
-Constraints:
-- The arc must build. No session should be replaceable.
-- No generic session themes ("Vision", "Values", "Vulnerability"
-  on their own). Be specific to what this client said.
-- Total length under 800 words.</div>
-          <p class="pl-tip"><strong>How I use this.</strong> The output is never the final programme. It's a draft I can argue with. Half the value is in the third section — the risks — because that's the bit I'd otherwise discover three sessions in.</p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ===================== SMALL BUSINESS ===================== -->
-    <section class="pl-section">
-      <div class="container pl-section-inner">
-        <p class="pl-section-tag">Section 3 of 4</p>
-        <h2>For small business owners</h2>
-        <p class="pl-section-lead">Three workflows aimed at the people running a business with their own hands. Less polish, more time back. Each one connects to tools you probably already have (calendar, email, accounting).</p>
-
-        <!-- ============== P7 ============== -->
-        <article class="pl-prompt" id="p7">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 07</span>
-            <span class="pl-prompt-aud">Small business</span>
-          </div>
-          <h3>Quote from enquiry</h3>
-          <p class="pl-prompt-desc">Customer enquiry comes in. A polished quote goes out, in your tone, with your pricing logic baked in. The first version is a draft. By the tenth use it's two-clicks-to-send.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>Help me turn a customer enquiry into a quote.
-
-&lt;enquiry&gt;
-[paste the email or message exactly as it arrived]
-&lt;/enquiry&gt;
-
-&lt;my-pricing-logic&gt;
-[3-5 lines describing how you price: base rates, what triggers a premium,
-what you charge extra for, minimum spend, etc. Add to about-you.md once
-you've written this twice.]
-&lt;/my-pricing-logic&gt;
-
-Apply style.md.
-
-Produce, in order:
-
-1. What I think they're actually asking for, in plain English
-2. Three clarifying questions to send back IF the brief is too vague
-   to quote (skip this section if the brief is clear enough)
-3. A scope, in bullets, of what's included
-4. A scope, in bullets, of what's explicitly NOT included
-5. The headline price (or price range if scope is uncertain)
-6. A draft reply email — friendly, professional, mine — that:
-   - Acknowledges what they're trying to do
-   - Confirms the scope
-   - Gives the price clearly
-   - Suggests one specific next step (a call, a deposit, a start date)
-   - Stays under 150 words
-
-If the enquiry is missing something material (timeline, budget,
-location, scope), don't guess. Flag it in section 2.</div>
-          <p class="pl-tip"><strong>Note.</strong> Don't paste customer details into a free-tier chat. Either anonymise or use a paid tier with privacy controls enabled. Bookkeepers and solicitors especially — check your professional obligations.</p>
-        </article>
-
-        <!-- ============== P8 ============== -->
-        <article class="pl-prompt" id="p8">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 08</span>
-            <span class="pl-prompt-aud">Small business</span>
-          </div>
-          <h3>Invoice triage and chase</h3>
-          <p class="pl-prompt-desc">The inbox of receipts, invoices, and "remember to follow up on this" sticky notes goes in. A prioritised list comes out, plus drafted chasers for late payers. Add a Xero or FreeAgent connector and this gets dramatically more useful.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>I'm catching up on my accounts. Help me triage what needs action this week.
-
-&lt;invoices-out&gt;
-[list of invoices you've sent that haven't been paid yet. Format:
-client name | invoice number | amount | date sent | due date]
-&lt;/invoices-out&gt;
-
-&lt;bills-in&gt;
-[list of bills you owe. Format: supplier | amount | due date]
-&lt;/bills-in&gt;
-
-&lt;today's-date&gt;
-[today's date]
-&lt;/today's-date&gt;
-
-Apply style.md.
-
-Produce, in this order:
-
-1. Overdue invoices (sent but not paid past due date)
-   - Sorted by days overdue, oldest first
-   - For each: the action I should take TODAY (gentle nudge, firmer chase,
-     phone call, stop work)
-
-2. Upcoming invoices (due in next 7 days but not paid yet)
-   - Sorted by due date
-   - For each: a one-line preventative nudge I could send today
-
-3. Bills due in next 7 days
-   - Sorted by due date with running total
-   - Flag anything that pushes me into a cashflow problem (you'll need
-     to know my approximate weekly cash buffer — ask if I haven't said)
-
-4. Draft chaser emails for everything in section 1
-   - Each one in my voice, under 80 words
-   - Tone graduated by days overdue:
-     * 1-14 days: light, "in case it got lost"
-     * 15-30 days: clearer, name the amount, name the date
-     * 30+ days: firm, escalation language, no apology
-
-5. One thing you noticed that I might want to act on (a client who's
-   always late, a supplier I'm overpaying, a pattern in my receivables)</div>
-          <p class="pl-tip"><strong>Make it recurring.</strong> Once this runs reliably, schedule it for Monday morning. Half the value of this prompt is that it runs whether you remember it or not.</p>
-        </article>
-
-        <!-- ============== P9 ============== -->
-        <article class="pl-prompt" id="p9">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 09</span>
-            <span class="pl-prompt-aud">Small business</span>
-          </div>
-          <h3>Daily ops brief</h3>
-          <p class="pl-prompt-desc">Today's calendar, today's unread emails, today's Stripe activity. Out comes a 30-second read that tells you what actually needs your attention today and what's noise. Best run as a scheduled task at 7am.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>It's morning. Give me a 30-second read of today.
-
-&lt;today's-calendar&gt;
-[paste today's calendar — events, with times and any notes]
-&lt;/today's-calendar&gt;
-
-&lt;unread-email-snippets&gt;
-[paste the first line of each unread email in your priority inbox.
-Skip newsletters, social notifications, and anything obviously automated.]
-&lt;/unread-email-snippets&gt;
-
-&lt;stripe-or-sales-activity&gt;
-[any sales, refunds, failed payments, or churns from the last 24 hours]
-&lt;/stripe-or-sales-activity&gt;
-
-Apply style.md.
-
-Output, in this order. Total length must be under 250 words.
-
-1. Today's shape — one sentence describing the day at a glance (busy / quiet
-   / heavy on meetings / focus time available)
-2. The one thing that MUST happen today (if there's nothing critical,
-   say so)
-3. Two meetings to over-prepare for, and why
-4. Three emails that need a real reply today (with the action for each)
-5. Anything in the sales activity that warrants a response (a refund,
-   a failed payment, an unusually large order)
-6. One thing I should actively NOT do today (a thing I'm tempted to do
-   that isn't today's job)
-
-If anything is missing or thin, just say so. Don't invent.</div>
-          <p class="pl-tip"><strong>Why item six matters.</strong> Most ops briefs tell you what to do. The one that earns its place tells you what to ignore. Most small business owners lose more hours to optional work than to busywork.</p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ===================== FOUNDERS ===================== -->
-    <section class="pl-section">
-      <div class="container pl-section-inner">
-        <p class="pl-section-tag">Section 4 of 4</p>
-        <h2>For founders</h2>
-        <p class="pl-section-lead">There's already a lot of founder content on this blog (<a href="/blog/why-founders-get-5-percent-from-ai.html">Why 5%</a>, <a href="/blog/build-your-first-ai-agent-stack.html">Build a Stack</a>, <a href="/blog/ai-content-pipeline-founders.html">Content Pipeline</a>) with several prompts already inside those posts. So this section is just one prompt — the one I get asked for most often.</p>
-
-        <!-- ============== P10 ============== -->
-        <article class="pl-prompt" id="p10">
-          <div class="pl-prompt-head">
-            <span class="pl-prompt-num">Prompt 10</span>
-            <span class="pl-prompt-aud">Founder</span>
-          </div>
-          <h3>Pitch deck self-critique</h3>
-          <p class="pl-prompt-desc">Paste your deck. Get the brutal, investor's-eye review you'd usually pay an advisor for, before you spend a fortnight redrafting it. Best run with Opus or Sonnet with extended thinking on. Worst on Haiku.</p>
-          <div class="pl-block">
-<button class="pl-copy" type="button">Copy</button>You are a Series A partner at a top-tier VC firm. You're reading my deck
-for the first time. Be useful, not kind.
-
-&lt;deck&gt;
-[paste the deck content slide-by-slide, OR attach the PDF]
-&lt;/deck&gt;
-
-&lt;context&gt;
-Stage I'm raising at: [pre-seed / seed / Series A]
-Cheque sizes I'm targeting: [e.g. £500k - £1.5m]
-Funds I'm planning to send this to: [or "I don't know yet"]
-&lt;/context&gt;
-
-Apply style.md.
-
-Read the deck once for the story arc. Read it again for the evidence.
-Then produce:
-
-1. The one-line story — what this deck tells me you're building, who it's
-   for, and why it might matter. If this doesn't land cleanly, that's the
-   first problem.
-
-2. The three slides doing the heaviest lifting, and the three slides I'd
-   skip past as an investor.
-
-3. Where I'd push back hardest (the claims that need stronger evidence,
-   the numbers that don't add up, the market sizing that's pasted in from
-   a McKinsey report).
-
-4. The one question I'd ask in the first 60 seconds of the call, that
-   this deck doesn't pre-empt.
-
-5. What you'd cut. Not what you'd add. Specifically: which slides,
-   sentences, or visuals are dead weight.
-
-6. If I had to invest or pass right now, based only on this deck, which
-   would I do, and what would change my mind?
-
-Brutality calibration: I'm a real founder. I've raised before. I can take it.
-But "brutal" doesn't mean cruel — be specific about what's actually wrong,
-not just dismissive. If something works, say so once.
-
-Length: under 1,000 words.</div>
-          <p class="pl-tip"><strong>How to use the output.</strong> Don't redraft the deck the same evening you run this. Sleep on it. About a third of what the model says will be wrong, about a third will be obvious, and about a third will be exactly what your advisor would have charged you £500 to say.</p>
-        </article>
+        <!-- Loading state (shown while fetching with a valid token) -->
+        <div class="pl-loading" id="plLoading" hidden>
+          <span class="pl-loading-spinner" aria-hidden="true"></span>
+          Loading the library…
+        </div>
+
+        <!-- Content container — populated by JS once unlocked -->
+        <div id="plContent" hidden></div>
 
       </div>
     </section>
 
     <!-- ===================== CTA ===================== -->
-    <section class="pl-section">
+    <section class="pl-section" id="plCtaWrap" hidden>
       <div class="container pl-section-inner">
         <div class="pl-cta">
           <h2>Want this installed properly?</h2>
           <p>The prompts above will get you a long way on your own. If you'd rather have someone install the whole setup with you, that's what the AI Brain engagements are for. Audit, Starter, or Sprint — depending on how far you want to go.</p>
           <div class="pl-cta-actions">
             <a href="/ai-brain/#ladder" class="btn btn-primary">See the four ways to start</a>
-            <a href="https://cal.com/nick-tong-cto/30min" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Book a 30-minute call</a>
+            <a href="/book/" class="btn btn-ghost">Book a 30-minute call</a>
           </div>
         </div>
       </div>
@@ -746,28 +314,219 @@ Length: under 1,000 words.</div>
   </footer>
 
   <script>
-    // Copy buttons on prompt blocks
-    document.querySelectorAll('.pl-copy').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const block = btn.closest('.pl-block');
-        if (!block) return;
-        // Build the prompt text from the block, excluding the copy button itself
-        const text = Array.from(block.childNodes)
-          .filter(n => !(n.nodeType === 1 && n.classList && n.classList.contains('pl-copy')))
-          .map(n => n.textContent)
-          .join('')
-          .trim();
-        try {
-          await navigator.clipboard.writeText(text);
-          btn.textContent = 'Copied';
-          btn.classList.add('is-copied');
-          setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('is-copied'); }, 1800);
-        } catch (_) {
-          btn.textContent = 'Press Ctrl+C';
-          setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
-        }
+    'use strict';
+
+    const STORAGE_KEY = 'ctood:promptLibToken';
+    const $gate      = document.getElementById('plGate');
+    const $gateForm  = document.getElementById('plGateForm');
+    const $gateBtn   = document.getElementById('plGateSubmit');
+    const $gateError = document.getElementById('plGateError');
+    const $loading   = document.getElementById('plLoading');
+    const $content   = document.getElementById('plContent');
+    const $ctaWrap   = document.getElementById('plCtaWrap');
+
+    function showGate(message) {
+      $loading.hidden = true;
+      $content.hidden = true;
+      $ctaWrap.hidden = true;
+      $gate.hidden = false;
+      if (message) {
+        $gateError.textContent = message;
+        $gateError.hidden = false;
+      } else {
+        $gateError.hidden = true;
+      }
+    }
+
+    function showLoading() {
+      $gate.hidden = true;
+      $content.hidden = true;
+      $ctaWrap.hidden = true;
+      $loading.hidden = false;
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    function renderLibrary(data) {
+      const { sections = [], prompts = [] } = data || {};
+
+      // Build a TOC + the section blocks
+      let html = '<div class="pl-toc" aria-label="Library contents"><h3>What\'s inside</h3><ol>';
+      prompts.forEach((p, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        html += `<li><a href="#${p.id}"><span class="pl-toc-num">${num}</span><span>${escapeHtml(p.title)}</span></a></li>`;
       });
+      html += '</ol></div>';
+
+      sections.forEach((s, sIdx) => {
+        const sectionPrompts = prompts.filter(p => p.section === s.id);
+        if (!sectionPrompts.length) return;
+        html += `
+          <div style="margin-top: 3rem;">
+            <p class="pl-section-tag">Section ${sIdx + 1} of ${sections.length}</p>
+            <h2>${escapeHtml(s.label)}</h2>
+            <p class="pl-section-lead">${s.lead}</p>
+        `;
+        sectionPrompts.forEach((p) => {
+          const promptIndex = prompts.indexOf(p);
+          const num = String(promptIndex + 1).padStart(2, '0');
+          html += `
+            <article class="pl-prompt" id="${p.id}">
+              <div class="pl-prompt-head">
+                <span class="pl-prompt-num">Prompt ${num}</span>
+                <span class="pl-prompt-aud">${escapeHtml(p.audience)}</span>
+              </div>
+              <h3>${escapeHtml(p.title)}</h3>
+              <p class="pl-prompt-desc">${p.description}</p>
+              <div class="pl-block"><button class="pl-copy" type="button">Copy</button>${escapeHtml(p.prompt)}</div>
+              <p class="pl-tip">${p.tip}</p>
+            </article>
+          `;
+        });
+        html += '</div>';
+      });
+
+      $content.innerHTML = html;
+      $loading.hidden = true;
+      $gate.hidden = true;
+      $content.hidden = false;
+      $ctaWrap.hidden = false;
+      bindCopyButtons();
+    }
+
+    function bindCopyButtons() {
+      document.querySelectorAll('.pl-copy').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const block = btn.closest('.pl-block');
+          if (!block) return;
+          const text = Array.from(block.childNodes)
+            .filter(n => !(n.nodeType === 1 && n.classList && n.classList.contains('pl-copy')))
+            .map(n => n.textContent)
+            .join('')
+            .trim();
+          try {
+            await navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied';
+            btn.classList.add('is-copied');
+            setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('is-copied'); }, 1800);
+          } catch (_) {
+            btn.textContent = 'Press Ctrl+C';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 1800);
+          }
+        });
+      });
+    }
+
+    async function fetchWithToken(token) {
+      showLoading();
+      try {
+        const res = await fetch('/api/prompts?token=' + encodeURIComponent(token), {
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.status === 401) {
+          // Token expired or invalid — clear and re-gate
+          try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+          showGate('Your access has expired. Drop your details again and you\'ll be back in.');
+          return;
+        }
+        if (!res.ok) throw new Error('Unexpected status ' + res.status);
+        const data = await res.json();
+        if (!data.ok) {
+          showGate('Something went wrong loading the library. Please try again.');
+          return;
+        }
+        renderLibrary(data);
+      } catch (err) {
+        console.error('[prompts] fetch failed', err);
+        showGate('We couldn\'t load the library right now. Please try again, or email web@ctoondemand.co.uk if it persists.');
+      }
+    }
+
+    function getTokenFromURL() {
+      const params = new URLSearchParams(location.search);
+      return params.get('t') || params.get('token') || '';
+    }
+
+    function getStoredToken() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return '';
+        const parsed = JSON.parse(raw);
+        if (!parsed || !parsed.token) return '';
+        return parsed.token;
+      } catch (_) { return ''; }
+    }
+
+    function persistToken(token) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ token, savedAt: Date.now() }));
+      } catch (_) { /* ignore, but user just won't auto-reload */ }
+    }
+
+    // ── Form submission ──
+    $gateForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!$gateForm.checkValidity()) { $gateForm.reportValidity(); return; }
+      $gateError.hidden = true;
+      $gateBtn.disabled = true;
+      $gateBtn.textContent = 'Unlocking…';
+      const formData = new FormData($gateForm);
+      const payload = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        _gotcha: formData.get('_gotcha') || ''
+      };
+      try {
+        const res = await fetch('/api/prompts', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.ok && data.token) {
+          persistToken(data.token);
+          // Update URL with token (so the user can bookmark and revisit
+          // without re-submitting), without a full page reload.
+          const newUrl = location.pathname + '?t=' + encodeURIComponent(data.token);
+          history.replaceState(null, '', newUrl);
+          renderLibrary(data);
+          return;
+        }
+        if (data && data.error === 'validation_error') {
+          showGate('Please fill in both your name and a valid email.');
+        } else if (data && data.error === 'hubspot_error') {
+          showGate('We couldn\'t save your details just now. Please try again in a moment.');
+        } else {
+          showGate('Something went wrong. Please try again, or email web@ctoondemand.co.uk.');
+        }
+        $gateBtn.disabled = false;
+        $gateBtn.textContent = 'Unlock the library';
+      } catch (err) {
+        console.error('[prompts] submit failed', err);
+        showGate('Connection issue. Please try again.');
+        $gateBtn.disabled = false;
+        $gateBtn.textContent = 'Unlock the library';
+      }
     });
+
+    // ── Boot: check for an existing token ──
+    (function boot() {
+      const urlToken = getTokenFromURL();
+      const storedToken = getStoredToken();
+      const token = urlToken || storedToken;
+      if (token) {
+        // If the token came from the URL, persist it so revisits work
+        if (urlToken && urlToken !== storedToken) persistToken(urlToken);
+        fetchWithToken(token);
+      } else {
+        showGate();
+      }
+    })();
   </script>
 
 </body>
