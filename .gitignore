@@ -3,3 +3,9 @@ node_modules/
 .claude/settings.local.json
 .claude/launch.json
 .gstack/
+
+# Node / Playwright (added for /book test infra)
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
