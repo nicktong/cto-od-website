@@ -106,37 +106,27 @@
     return errors;
   }
 
-  function buildHubSpotPayload(values, pageUri) {
-    return {
-      fields: [
-        { name: 'firstname', value: values.name || '' },
-        { name: 'email', value: values.email || '' },
-        { name: 'company', value: values.company || '' },
-        { name: 'funding_stage', value: values.stage || '' },
-        { name: 'message', value: values.situation || '' }
-      ],
-      context: {
-        pageUri: pageUri,
-        pageName: 'Book a Call'
-      }
+  /* POST to our Vercel Serverless Function at /api/book. The function
+     writes directly to HubSpot Contacts API with a Private App token
+     (server-side env var). See api/book.js for the contract. */
+  async function submitBrief(values) {
+    const payload = {
+      name: values.name || '',
+      email: values.email || '',
+      company: values.company || '',
+      stage: values.stage || '',
+      situation: values.situation || ''
     };
-  }
-
-  async function submitToHubSpot(values) {
-    const url = 'https://api.hsforms.com/submissions/v3/integrations/submit/' +
-      encodeURIComponent(cfg.hubspot.portalId) + '/' +
-      encodeURIComponent(cfg.hubspot.formGuid);
-    const payload = buildHubSpotPayload(values, window.location.href);
-    const res = await fetch(url, {
+    const res = await fetch('/api/book', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
     if (!res.ok) {
-      const text = await res.text().catch(function () { return ''; });
-      const err = new Error('HubSpot submit failed: ' + res.status);
+      const data = await res.json().catch(function () { return {}; });
+      const err = new Error('Brief submit failed: ' + res.status);
       err.status = res.status;
-      err.body = text;
+      err.body = data;
       throw err;
     }
     return res.json().catch(function () { return null; });
@@ -237,7 +227,7 @@
       if (errorBanner) errorBanner.hidden = true;
 
       try {
-        await submitToHubSpot(values);
+        await submitBrief(values);
         clearDraft();
         track('generate_lead', { form_type: 'brief', stage: values.stage || '' });
         track('book_form_submit_success', { stage: values.stage || '' });
