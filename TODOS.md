@@ -1,0 +1,85 @@
+# TODOs
+
+Deferred work captured from reviews. Each item has enough context to pick up
+cold months later. Tick off when shipped.
+
+---
+
+## CSP (Content-Security-Policy) hardening
+
+**Status:** Open
+**Deferred from:** `/plan-eng-review` of /book on 2026-05-20
+**Surfaced by:** Architecture review, finding A2 (cal.com iframe CSP risk)
+**Priority:** P2 — security defence-in-depth, not blocking ship
+
+### What
+
+Add a Content-Security-Policy HTTP header to the site, scoped initially in
+`Report-Only` mode for one week of telemetry, then flipped to enforce.
+
+Header value (starting point — verify domains before enforcing):
+
+```
+Content-Security-Policy:
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' app.cal.com cal.com *.googletagmanager.com vitals.vercel-insights.com;
+  connect-src 'self' api.hsforms.com app.cal.com cal.com *.google-analytics.com vitals.vercel-insights.com;
+  frame-src app.cal.com cal.com;
+  img-src 'self' data: *.google-analytics.com;
+  style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+  font-src 'self' fonts.gstatic.com;
+  report-uri /api/csp-report;
+```
+
+Set via `vercel.json` headers config or via a Vercel Edge Function that
+appends the header to every response.
+
+### Why
+
+Defence-in-depth against XSS. If any third-party script (HubSpot, cal.com,
+GA4) is ever compromised, CSP limits what an attacker can exfiltrate or
+inject. Today there is no XSS surface (no user-generated content rendered on
+the page), but `/book` accepts a freeform textarea — that data only leaves
+via HubSpot, but the surface area for future regressions is real.
+
+### Pros
+
+- Standard hardening for production web apps.
+- Lighthouse "Best Practices" score improvement.
+- Future-proofs the site against XSS regressions when we add more
+  user-input surfaces.
+
+### Cons
+
+- Risk of breaking third-party widgets if a domain isn't whitelisted.
+- Maintenance: every new third-party script needs a CSP update.
+- The initial whitelist requires verification against actual cal.com /
+  HubSpot / Vercel domains.
+
+### Context
+
+Deferred from /plan-eng-review because v1 of /book was already large (23
+locked decisions, 13 implementation tasks, plus 12 Playwright tests).
+Visiting later is safer once we have telemetry to confirm which domains the
+site actually loads, and once the booking page is stable.
+
+### How to approach when picking this up
+
+1. Inventory all third-party domains the site loads today — DevTools →
+   Network → group by domain. Cross-reference against the starting CSP above.
+2. Add the header in `Report-Only` mode via `vercel.json`. Set up a small
+   `/api/csp-report` edge function to log violations to a file or external
+   service.
+3. Watch reports for one week. Any unexpected domains → either whitelist
+   them or remove the script.
+4. Flip from `Content-Security-Policy-Report-Only` to
+   `Content-Security-Policy` to enforce.
+5. Add a Playwright test that asserts the CSP header is present and
+   contains the key directives.
+
+### Depends on / blocked by
+
+- Vercel hosting must be live (after T8 in plan-book-page.md).
+- Confirmed list of third-party domains in actual production use.
+
+---
