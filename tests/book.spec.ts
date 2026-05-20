@@ -5,7 +5,10 @@ import { test, expect } from '@playwright/test';
  * See plan-book-page.md Decision #23 for the coverage matrix.
  */
 
-const HUBSPOT_URL = /api\.hsforms\.com\/submissions\/v3\/integrations\/submit/;
+/* Brief form now posts to our own serverless function at /api/book
+   (which forwards to HubSpot Contacts API server-side). Tests intercept
+   that endpoint directly so they run without needing `vercel dev`. */
+const API_URL = /\/api\/book$/;
 
 async function clearStorageAndConsent(page: import('@playwright/test').Page) {
   // Decline consent so the banner isn't covering form fields in subsequent tests.
@@ -30,13 +33,13 @@ async function fillValidForm(page: import('@playwright/test').Page, overrides: R
 
 test.describe('/book — brief form', () => {
 
-  test('1: form_happy_path — submit fills HubSpot and shows success card', async ({ page }) => {
+  test('1: form_happy_path — submit fills CRM via /api/book and shows success card', async ({ page }) => {
     await clearStorageAndConsent(page);
-    // Mock HubSpot to return 200.
-    await page.route(HUBSPOT_URL, route => route.fulfill({
+    // Mock /api/book to return 200.
+    await page.route(API_URL, route => route.fulfill({
       status: 200,
       contentType: 'application/json',
-      body: JSON.stringify({ inlineMessage: 'OK' }),
+      body: JSON.stringify({ ok: true, contactId: 'test-contact-id' }),
     }));
 
     await page.goto('/book/');
@@ -109,9 +112,9 @@ test.describe('/book — brief form', () => {
 
   test('5: form_honeypot_blocks_bot — fake-success shown, no network call', async ({ page }) => {
     await clearStorageAndConsent(page);
-    let hubspotCalled = false;
-    await page.route(HUBSPOT_URL, route => {
-      hubspotCalled = true;
+    let apiCalled = false;
+    await page.route(API_URL, route => {
+      apiCalled = true;
       route.fulfill({ status: 200, body: '{}' });
     });
 
@@ -124,17 +127,17 @@ test.describe('/book — brief form', () => {
     });
     await page.click('button[type="submit"]');
 
-    // Honeypot triggers a fake success path locally, no HubSpot fetch.
+    // Honeypot triggers a fake success path locally, no /api/book fetch.
     await expect(page.locator('#briefFormSuccess')).toBeVisible();
-    expect(hubspotCalled).toBe(false);
+    expect(apiCalled).toBe(false);
   });
 
-  test('6: form_hubspot_4xx_error — error banner shown, form preserved', async ({ page }) => {
+  test('6: form_api_4xx_error — error banner shown, form preserved', async ({ page }) => {
     await clearStorageAndConsent(page);
-    await page.route(HUBSPOT_URL, route => route.fulfill({
+    await page.route(API_URL, route => route.fulfill({
       status: 422,
       contentType: 'application/json',
-      body: JSON.stringify({ status: 'error', message: 'Invalid form fields' }),
+      body: JSON.stringify({ ok: false, error: 'validation_error', fields: ['email'] }),
     }));
 
     await page.goto('/book/');
@@ -151,8 +154,8 @@ test.describe('/book — brief form', () => {
 
   test('7: form_network_offline — error banner shown when fetch rejects', async ({ page, context }) => {
     await clearStorageAndConsent(page);
-    // Abort all HubSpot requests at the network layer to simulate offline.
-    await page.route(HUBSPOT_URL, route => route.abort('failed'));
+    // Abort all API requests at the network layer to simulate offline.
+    await page.route(API_URL, route => route.abort('failed'));
 
     await page.goto('/book/');
     await fillValidForm(page);
