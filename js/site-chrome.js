@@ -9,7 +9,10 @@
 
    The `current` attribute on <site-header> highlights the active
    nav item. Valid values: home, method, services, ai-brain,
-   about, blog. Omit on pages with no match.
+   about, blog, book. (`book` is intentionally NOT in the primary
+   NAV_ITEMS array — it lives only as the header CTA pill — but
+   the attribute is accepted for future-proofing.)
+   Omit on pages with no match.
    ============================================================ */
 
 (function () {
@@ -25,7 +28,11 @@
     { id: 'blog',     href: '/blog/',      label: 'Blog' }
   ];
 
-  const BOOK_URL = 'https://cal.com/nick-tong-cto';
+  /* Single funnel: every "Book a Call" CTA routes through /book where the
+     visitor can either send a brief or pick a cal.com slot. The fallback
+     cal.com link still exists inside /book/index.html itself if the embed
+     fails to load. */
+  const BOOK_URL = '/book/';
 
   // ── <site-topbar> ─────────────────────────────────────────
   class SiteTopbar extends HTMLElement {
@@ -37,7 +44,7 @@
             <span class="topbar-text">
               <strong>2 fractional CTO slots open for Q2.</strong> Booking discovery calls now.
             </span>
-            <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer" class="topbar-cta">
+            <a href="${BOOK_URL}" class="topbar-cta">
               Book a call <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -69,7 +76,7 @@
 
             <nav class="nav-desktop" aria-label="Primary navigation">
               ${desktopLinks}
-              <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Book a Call</a>
+              <a href="${BOOK_URL}" class="btn btn-nav">Book a Call</a>
             </nav>
 
             <button class="hamburger" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -79,7 +86,7 @@
 
           <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation">
             ${mobileLinks}
-            <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer" class="mobile-link mobile-cta">Book a 30-minute Call</a>
+            <a href="${BOOK_URL}" class="mobile-link mobile-cta">Book a 30-minute Call</a>
           </nav>
         </header>
       `;
