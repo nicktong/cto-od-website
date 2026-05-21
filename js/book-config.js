@@ -8,12 +8,11 @@
   'use strict';
 
   window.BOOK_CONFIG = {
-    /* HubSpot Forms API.
-       Region: na2 (informational — api.hsforms.com handles routing).
-       Form check link: https://424ule.share-na2.hsforms.com/2fahT77mmRS2fJBGdK1rTLg */
+    /* HubSpot CRM (informational only — actual submit goes through
+       /api/book which authenticates server-side with HUBSPOT_TOKEN env
+       var set in Vercel. See api/book.js for the contract). */
     hubspot: {
       portalId: '245450210',
-      formGuid: '7da853ef-b9a6-452d-9f24-119d2b5ad32e',
       region:   'na2'
     },
 

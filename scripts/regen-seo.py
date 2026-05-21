@@ -31,7 +31,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITE = "https://ctoondemand.co.uk"
+SITE = "https://www.ctoondemand.co.uk"
 
 # Page list. Order = sitemap order. (url_path, file_path, changefreq, priority)
 # When you add a new page, add it here.

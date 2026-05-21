@@ -2,12 +2,12 @@
 
 > All key page content from ctoondemand.co.uk, concatenated for AI assistants.
 
-> Source: https://ctoondemand.co.uk/  |  Index: https://ctoondemand.co.uk/llms.txt
+> Source: https://www.ctoondemand.co.uk/  |  Index: https://www.ctoondemand.co.uk/llms.txt
 
 ---
 
 # Home — CTO on Demand
-URL: https://ctoondemand.co.uk/
+URL: https://www.ctoondemand.co.uk/
 
 Fractional & Interim CTO Services
 
@@ -210,7 +210,7 @@ Yes, supporting the search and appointment of a permanent CTO is often a natural
 ---
 
 # About Nick Tong
-URL: https://ctoondemand.co.uk/about/
+URL: https://www.ctoondemand.co.uk/about/
 
 25+
 Years in tech
@@ -317,7 +317,7 @@ A fast-scaling marketplace had technical ambition but no engineering function to
 ---
 
 # The Partner CTO Method
-URL: https://ctoondemand.co.uk/method/
+URL: https://www.ctoondemand.co.uk/method/
 
 The Partner CTO Method
 
@@ -396,7 +396,7 @@ And I won't work with companies whose product has net-negative social impact.
 ---
 
 # Services and Pricing
-URL: https://ctoondemand.co.uk/services/
+URL: https://www.ctoondemand.co.uk/services/
 
 Four Ways to Engage, Depending on Your Stage
 
@@ -511,7 +511,7 @@ The whole point of fractional engagement is flexibility. The principles that gov
 ---
 
 # AI Brain
-URL: https://ctoondemand.co.uk/ai-brain/
+URL: https://www.ctoondemand.co.uk/ai-brain/
 
 Stop copy-pasting into your AI. Start running your business through it.
 
@@ -652,7 +652,7 @@ If that sounds like you, the Audit is the right first step.
 ---
 
 # Book a Call
-URL: https://ctoondemand.co.uk/book/
+URL: https://www.ctoondemand.co.uk/book/
 
 Let's talk
 
@@ -705,7 +705,7 @@ How I Work →
 # Blog posts
 
 ## From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
-URL: https://ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html
+URL: https://www.ctoondemand.co.uk/blog/ai-agents-engineering-leadership.html
 
 AI & Engineering Leadership
 10 January 2026
@@ -714,8 +714,6 @@ AI & Engineering Leadership
 From Management to Orchestration: Leading Engineering Teams in the Age of AI Agents
 
 AI coding tools are already changing how engineering teams work. But the real transformation isn't about writing code faster, it's about a fundamental shift in what engineering leadership looks like. The CTO who adapts to this shift will have a decisive advantage. The one who doesn't will be managing a team that's slowly optimising the wrong things.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -845,7 +843,7 @@ Read article →
 ---
 
 ## You Don't Need a Content Team. You Need a System.
-URL: https://ctoondemand.co.uk/blog/ai-content-pipeline-founders.html
+URL: https://www.ctoondemand.co.uk/blog/ai-content-pipeline-founders.html
 
 AI Brain
 17 May 2026
@@ -854,8 +852,6 @@ AI Brain
 You Don't Need a Content Team. You Need a System.
 
 You are not slow at producing content because you lack ideas. You are slow because you are running a production process through a single chat window.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -905,8 +901,216 @@ See the AI Brain →
 
 ---
 
+## AI for Coaches and Small Businesses: The Setup I Install for Clients
+URL: https://www.ctoondemand.co.uk/blog/ai-for-coaches-and-small-businesses.html
+
+AI Brain
+20 May 2026
+9 min read
+
+AI for coaches and small businesses: the setup I install for clients (with prompts)
+
+Most of the AI advice I've written has been for founders. But the same techniques unlock even more value for coaches, consultants, and small business owners. Smaller stack, fewer integrations, clearer use cases. Here's what changes when you're not running a venture-backed startup, and the prompt library I send to clients on day one.
+
+Nick Tong
+Fractional CTO · CTO on Demand
+
+If you've been reading the AI Brain posts on this blog, you'll have noticed they lean towards founders. That's not because founders are the only people who benefit. It's because they're the ones who tend to find me first, usually after their tenth investor conversation about "AI strategy."
+
+But in the last six months the conversations have shifted. A career coach with 200 active clients. A bookkeeper running a one-person practice. A small agency owner doing the work of four people. They all pay for Claude or ChatGPT. They all use about five percent of what they're paying for. And honestly, the setup I install for them is faster to build, easier to maintain, and pays back inside a fortnight.
+
+So here's the version of the AI Brain framework that's been hiding behind the founder-shaped posts: what changes when you're not raising a Series A, and what stays the same.
+
+What's different when you're not a founder
+
+The diagnostic is the same. You probably already know the feeling I described in Why Most Founders Are Getting 5% From Their AI Tools: every new chat starts from scratch, the outputs need rewriting, nothing accumulates. The principle is the same too, three things working together: context, workflows, and voice.
+
+What changes for coaches and small business owners is the shape of the setup:
+
+Fewer integrations, more depth. A founder's stack might include Linear, Mixpanel, Stripe, HubSpot, Slack, Notion. A coach's stack is usually three things: Calendar, email, and notes. That's it. Less surface area, more time per integration.
+
+Voice matters more, not less. Coaches sell their voice. Small business owners build relationships on their voice. There's no marketing team to flatten it out. The persona file is the entire game.
+
+Repetition is heavier. A founder does an investor update once a month. A coach does session prep three times a day, every day. The compound time savings are bigger.
+
+The wins are softer to investors but harder to your evenings. No one needs to walk a VC through your meeting prep workflow. But the hour you save each evening on session notes is the hour you get to spend with your kids.
+
+That last bullet is the one that lands most often. The founders who hire me are doing it for leverage. The coaches and small business owners who hire me are doing it for their lives back.
+
+Move 1: Pick the right tool, not just the right tier
+
+Most people pay £20 a month for one AI tool and ask it to do everything. That's the first thing I change.
+
+The honest answer is that different models are good at different things, and the difference is bigger than the marketing implies. Here's what I steer clients to, depending on what they're trying to do:
+
+Claude for reasoning, writing in your voice, long documents, building workflows that need consistency. It's my default for almost everything client-facing.
+
+ChatGPT when you need images, infographics, or video (it owns Sora). Also strong for tasks where you want a slightly more confident, faster-to-an-answer style.
+
+Gemini if you live in Google Workspace. The way it pulls from your Drive, Gmail, and Calendar is genuinely smoother than the third-party connectors on the others.
+
+Grok when you need something with fewer guardrails. I rarely recommend it for client work, but it has its niche.
+
+The tier question matters too. The basic £20/month plan is enough for most coaches and most small businesses. You'll know you've outgrown it when you regularly hit usage caps mid-afternoon, or when you start running two or three workflows in parallel. The £100 tier is for heavier daily use. The £200 Pro tier is for people running a business through the tool, not just using it for work.
+
+Within Claude specifically, you've got three models to choose from: Haiku is fast and cheap for simple tasks like summarising a meeting note. Sonnet is the everyday workhorse, balancing speed and intelligence. Opus is what you reach for when you need deep reasoning, complex synthesis, or a piece of psychology-style analysis. The default should be Sonnet. Promote to Opus only when you need it.
+
+A short rule of thumb. If a task makes you slightly nervous to delegate to a junior, use Opus or Sonnet with extended thinking. If you'd happily delegate it to a sharp intern, Sonnet is fine. If it's a one-paragraph rewrite or a quick summary, Haiku will do it in half the time for a fraction of the cost.
+
+Move 2: Connect the boring stuff
+
+This is the move that most people skip and then regret. Claude, ChatGPT, and Gemini all have native connectors to the tools you already use. Set them up once and you stop copy-pasting context for the rest of your career.
+
+For a coach, the three I always wire up are Calendar, Gmail, and Granola (or whatever your meeting recorder is). Claude can now answer "what's the rest of my week look like?" without you describing it. It can draft a follow-up email and reference the actual conversation you had. It can prep for tomorrow's session using last session's transcript.
+
+For a small business owner, add Stripe and a bookkeeping integration if you have one (Xero, FreeAgent, Quickbooks). Suddenly Claude can answer questions like "which invoices are overdue?" or "draft a chase email for everything over 30 days." That's the kind of question you'd otherwise spend twenty minutes pulling together yourself.
+
+One thing nobody warns you about: most of these integrations are one account per integration at a time. If you've got a personal Gmail and a business Gmail, you'll need to pick one or do some account-switching gymnastics. Plan around it.
+
+Move 3: Build the three workflows that move the needle
+
+The mistake most people make is trying to set up fifteen things at once. The trick is to find the three things you do most often and turn just those into workflows. Everything else stays as ad-hoc chat for now.
+
+For a coach, the three I install first are usually:
+
+Session prep from notes. Yesterday's notes go in. Tomorrow's prep comes out: where you left off, the question to open with, the thing the client said they'd think about, and the one risk to watch for.
+
+Post-session capture. A transcript or a voice note goes in. Out comes a structured client record (themes, breakthroughs, blockers, agreed actions) and a short follow-up email in your voice.
+
+Programme design from a discovery call. Discovery call transcript in. A draft 8 or 12-week arc comes out, with session themes and the questions you'd use to open each one. You'll rewrite half of it. That's fine. The half you didn't rewrite is the half you got back.
+
+For a small business owner, the three are usually:
+
+Quote from enquiry. Customer email goes in. A polished quote comes out, in your tone, with your pricing logic baked in.
+
+Invoice triage and chase. The inbox of receipts, invoices, and "remember to follow up on this" sticky notes goes in. A prioritised list comes out, plus drafted chasers for late payers.
+
+Daily ops brief. Today's calendar, the unread emails, today's Stripe activity. Out comes a 30-second read that tells you what needs your attention today and what's just noise.
+
+Here's the meeting-prep prompt I give coaches as a starting point. It assumes you've created a small about-you.md file in your Claude Project with two or three paragraphs on who you are, who you work with, and how you write. (The full library at the bottom of this post has the prompt for building that file, plus the rest of these workflows.)
+
+Coach · Session prep from notes
+You are helping me prep for a coaching session in the next hour.
+
+Inputs:
+<client-notes>
+[paste the last session's notes, the client's latest message,
+or a transcript]
+</client-notes>
+
+<goal>
+[one line on what I want to achieve in this session]
+</goal>
+
+Use about-you.md for context on how I coach. Use style.md for tone.
+
+Output, in this order:
+1. Where we left off (3 bullets, max)
+2. The one question I should open with
+3. Two things the client said last time that they probably haven't done
+4. One risk or watch-out for this session
+5. A 2-sentence intention for me as the coach
+
+Keep the whole thing under 200 words. No buzzwords.
+If anything's missing from the inputs, ask before you draft.
+
+You can lift that into a Claude Project today and have something working before the next session. It will not be perfect. The fix isn't a better prompt; it's iterating the about-you.md and style.md files in the project's knowledge base. After three or four sessions, the outputs stop needing edits.
+
+Move 4: Tighten the discipline
+
+This is the move that separates "I use AI sometimes" from "AI is genuinely part of my operating model." It's also the one that nobody talks about because it sounds boring.
+
+Three small disciplines do most of the work:
+
+Keep your project instructions tight. About twenty lines. If you write a thousand-word prompt up front, every single request gets that thousand-word tax on top of it. The outputs get slower and worse. Cut to what you actually need every time. Promote optional context to the knowledge base instead.
+
+Don't upload raw documents to your knowledge base. Summarise first. Take your 60-page coaching manual, run it through Claude once with a prompt like "extract the key principles, frameworks, and decision rules as a structured reference document." Upload the structured reference, not the original. Smaller, tighter, more useful.
+
+Write a style file. Two short sections: how you write (sentence length, voice, what you sound like) and what you never write (banned phrases, AI tells, the words that make you wince). Mine bans "delve," "in the realm of," "leverage" as a verb, and any sentence that starts with "It's important to note." Yours will be different. The point is that you have one.
+
+If you want a template for the style file, it's in the prompt library at the bottom of this post.
+
+A side project that shows what's possible
+
+Over a couple of weekends earlier this year I built Stack Almanac, a personal project to scratch an itch. It's an AI-powered supplement tracker and advisor that adjusts recommendations based on your data, your goals, and your physiology (rather than the supplement industry's default assumption that everyone using it is a thirty-year-old man).
+
+The reason I mention it: it took about 32 hours of focused work, mostly in Claude Code. Five years ago it would have been a six-month engineering project costing more than a hundred thousand pounds. That gap, what one person with Claude can ship now vs. what a small team used to ship, is the part of this story that most people haven't quite processed yet. It's also why my engagements look the way they do: an installation, not a permanent retainer.
+
+Anyway, you don't need to build a supplement tracker to feel that gap. You'll feel it the first time the AI you've set up properly drafts a session note in your voice while you're still pouring the next coffee.
+
+Get the full prompt library
+
+Ten prompts I install for clients, covering the foundations (about-you brief, style guardrails, knowledge hygiene) plus three workflows each for coaches, small business owners, and founders. Drop your details and you'll be redirected straight to the library.
+
+By submitting, you agree to be added to my contacts so I can email you with updates to the library. I don't send a newsletter. Unsubscribe at any time.
+
+Unlocked. Redirecting you to the library now. Your access lasts 30 days on this device. If the redirect doesn't fire, click here.
+
+Where this builds on what's already covered
+
+This post sits on top of three earlier posts on this blog. If you haven't read them yet, they're the foundation:
+
+Why Most Founders Are Getting 5% From Their AI Tools — the diagnostic. Why most setups aren't compounding.
+
+Stop Asking One AI to Do Everything. Build a Stack Instead. — the architecture. Why you want multiple narrow agents rather than one wide one.
+
+You Don't Need a Content Team. You Need a System. — the pipeline pattern, applied to content but generalisable.
+
+This post is the one I'd send to a coach or a small business owner who's read those three and wants to know "OK but what's actually different for me?"
+
+If you want help installing this
+
+If you'd rather skip the trial-and-error and have someone install it properly with you, that's what AI Brain is for. The Audit is a half-day diagnostic. The Starter installs your single highest-leverage workflow over two weeks. The Sprint is a four-week build that installs the whole framework, including a joint session with your co-founder or business partner. See the four ways to start if you want pricing transparency.
+
+Or just book a 30-minute call and we'll talk through whether AI Brain is actually the right fit for what you're trying to do. If it isn't, I'll tell you, and point you at something that is.
+
+On this page
+
+What's different when you're not a founder
+
+Pick the right tool and tier
+
+Connect the boring stuff
+
+Three workflows that move the needle
+
+Tighten the discipline
+
+A side project that shows what's possible
+
+Get the prompt library
+
+Where this builds on
+
+If you want help
+
+Continue reading
+
+AI Brain
+
+Why Most Founders Are Getting 5% From Their AI Tools
+
+The diagnostic, and what an AI brain actually is. The foundation post for everything else.
+Read article →
+
+AI Brain
+
+Stop Asking One AI to Do Everything. Build a Stack Instead.
+
+Why single-agent setups break and how to build a small stack of focused agents that stay reliable.
+Read article →
+
+AI Brain
+
+You Don't Need a Content Team. You Need a System.
+
+The same architectural shift, applied to content production.
+Read article →
+
+---
+
 ## Stop Asking One AI to Do Everything. Build a Stack Instead.
-URL: https://ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html
+URL: https://www.ctoondemand.co.uk/blog/build-your-first-ai-agent-stack.html
 
 AI Brain
 9 May 2026
@@ -915,8 +1119,6 @@ AI Brain
 Stop Asking One AI to Do Everything. Build a Stack Instead.
 
 Your AI setup worked brilliantly for two weeks. Then the outputs started drifting. The tone went slightly off. It started mixing up context. You stopped trusting it — and then you stopped using it. This is one of the most common patterns I see, and the fix is simpler than you'd expect.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1028,7 +1230,7 @@ See the AI Brain →
 ---
 
 ## More Than a Technologist: Why a Fractional CTO Is a Business Partner First
-URL: https://ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html
+URL: https://www.ctoondemand.co.uk/blog/business-partner-not-just-a-technologist.html
 
 Fractional CTO
 4 May 2026
@@ -1037,8 +1239,6 @@ Fractional CTO
 More Than a Technologist: Why a Fractional CTO Is a Business Partner First
 
 A client said something to me this weekend that has stayed with me. They told me what they valued most about working together wasn't the tech, it was that I took the time to understand their business, and translated technology decisions in a language they could actually act on. They saw me as a partner, not just the technical person they brought on board. Here's what that actually looks like in practice, and why it changes the engagement.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1140,7 +1340,7 @@ Read article →
 ---
 
 ## The First 90 Days: What a Fractional CTO Actually Does
-URL: https://ctoondemand.co.uk/blog/first-90-days-fractional-cto.html
+URL: https://www.ctoondemand.co.uk/blog/first-90-days-fractional-cto.html
 
 Process
 11 March 2026
@@ -1149,8 +1349,6 @@ Process
 The First 90 Days: What a Fractional CTO Actually Does
 
 The first three months of a fractional CTO engagement are where trust is built, the real problems are identified, and the foundation for everything that follows is laid. Here's a month-by-month account of how it should go.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1296,7 +1494,7 @@ Read article →
 ---
 
 ## How Much Does a Fractional CTO Cost in the UK? (2026 Pricing Guide)
-URL: https://ctoondemand.co.uk/blog/fractional-cto-cost-uk-2026.html
+URL: https://www.ctoondemand.co.uk/blog/fractional-cto-cost-uk-2026.html
 
 Pricing
 26 February 2026
@@ -1305,8 +1503,6 @@ Pricing
 How Much Does a Fractional CTO Cost in the UK? (2026 Pricing Guide)
 
 Fractional CTO pricing in the UK ranges significantly depending on experience, commitment level, and the complexity of your situation. Here's an honest breakdown of what you should expect to pay, and more importantly, how to think about the value.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1442,7 +1638,7 @@ Read article →
 ---
 
 ## Fractional CTO vs Interim CTO: What's the Difference?
-URL: https://ctoondemand.co.uk/blog/fractional-cto-vs-interim-cto.html
+URL: https://www.ctoondemand.co.uk/blog/fractional-cto-vs-interim-cto.html
 
 Fractional CTO Guide
 18 February 2026
@@ -1451,8 +1647,6 @@ Fractional CTO Guide
 Fractional CTO vs Interim CTO: What's the Difference?
 
 Both models give you senior technology leadership without a permanent hire. But they serve fundamentally different needs. Understanding the distinction (and being honest about which one fits your situation) is the single most important step in getting this right.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1583,7 +1777,7 @@ Read article →
 ---
 
 ## Coming Soon: Real-Time AI Workshops
-URL: https://ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html
+URL: https://www.ctoondemand.co.uk/blog/live-ai-workshops-coming-soon.html
 
 Workshops
 16 May 2026
@@ -1592,8 +1786,6 @@ Workshops
 Coming Soon: Real-Time AI Workshops
 
 The thing founders tell me most often isn't "AI doesn't work." It's "I wish I'd started this six months ago." Getting the setup right is the hard part — and the reason most setups stall is that there's no one in the room when things don't quite click. That's what I'm building next.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1652,7 +1844,7 @@ Express Interest →
 ---
 
 ## Psychological Safety: The Most Underrated Engineering Leadership Tool
-URL: https://ctoondemand.co.uk/blog/psychological-safety-engineering-teams.html
+URL: https://www.ctoondemand.co.uk/blog/psychological-safety-engineering-teams.html
 
 Engineering Leadership
 28 January 2026
@@ -1661,8 +1853,6 @@ Engineering Leadership
 Psychological Safety: The Most Underrated Engineering Leadership Tool
 
 If you ask most CTOs what makes an engineering team high-performing, you'll hear about technical practices, architecture, process, and hiring. Rarely will you hear the answer that the research most strongly supports: psychological safety. Here's why it matters more than almost anything else, and how to actually build it.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1790,7 +1980,7 @@ Read article →
 ---
 
 ## What is a Fractional CTO? The Complete Guide for UK Startups (2026)
-URL: https://ctoondemand.co.uk/blog/what-is-a-fractional-cto.html
+URL: https://www.ctoondemand.co.uk/blog/what-is-a-fractional-cto.html
 
 Fractional CTO Guide
 5 March 2026
@@ -1799,8 +1989,6 @@ Fractional CTO Guide
 What is a Fractional CTO? The Complete Guide for UK Startups
 
 A fractional CTO gives your startup access to senior, C-suite technology leadership without the cost or commitment of a full-time hire. Here's exactly what they do, when you need one, and how to find the right fit for your stage.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand
@@ -1942,7 +2130,7 @@ Read article →
 ---
 
 ## Why Most Founders Are Getting 5% From Their AI Tools
-URL: https://ctoondemand.co.uk/blog/why-founders-get-5-percent-from-ai.html
+URL: https://www.ctoondemand.co.uk/blog/why-founders-get-5-percent-from-ai.html
 
 AI Brain
 2 May 2026
@@ -1951,8 +2139,6 @@ AI Brain
 Why Most Founders Are Getting 5% From Their AI Tools
 
 You're paying for Claude every month. You use it for a handful of things, and you've probably thought "it's useful, but I'm not sure it's saving me that much time." You're right — it isn't. Not yet. But that's not the tool's fault.
-
-NT
 
 Nick Tong
 Fractional CTO · CTO on Demand

@@ -256,12 +256,17 @@ class on the home page contact form — it's a 2-col grid pairing two
 **Always include a honeypot** — see the `_gotcha` field at
 `services/index.html:275` and `book/index.html`.
 
-**Submission:** static-site forms POST directly from the browser to a
-third-party endpoint. Rate-card form uses Formspree
-(`formspree.io/f/xpqydglp`). `/book` brief form uses HubSpot Forms API
-(`api.hsforms.com/submissions/v3/integrations/submit/{portalId}/{formId}`)
-so the contact lands in the CRM. Both wrap the fetch in try/catch and
-show an inline error banner on failure.
+**Submission:**
+- **Rate-card form** posts directly browser → Formspree
+  (`formspree.io/f/xpqydglp`).
+- **`/book` brief form** posts browser → `/api/book` (Vercel Serverless
+  Function in `api/book.js`) → HubSpot Contacts API. The serverless layer
+  authenticates with a HubSpot Private App token (env var
+  `HUBSPOT_TOKEN`). We do NOT use HubSpot's Forms API anymore — the new
+  "Form Frame" forms don't expose it.
+
+Both forms wrap the fetch in try/catch and show an inline error banner on
+failure.
 
 ### Cards
 

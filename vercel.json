@@ -5,8 +5,8 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.ctoondemand.co.uk" }],
-      "destination": "https://ctoondemand.co.uk/$1",
+      "has": [{ "type": "host", "value": "ctoondemand.co.uk" }],
+      "destination": "https://www.ctoondemand.co.uk/$1",
       "permanent": true
     }
   ],

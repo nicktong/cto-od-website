@@ -51,7 +51,7 @@ The site is optimised for Google AI Overviews / AI Mode per Google's [generative
 - The page's existing JSON-LD block — Article/Service/HowTo/FAQPage/Organization as appropriate.
 - The `BreadcrumbList` JSON-LD on inner pages and blog posts.
 
-Open Graph + Twitter cards on every page. `og:image` should remain `https://ctoondemand.co.uk/og-image.png` unless you generate a per-page image.
+Open Graph + Twitter cards on every page. `og:image` should remain `https://www.ctoondemand.co.uk/og-image.png` unless you generate a per-page image.
 
 ## Files that AI crawlers and Vercel care about
 

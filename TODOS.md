@@ -5,6 +5,35 @@ cold months later. Tick off when shipped.
 
 ---
 
+## Funding stage as a structured HubSpot property (currently embedded in message)
+
+**Status:** Open
+**Deferred from:** /book serverless-bypass fix on 2026-05-20
+**Surfaced by:** HubSpot MCP doesn't expose custom-property creation
+**Priority:** P3 — quality-of-life, the data is captured either way
+
+### What
+Today /api/book writes the visitor's stage into the contact `message` field as
+a `[Stage: Seed]\n\n…` prefix. That's a workaround. If we create
+`funding_stage` as a custom contact property in HubSpot, /api/book can write
+it as a first-class field, which makes it filterable in HubSpot views and
+reportable in dashboards.
+
+### How to do it
+1. HubSpot → Settings → Properties → Create property → Object: Contact.
+2. Label `Funding stage`, internal name `funding_stage`, type `Dropdown
+   select`, options `Pre-seed`, `Seed`, `Series A`, `Scale-up`, `Other`.
+3. In `api/book.js`, add `funding_stage: fields.stage` to the `properties`
+   object inside `upsertContact()`.
+4. Remove the `composeMessage()` stage prefix (or keep it as belt-and-braces).
+5. Re-deploy.
+
+### Trigger to revisit
+The first time you find yourself wanting to filter contacts by funding stage
+in HubSpot lists / reports.
+
+---
+
 ## CSP (Content-Security-Policy) hardening
 
 **Status:** Open
