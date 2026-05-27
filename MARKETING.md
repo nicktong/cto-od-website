@@ -115,7 +115,7 @@ The positioning is simple. Most founders do not need a consultancy. They need a 
 - Honest about what AI cannot do. You will be told which subscriptions to cancel and which workflows are not worth automating.
 
 ### AI Training Course
-**Elevator pitch.** A four to six week course for non-technical founders who lead AI-enabled teams. Async lessons on Thinkific, one live group call a week, one 1:1 with Nick. Walk in fluent enough to challenge engineering, evaluate AI work, and stop nodding through meetings.
+**Elevator pitch.** A four to six week course for non-technical founders who lead AI-enabled teams. Async lessons, one live group call a week, one 1:1 with Nick. Walk in fluent enough to challenge engineering, evaluate AI work, and stop nodding through meetings.
 
 **Differentiators.**
 - Built for non-technical founders specifically. The whole curriculum assumes you do not write code and do not want to.
@@ -155,7 +155,7 @@ That is exactly why the fractional model exists. Two to four days a month, retai
 That is because off-the-shelf tools are built for the average user, not your business. AI Brain is a custom build. Your workflows, your voice, your knowledge sources, your evaluation criteria. It sticks because you helped build it and you can run it without me afterwards.
 
 **"I don't have time for a course."**
-The course is built for founders who do not have time. Async Thinkific lessons you can do at 6am or on a flight. One live group call a week, recorded if you cannot make it. One 1:1 with me to close the gaps specific to your business. Four to six weeks total. Less time than the meetings you are currently sitting through and not understanding.
+The course is built for founders who do not have time. Async lessons you can do at 6am or on a flight. One live group call a week, recorded if you cannot make it. One 1:1 with me to close the gaps specific to your business. Four to six weeks total. Less time than the meetings you are currently sitting through and not understanding.
 
 **"Can I get results without being technical?"**
 The course ICP is explicitly non-technical founders. Every lesson assumes you do not write code and do not want to. The point is to make you fluent enough to lead, evaluate, and challenge. Not to turn you into an engineer.
