@@ -718,10 +718,12 @@ module.exports.__test = {
   parseRepoUrl,
   verifyHubspotSignature,
   hasPriorAgentNote,
+  fetchRepoFile,
   formatLeadNoteBody,
   formatSprintNoteBody,
   ALLOWED_LEAD_SOURCES,
   SALES_AGENT_MARKER,
   SPRINT_PIPELINE_MARKER,
-  GRADUATED_STATUS
+  GRADUATED_STATUS,
+  SIGNATURE_REPLAY_WINDOW_MS
 };

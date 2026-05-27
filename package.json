@@ -8,6 +8,7 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report",
+    "test:unit": "node --test tests/unit/*.test.js",
     "serve": "python3 -m http.server 8000"
   },
   "dependencies": {

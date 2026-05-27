@@ -240,13 +240,21 @@ async function fetchLastCommitDate(owner, repo, token) {
 
 // ── Slack ────────────────────────────────────────────────────
 
+// Slack post — degrades silently on ANY failure (network error,
+// 5xx, etc) per eng-review S2-1. The cron must not turn red just
+// because Slack is having a moment. Caller checks the .ok field.
 async function postToSlack(webhookUrl, payload) {
-  const res = await fetch(webhookUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  });
-  return { ok: res.ok, status: res.status };
+  try {
+    const res = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return { ok: res.ok, status: res.status };
+  } catch (err) {
+    console.error(`${LOG_PREFIX} slack_network_error message=${err && err.message}`);
+    return { ok: false, status: 0, error: err && err.message };
+  }
 }
 
 // ── Main ─────────────────────────────────────────────────────
