@@ -379,10 +379,8 @@
       </button>
       <h3 id="rateCardTitle">Get the AI Brain rate card</h3>
       <p class="rc-modal-intro">Drop your details and I'll email the full rate card across. No newsletter, no follow-up sequence.</p>
-      <form id="rateCardForm" action="https://formspree.io/f/xpqydglp" method="POST" novalidate>
+      <form id="rateCardForm" novalidate>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
-        <input type="hidden" name="_subject" value="AI Brain rate card request" />
-        <input type="hidden" name="source" value="ai-brain page rate card request" />
         <div class="rc-form-row">
           <label for="rcName">Your name <span aria-hidden="true" style="color:#dc2626">*</span></label>
           <input type="text" id="rcName" name="name" required autocomplete="name" placeholder="Jane Smith" />
@@ -497,11 +495,18 @@
         rcSubmit.disabled = true;
         rcSubmit.textContent = 'Sending…';
         rcError.hidden = true;
+        const fd = new FormData(rcForm);
+        const payload = {
+          name: (fd.get('name') || '').toString().trim(),
+          email: (fd.get('email') || '').toString().trim(),
+          company: (fd.get('company') || '').toString().trim(),
+          _gotcha: (fd.get('_gotcha') || '').toString()
+        };
         try {
-          const res = await fetch(rcForm.action, {
+          const res = await fetch('/api/rate-card', {
             method: 'POST',
-            body: new FormData(rcForm),
-            headers: { 'Accept': 'application/json' }
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
           });
           if (!res.ok) throw new Error();
           rcForm.hidden = true;
