@@ -40,6 +40,7 @@ PAGES: list[tuple[str, str, str, str]] = [
     ("/method/",                                       "method/index.html",                                     "monthly", "0.9"),
     ("/services/",                                     "services/index.html",                                   "monthly", "0.9"),
     ("/ai-brain/",                                     "ai-brain/index.html",                                   "monthly", "0.9"),
+    ("/course/",                                       "course/index.html",                                     "monthly", "0.9"),
     ("/book/",                                         "book/index.html",                                       "monthly", "0.95"),
     ("/about/",                                        "about/index.html",                                      "monthly", "0.8"),
     ("/blog/",                                         "blog/index.html",                                       "weekly",  "0.8"),

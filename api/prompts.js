@@ -134,6 +134,10 @@ async function upsertContact(token, fields) {
       firstname: fields.name,
       email: fields.email,
       message: noteLine,
+      // Sales agent (/api/sales-agent) filters incoming HubSpot webhooks
+      // on lead_source — without this, prompt library leads never trigger
+      // the agent's personalised follow-up.
+      lead_source: 'prompt_library',
       hs_lead_status: 'NEW',
       hs_analytics_source: 'OFFLINE',
       lifecyclestage: 'lead'

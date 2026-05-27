@@ -24,6 +24,7 @@
     { id: 'method',   href: '/method/',    label: 'Method' },
     { id: 'services', href: '/services/',  label: 'How I Work' },
     { id: 'ai-brain', href: '/ai-brain/',  label: 'AI Brain' },
+    { id: 'course',   href: '/course/',    label: 'Course' },
     { id: 'about',    href: '/about/',     label: 'About' },
     { id: 'blog',     href: '/blog/',      label: 'Blog' }
   ];
