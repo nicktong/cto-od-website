@@ -159,3 +159,46 @@ HubSpot contacts. Add IP-based rate limiting via Vercel Edge Middleware.
 When monthly LinkedIn ad spend exceeds £500 or when HubSpot shows contact creation spikes.
 
 ---
+
+## Public alumni page at /course/cohort-1/
+
+**Status:** Open
+**Deferred from:** /plan-ceo-review of course design on 2026-05-26 (SELECTIVE EXPANSION cherry-pick E1)
+**Surfaced by:** Section 10 long-term trajectory review — completes the closed-loop alumni system
+**Priority:** P2 — build between Cohort 1 graduation and Cohort 2 launch
+
+### What
+A new public page at `/course/cohort-1/` (and `/cohort-2/`, etc.) showcasing graduates from each cohort. Each card displays:
+- Graduate's first name + (optional) company name
+- One-line "after this course, I can..." statement (from their handover doc)
+- Public repo link IF they opted in to make their repo public at graduation
+- Cohort start/end dates
+
+Every future cohort doubles the size of this gallery. Cohort 2 sells itself off the back of Cohort 1's gallery.
+
+### How to do it
+1. Build the page template using the existing site design system (`<x-topbar>`, `cards-grid-3` pattern, JSON-LD `Person` schema per graduate where applicable).
+2. Data source: HubSpot list filtered on `course_status='graduated' AND alumni_opt_in=true AND alumni_show_publicly=true`. Generate the page at build time via a script (similar pattern to `scripts/regen-seo.py`) so the page is fully static — no API calls at view time.
+3. Optional: add the alumni count + cohort number to the top of the course page hero ("Join 24 founders from previous cohorts...").
+4. Add `/course/cohort-1/` to the `scripts/regen-seo.py` PAGES list and run regen.
+5. Wire from `/course/index.html` (link from the FAQ or the social-proof block).
+
+### Pros
+- Compounds — every cohort feeds the gallery permanently
+- Strong differentiator from generic AI courses (real names, real outputs)
+- SEO: each graduate's name + course becomes a long-tail keyword
+- Free social proof for Cohort 2 sales
+
+### Cons
+- Requires participants to opt in publicly (some won't, by S3-1 decision — that's fine)
+- Maintenance: regenerate when each cohort graduates
+- Risk: if Cohort 1 has <3 public opt-ins, the page looks thin
+
+### Trigger to revisit
+End of Week 5 of Cohort 1 — when participants are about to consent to public showcase as part of the graduation opt-in flow. Build the page in Week 6 to publish immediately at graduation.
+
+### Depends on / blocked by
+- Cohort 1 has graduated AND ≥3 participants opted in to public showcase
+- `alumni_show_publicly` HubSpot custom property created (separate from `alumni_opt_in` because tracking opt-in is a different decision from public-showcase opt-in)
+
+---
