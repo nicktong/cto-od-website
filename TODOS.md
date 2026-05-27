@@ -112,3 +112,50 @@ site actually loads, and once the booking page is stable.
 - Confirmed list of third-party domains in actual production use.
 
 ---
+
+## Shared HubSpot upsert utility
+
+**Status:** Open
+**Deferred from:** /plan-ceo-review of marketing system on 2026-05-26
+**Surfaced by:** Code quality review — three independent upsert implementations
+**Priority:** P3 — not blocking, refactor when a fourth API lands
+
+### What
+`api/book.js`, `api/prompts.js`, and `api/waitlist.js` (new) each implement the
+same HubSpot upsert pattern: POST contact, handle 409 with a GET+PATCH to merge.
+Three copies of the pattern diverge over time. Extract to `api/_lib/hubspot.js`
+as a shared utility callable by all serverless functions.
+
+### How to do it
+1. Create `api/_lib/hubspot.js` with `upsertContact(token, properties, mergeStrategy)`.
+2. `mergeStrategy` handles the 409+PATCH per caller (prompts appends to message; book overwrites; waitlist sets new properties). Pass as a callback.
+3. Update `api/book.js`, `api/prompts.js`, `api/waitlist.js` to import from `_lib`.
+4. Run Playwright tests to verify book flow still works.
+
+### Trigger to revisit
+When a fourth API endpoint needs to write to HubSpot contacts.
+
+---
+
+## Rate limiting on api/waitlist.js
+
+**Status:** Open
+**Deferred from:** /plan-ceo-review of marketing system on 2026-05-26
+**Surfaced by:** Security review — waitlist endpoint exposed to ad traffic
+**Priority:** P3 — add before running paid ads at scale
+
+### What
+`api/waitlist.js` has a `_gotcha` honeypot for bot detection but no rate limiting.
+A programmatic flood (e.g. from a scraped form URL) could create thousands of fake
+HubSpot contacts. Add IP-based rate limiting via Vercel Edge Middleware.
+
+### How to do it
+1. Create `middleware.js` at repo root with a rate limiter for `/api/waitlist`.
+2. Use `@vercel/kv` (Redis-backed) to track request count per IP per minute.
+3. Return 429 after 20 requests/minute from same IP (conservative for ad traffic).
+4. Alternative: add reCAPTCHA v3 to the course page form (no UX friction).
+
+### Trigger to revisit
+When monthly LinkedIn ad spend exceeds £500 or when HubSpot shows contact creation spikes.
+
+---
