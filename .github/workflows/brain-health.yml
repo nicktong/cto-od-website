@@ -1,0 +1,25 @@
+name: Brain Health daily check
+
+on:
+  schedule:
+    # Daily at 09:00 UTC (10:00 BST / 09:00 GMT) — Nick's morning.
+    - cron: '0 9 * * *'
+  workflow_dispatch: {}  # Allow manual trigger from the Actions tab.
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Brain Health check
+        env:
+          # GITHUB_TOKEN is a reserved name in GitHub Actions, so we
+          # use GITHUB_COHORT_TOKEN end-to-end (workflow + script).
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+          GITHUB_COHORT_TOKEN: ${{ secrets.GITHUB_COHORT_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          STAGNANT_DAYS: '60'
+        run: node scripts/brain-health-check.js
