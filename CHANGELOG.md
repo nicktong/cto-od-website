@@ -5,6 +5,15 @@ All notable changes to ctoondemand.co.uk are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 versioned as `MAJOR.MINOR.PATCH.MICRO` (4-digit) per the gstack convention.
 
+## [0.2.2.0] - 2026-05-26
+
+### Added
+- **`/api/rate-card` Vercel serverless function** that upserts a HubSpot contact for AI Brain rate card requests. Mirrors `/api/book`: Private App token via `HUBSPOT_TOKEN`, create→PATCH on 409, honeypot, validation error shape. Stamps `lead_source: "ai-brain-rate-card"` so the sales agent can route these leads correctly in HubSpot.
+- **Playwright coverage** for the rate card modal (`tests/rate-card.spec.ts`): happy path JSON shape, native required validation, optional company omitted, API error, `ok: false` payload, network offline, and a guard test that the form action points at `/api/rate-card` (not Formspree).
+
+### Changed
+- **AI Brain rate card modal** (`/ai-brain/`) now POSTs JSON to `/api/rate-card` instead of `https://formspree.io/f/xpqydglp`. Rate card leads now land in HubSpot alongside `/book/` submissions instead of being invisible to the CRM. Modal UI, success/error states, and honeypot behaviour unchanged.
+
 ## [0.2.1.0] - 2026-05-20
 
 ### Added
