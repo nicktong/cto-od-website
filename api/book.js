@@ -75,6 +75,11 @@ async function upsertContact(token, fields) {
       // Custom property created in HubSpot — dropdown:
       //   Pre-seed / Seed / Series A / Scale-up / Other
       funding_stage: fields.stage,
+      // Sales agent (/api/sales-agent) filters HubSpot webhooks on
+      // lead_source. /book is the highest-intent channel — adding
+      // cto_services here means form-fill-but-no-call leads get a
+      // personalised follow-up draft via the agent.
+      lead_source: 'cto_services',
       // Source attribution so it's clear in CRM where the lead came from.
       hs_lead_status: 'NEW',
       hs_analytics_source: 'OFFLINE',

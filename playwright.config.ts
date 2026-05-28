@@ -8,6 +8,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  // Unit tests (node:test) live in tests/unit/ — Playwright must ignore them.
+  // Run unit tests with: npm run test:unit
+  testIgnore: ['**/unit/**'],
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,

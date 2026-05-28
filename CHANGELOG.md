@@ -5,6 +5,27 @@ All notable changes to ctoondemand.co.uk are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 versioned as `MAJOR.MINOR.PATCH.MICRO` (4-digit) per the gstack convention.
 
+## [0.3.0.0] - 2026-05-28
+
+Marketing system + course Cohort 1 pre-launch. Reviewed via /office-hours,
+/plan-ceo-review (SELECTIVE EXPANSION), and /plan-eng-review.
+
+### Added
+- **`MARKETING.md`** — AI knowledge base for the sales agent, covering all three ICPs (fractional CTO, AI Brain build-out, AI training course), pricing, objection handling, conversion paths.
+- **`/api/sales-agent.js`** — Vercel serverless agent with two modes dispatched by HubSpot webhook type. Mode 1: lead qualification (classify + score + draft follow-up email, `[sales-agent-v1]` Note). Mode 2: Sprint pipeline auto-routing on course graduation (reads private repo via GitHub Contents API, scores Sprint-readiness, `[sprint-pipeline-v1]` Note, private to Nick). HMAC v3 verification, idempotency via Note markers, MARKETING.md system prompt with prompt caching.
+- **`lib/claude.js`** — shared Claude API helpers (call, MARKETING.md loader, system-prompt builder, JSON parser with bounded fallback, XML escaping) used by the agent and the case-study script.
+- **`/course/` pre-launch waitlist page** — hero, who-it's-for, what-you-get, pricing (£1,500 Cohort 1 pilot / £2,250 Cohort 2, 10 places, Sprint upgrade credit), FAQ, GDPR-consent waitlist form. Wired to `/api/waitlist.js`.
+- **`/api/waitlist.js`** — course waitlist capture, sets `lead_source=course_waitlist` + `course_interest=true`, honeypot.
+- **`/api/rate-card.js`** — migrates the AI Brain rate card from Formspree to HubSpot (`lead_source=ai_brain_rate_card`), so rate-card leads reach the sales agent.
+- **`scripts/draft-case-study.js`** — generates long-form case-study drafts from a graduate's repo via Claude in Nick's voice.
+- **`scripts/brain-health-check.js` + `.github/workflows/brain-health.yml`** — daily cron polling opted-in alumni repos for stagnation, Slack alert on >60 days, degrades silently on failure.
+- **`docs/operations/graduation-flow.md`** — consent-first graduation sequence (GDPR posture).
+- **66-test unit suite** (`tests/unit/`, `node:test`, zero new deps) covering HMAC, dispatch routing, marker idempotency, GitHub failure modes, stagnation thresholds, Slack degradation, and the lib/claude parser. New `npm run test:unit` script.
+- **`/course` added to site nav, sitemap, and llms.txt.**
+
+### Changed
+- `api/prompts.js` sets `lead_source=prompt_library`; `api/book.js` sets `lead_source=cto_services` — both now flow through the sales agent. `/book` is the highest-intent channel and was previously invisible to it.
+
 ## [0.2.1.0] - 2026-05-20
 
 ### Added
