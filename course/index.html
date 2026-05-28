@@ -228,22 +228,24 @@
         </header>
 
         <div class="course-price-block" data-animate data-delay="1">
-          <!-- TODO Nick: replace with actual prices before going live -->
           <div class="course-price-grid">
             <div class="course-price-card course-price-card--featured">
-              <span class="course-price-label">Early-bird</span>
-              <span class="course-price-value">&pound;[NICK_TO_DECIDE]</span>
+              <span class="course-price-label">Cohort 1 (pilot)</span>
+              <span class="course-price-value">&pound;1,500</span>
               <span class="course-price-note">First cohort, waitlist only.</span>
             </div>
             <div class="course-price-card">
-              <span class="course-price-label">Full price</span>
-              <span class="course-price-value">&pound;[NICK_TO_DECIDE]</span>
-              <span class="course-price-note">Once the early-bird seats are gone.</span>
+              <span class="course-price-label">Cohort 2 onwards</span>
+              <span class="course-price-value">&pound;2,250</span>
+              <span class="course-price-note">Price goes up after the pilot.</span>
             </div>
           </div>
-          <!-- TODO Nick: confirm the cohort cap number before ads run -->
           <p class="course-cohort-cap">
-            Limited to <strong>[NICK_TO_DECIDE]</strong> students per cohort. Waitlist members get first refusal.
+            Limited to <strong>10</strong> places in the first cohort. Waitlist members get first refusal.
+          </p>
+          <p class="course-upgrade-note">
+            If you go on to an <a href="/ai-brain/">AI Brain Sprint</a> within 30 days of finishing,
+            your &pound;1,500 course fee is credited against it. The course pays for itself if you upgrade.
           </p>
         </div>
       </div>
@@ -462,6 +464,14 @@
       margin-top: 1.25rem;
       text-align: center;
       color: var(--clr-body, #475569);
+    }
+    .course-upgrade-note {
+      margin-top: .75rem;
+      text-align: center;
+      font-size: .92rem;
+      color: var(--clr-body, #64748b);
+      max-width: 44rem;
+      margin-inline: auto;
     }
 
     /* Consent checkbox */
